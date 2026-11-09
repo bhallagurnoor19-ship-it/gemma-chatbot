@@ -1,0 +1,7 @@
+configuration,forced_mode,prompt,ttft_mean_ms,ttft_median_ms,ttft_p95_ms,total_mean_ms,total_p95_ms,avg_chunks,avg_tokens
+1. Chat (No History RAG),off,Explain Python generators in detail.,209.22,2.416,2.947,209.233,2.966,0.0,0.0
+2. Chat (With Relevant History),memory,What did we decide about model lifecycle earlier?,2.569,2.247,3.319,2.58,3.334,0.0,0.0
+3. Chat (With Irrelevant History in DB),memory,What did we discuss about pasta recipes?,2.278,2.185,2.388,2.289,2.4,0.0,0.0
+4. Chat (With Document RAG),documents,Explain cloud deployment across AWS regions from documents.,15.837,2.43,2.661,15.848,2.671,0.0,0.0
+5. Chat (With Codebase RAG),codebase,How is classify_intent implemented in app.py?,3.293,2.393,3.443,3.307,3.454,0.0,0.0
+6. Chat (With Multi-Source RAG),both,Compare cloud deployment guide and app.py architecture.,2.939,2.455,4.79,2.953,4.811,0.0,0.0

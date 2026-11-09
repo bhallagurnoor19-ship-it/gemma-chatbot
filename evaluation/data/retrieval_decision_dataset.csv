@@ -1,0 +1,66 @@
+id,category,query,expected_retrieval,actual_retrieval,detected_mode,outcome,is_correct,reason
+CAT1_01,Category 1: Ordinary,Hey.,False,False,off,TN,True,Standard greeting
+CAT1_02,Category 1: Ordinary,How are you doing today?,False,False,off,TN,True,Pleasantry / small talk
+CAT1_03,Category 1: Ordinary,Explain Python decorators with a simple example.,False,False,off,TN,True,General programming concept
+CAT1_04,Category 1: Ordinary,What is a binary search tree?,False,False,off,TN,True,General computer science question
+CAT1_05,Category 1: Ordinary,Write a basic SQL query to select all users older than 30.,False,False,off,TN,True,Generic code generation
+CAT1_06,Category 1: Ordinary,What is the difference between TCP and UDP?,False,False,off,TN,True,Networking fundamentals
+CAT1_07,Category 1: Ordinary,How does quicksort work?,False,False,off,TN,True,Standard algorithm question
+CAT1_08,Category 1: Ordinary,Can you define polymorphism in object-oriented programming?,False,False,off,TN,True,General OOP theory
+CAT1_09,Category 1: Ordinary,What is the capital of France?,False,False,off,TN,True,General trivia
+CAT1_10,Category 1: Ordinary,Good morning!,False,False,off,TN,True,Greeting
+CAT1_11,Category 1: Ordinary,Explain the difference between synchronous and asynchronous execution.,False,False,off,TN,True,General software engineering concept
+CAT1_12,Category 1: Ordinary,Write a regular expression to validate an email address.,False,False,off,TN,True,Generic coding problem
+CAT1_13,Category 1: Ordinary,What are the SOLID design principles?,False,False,off,TN,True,General design principle query
+CAT2_01,Category 2: Explicit History,What did we decide about model lifecycle?,True,True,memory,TP,True,Explicit reference to prior decision ('what did we decide')
+CAT2_02,Category 2: Explicit History,Continue our PDF Intelligence implementation we discussed earlier.,True,True,all,TP,True,Explicit continuation from prior discussion ('discussed earlier')
+CAT2_03,Category 2: Explicit History,What was the bug DeepSeek identified?,True,False,off,FN,False,Explicit agent attribution reference ('what did DeepSeek...')
+CAT2_04,Category 2: Explicit History,Recall our earlier discussion about message persistence.,True,True,memory,TP,True,Explicit memory retrieval instruction ('earlier discussion')
+CAT2_05,Category 2: Explicit History,Compare this with the architecture we designed previously.,True,True,memory,TP,True,Explicit historical comparison ('designed previously')
+CAT2_06,Category 2: Explicit History,What did Qwen implement in the earlier session?,True,True,memory,TP,True,Explicit agent implementation inquiry ('Qwen earlier implementation')
+CAT2_07,Category 2: Explicit History,Summarize our conversation from earlier today.,True,True,memory,TP,True,Explicit conversation summary request
+CAT2_08,Category 2: Explicit History,What were the results of the phase 7 benchmark we discussed earlier?,True,True,memory,TP,True,Explicit reference to earlier benchmark discussion
+CAT2_09,Category 2: Explicit History,Can you check what I said earlier regarding the SQLite schema?,True,True,memory,TP,True,Explicit reference to user's prior statement ('what I said earlier')
+CAT2_010,Category 2: Explicit History,Continue from where we left off on the RAG pipeline.,True,True,memory,TP,True,Explicit task continuation from prior checkpoint
+CAT2_11,Category 2: Explicit History,What did Gemma suggest during our initial architecture review?,True,True,memory,TP,True,Explicit agent advice query ('Gemma suggest earlier')
+CAT2_12,Category 2: Explicit History,"As we discussed previously, how should we handle orphaned model leases?",True,True,memory,TP,True,Explicit reference to previous agreement
+CAT2_13,Category 2: Explicit History,Show me the earlier code DeepSeek wrote for lease management.,True,True,memory,TP,True,Explicit cross-model code query ('earlier code DeepSeek wrote')
+CAT3_01,Category 3: Implicit History,Why did we choose SQLite instead?,True,False,off,FN,False,Implicit reference to an unstated historical design trade-off
+CAT3_02,Category 3: Implicit History,What was causing that memory issue?,True,False,off,FN,False,Implicit demonstrative reference ('that memory issue')
+CAT3_03,Category 3: Implicit History,Did we already solve this problem?,True,False,off,FN,False,Implicit inquiry into past resolution status
+CAT3_04,Category 3: Implicit History,Continue from where we stopped.,True,False,off,FN,False,Implicit workflow continuation
+CAT3_05,Category 3: Implicit History,What happened to the earlier implementation?,True,True,memory,TP,True,Implicit inquiry on previous artifact status
+CAT3_06,Category 3: Implicit History,Is the latest change compatible with our existing design?,True,False,off,FN,False,Implicit comparison with established design decisions
+CAT3_07,Category 3: Implicit History,Why was that timeout occurring?,True,False,off,FN,False,Implicit reference to previously debugged timeout
+CAT3_08,Category 3: Implicit History,Did we fix that unclosed database handle?,True,False,off,FN,False,Implicit reference to past bug fix
+CAT3_09,Category 3: Implicit History,How does this compare to our first attempt?,True,False,off,FN,False,Implicit comparison with initial attempt
+CAT3_10,Category 3: Implicit History,What was the conclusion on that issue?,True,False,off,FN,False,Implicit reference to past conclusion
+CAT3_11,Category 3: Implicit History,Why did that test fail earlier?,True,True,memory,TP,True,Implicit reference to a past test run
+CAT3_12,Category 3: Implicit History,Are we still using that fallback approach?,True,False,off,FN,False,Implicit inquiry on persistence of prior design decision
+CAT3_13,Category 3: Implicit History,What went wrong with the initial indexing run?,True,False,off,FN,False,Implicit retrospective on previous failure
+CAT4_01,Category 4: Project Context,How should we improve the chatbot's TTFT?,False,False,off,TN,True,"Forward-looking technical question (needs code analysis, not past chat memory)"
+CAT4_02,Category 4: Project Context,Review the current RAG architecture.,False,False,off,TN,True,"Codebase/architectural review (needs codebase/docs RAG, not past chat memory)"
+CAT4_03,Category 4: Project Context,Is our model-switching approach efficient?,False,False,off,TN,True,Technical evaluation query (needs codebase inspection)
+CAT4_04,Category 4: Project Context,What should we implement next in the project?,True,False,off,FN,False,Needs project roadmap and previously decided milestones from conversation
+CAT4_05,Category 4: Project Context,Check whether this new feature conflicts with our existing system.,False,False,off,TN,True,Codebase compatibility query (needs codebase RAG)
+CAT4_06,Category 4: Project Context,How does our intent classification work in app.py?,False,False,codebase,TN,True,Direct codebase inspection request (codebase RAG)
+CAT4_07,Category 4: Project Context,What is the bottleneck in our current SSE pipeline?,False,False,off,TN,True,Performance analysis query (needs benchmark/code analysis)
+CAT4_08,Category 4: Project Context,Can our current database schema handle voice inputs?,False,False,off,TN,True,Schema verification query (codebase RAG)
+CAT4_09,Category 4: Project Context,Explain how our model eviction policy works in model_lifecycle.py.,False,False,documents,TN,True,Codebase query for model_lifecycle.py
+CAT4_10,Category 4: Project Context,Do we have any tests for duplicate message submission?,False,False,off,TN,True,Test suite inspection query (codebase RAG)
+CAT4_11,Category 4: Project Context,What is the maximum token limit configured in our prompt builder?,False,False,off,TN,True,Configuration lookup in prompt_builder.py (codebase RAG)
+CAT4_12,Category 4: Project Context,How are PDF files processed in our system?,False,False,documents,TN,True,Architecture explanation (codebase/doc RAG)
+CAT4_13,Category 4: Project Context,What have we completed so far on the project roadmap?,True,True,memory,TP,True,Historical progress inquiry ('what have we completed so far')
+CAT5_01,Category 5: Ambiguous,What about the previous one?,False,False,off,TN,True,Immediate predecessor pronoun; resolved by live sliding window without vector retrieval
+CAT5_02,Category 5: Ambiguous,Can we improve that?,False,False,off,TN,True,Immediate demonstrative; resolved by immediate prior assistant turn
+CAT5_03,Category 5: Ambiguous,Is it still necessary?,False,False,off,TN,True,Immediate pronoun; resolved by recent sliding window context
+CAT5_04,Category 5: Ambiguous,What did we do there?,False,False,off,TN,True,Immediate spatial/logical reference; resolved by recent turns
+CAT5_05,Category 5: Ambiguous,Why did that happen?,False,False,off,TN,True,Immediate error reference; resolved by previous turn's output
+CAT5_06,Category 5: Ambiguous,Can you check that again?,False,False,off,TN,True,Immediate repetition request; resolved by recent turns
+CAT5_07,Category 5: Ambiguous,Is there another way to do this?,False,False,off,TN,True,Immediate alternative query; resolved by active context
+CAT5_08,Category 5: Ambiguous,Does it work now?,False,False,off,TN,True,Immediate verification prompt; resolved by active context
+CAT5_09,Category 5: Ambiguous,What should we do with it?,False,False,off,TN,True,Immediate object pronoun; resolved by active context
+CAT5_10,Category 5: Ambiguous,Could that be faster?,False,False,off,TN,True,Immediate optimization query; resolved by recent output
+CAT5_11,Category 5: Ambiguous,Will this break anything?,False,False,off,TN,True,Immediate impact assessment; resolved by current code in context
+CAT5_12,Category 5: Ambiguous,Can you elaborate on that point?,False,False,off,TN,True,Immediate elaboration request; resolved by last assistant message
+CAT5_13,Category 5: Ambiguous,What was the alternative we rejected earlier?,True,True,memory,TP,True,Ambiguous noun phrase but explicit historical modifier ('rejected earlier') requiring history retrieval

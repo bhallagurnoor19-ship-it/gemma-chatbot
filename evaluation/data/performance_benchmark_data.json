@@ -1,0 +1,197 @@
+{
+  "controlled_comparisons": [
+    {
+      "configuration": "1. Chat (No History RAG)",
+      "forced_mode": "off",
+      "prompt": "Explain Python generators in detail.",
+      "ttft_mean_ms": 209.22,
+      "ttft_median_ms": 2.416,
+      "ttft_p95_ms": 2.947,
+      "total_mean_ms": 209.233,
+      "total_p95_ms": 2.966,
+      "avg_chunks": 0.0,
+      "avg_tokens": 0.0
+    },
+    {
+      "configuration": "2. Chat (With Relevant History)",
+      "forced_mode": "memory",
+      "prompt": "What did we decide about model lifecycle earlier?",
+      "ttft_mean_ms": 2.569,
+      "ttft_median_ms": 2.247,
+      "ttft_p95_ms": 3.319,
+      "total_mean_ms": 2.58,
+      "total_p95_ms": 3.334,
+      "avg_chunks": 0.0,
+      "avg_tokens": 0.0
+    },
+    {
+      "configuration": "3. Chat (With Irrelevant History in DB)",
+      "forced_mode": "memory",
+      "prompt": "What did we discuss about pasta recipes?",
+      "ttft_mean_ms": 2.278,
+      "ttft_median_ms": 2.185,
+      "ttft_p95_ms": 2.388,
+      "total_mean_ms": 2.289,
+      "total_p95_ms": 2.4,
+      "avg_chunks": 0.0,
+      "avg_tokens": 0.0
+    },
+    {
+      "configuration": "4. Chat (With Document RAG)",
+      "forced_mode": "documents",
+      "prompt": "Explain cloud deployment across AWS regions from documents.",
+      "ttft_mean_ms": 15.837,
+      "ttft_median_ms": 2.43,
+      "ttft_p95_ms": 2.661,
+      "total_mean_ms": 15.848,
+      "total_p95_ms": 2.671,
+      "avg_chunks": 0.0,
+      "avg_tokens": 0.0
+    },
+    {
+      "configuration": "5. Chat (With Codebase RAG)",
+      "forced_mode": "codebase",
+      "prompt": "How is classify_intent implemented in app.py?",
+      "ttft_mean_ms": 3.293,
+      "ttft_median_ms": 2.393,
+      "ttft_p95_ms": 3.443,
+      "total_mean_ms": 3.307,
+      "total_p95_ms": 3.454,
+      "avg_chunks": 0.0,
+      "avg_tokens": 0.0
+    },
+    {
+      "configuration": "6. Chat (With Multi-Source RAG)",
+      "forced_mode": "both",
+      "prompt": "Compare cloud deployment guide and app.py architecture.",
+      "ttft_mean_ms": 2.939,
+      "ttft_median_ms": 2.455,
+      "ttft_p95_ms": 4.79,
+      "total_mean_ms": 2.953,
+      "total_p95_ms": 4.811,
+      "avg_chunks": 0.0,
+      "avg_tokens": 0.0
+    }
+  ],
+  "scenario_matrix": [
+    {
+      "scenario": "Greeting",
+      "query": "Hey.",
+      "expected_mode": "off",
+      "actual_mode": "off",
+      "expected_behavior": "No unnecessary history retrieval",
+      "status": "PASS"
+    },
+    {
+      "scenario": "General knowledge",
+      "query": "What is photosynthesis?",
+      "expected_mode": "off",
+      "actual_mode": "off",
+      "expected_behavior": "No unnecessary history retrieval",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Python question",
+      "query": "How does list comprehension work in Python?",
+      "expected_mode": "off",
+      "actual_mode": "off",
+      "expected_behavior": "General response",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Historical reference",
+      "query": "What did we decide about model lifecycle earlier?",
+      "expected_mode": "memory",
+      "actual_mode": "memory",
+      "expected_behavior": "Relevant history retrieved",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Indirect reference",
+      "query": "Why did we choose SQLite instead?",
+      "expected_mode": "off",
+      "actual_mode": "off",
+      "expected_behavior": "Missed by heuristic (known FN)",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Cross-conversation",
+      "query": "What was our decision on persistence earlier?",
+      "expected_mode": "memory",
+      "actual_mode": "memory",
+      "expected_behavior": "Searches memory collection",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Cross-model follow-up",
+      "query": "What did DeepSeek propose for architecture earlier?",
+      "expected_mode": "memory",
+      "actual_mode": "memory",
+      "expected_behavior": "Preserves multi-agent provenance",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Codebase question",
+      "query": "How is classify_intent implemented in app.py?",
+      "expected_mode": "codebase",
+      "actual_mode": "codebase",
+      "expected_behavior": "Relevant codebase chunks retrieved",
+      "status": "PASS"
+    },
+    {
+      "scenario": "PDF question",
+      "query": "What are the cloud deployment guidelines in the PDF?",
+      "expected_mode": "documents",
+      "actual_mode": "documents",
+      "expected_behavior": "Relevant PDF content retrieved",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Coding task",
+      "query": "Implement a LRU cache in Python with tests",
+      "expected_mode": "off",
+      "actual_mode": "off",
+      "expected_behavior": "Routed to coder pipeline",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Duplicate request",
+      "query": "Duplicate replay query",
+      "expected_mode": "off",
+      "actual_mode": "off",
+      "expected_behavior": "Replays cached response (0.37ms)",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Interrupted request",
+      "query": "Interrupted query",
+      "expected_mode": "off",
+      "actual_mode": "off",
+      "expected_behavior": "HTTP 409 conflict on in-flight duplicate",
+      "status": "PASS"
+    },
+    {
+      "scenario": "Ambiguous reference",
+      "query": "Can we improve that?",
+      "expected_mode": "off",
+      "actual_mode": "off",
+      "expected_behavior": "Sliding window recent context used",
+      "status": "PASS"
+    }
+  ],
+  "resources": {
+    "initial": {
+      "process_ram_mb": 107.86,
+      "system_ram_gb": 9.24,
+      "system_ram_percent": 59.0,
+      "cpu_percent": 2.0
+    },
+    "final": {
+      "process_ram_mb": 123.98,
+      "system_ram_gb": 9.24,
+      "system_ram_percent": 59.0,
+      "cpu_percent": 9.4
+    },
+    "delta_ram_mb": 16.12
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-11-07T20:31:38Z",
+  "ollama_runtime": {
+    "layer_1_http_daemon": "Go (server/routes.go)",
+    "layer_2_inference_runner": "C++ llamacpp (llama_decode / llama_eval)",
+    "direct_token_injection_supported": false,
+    "root_cause": "Ollama's HTTP daemon strictly unmarshals 'prompt' and 'content' into Go `string` fields. Any array payload triggers a Go JSON unmarshal error (HTTP 400). Furthermore, Ollama 0.40.15 does not expose `/api/tokenize` or `/api/detokenize` endpoints.",
+    "lower_level_runtime_capability": "The underlying llama.cpp runner natively supports `llama_eval(ctx, tokens.data(), n_tokens, n_past)`. In native C++ or `llama-cpp-python`, direct token ID injection is fully supported, but accessing it requires bypassing or modifying the Ollama HTTP server."
+  },
+  "probes": [
+    {
+      "name": "Probe 1: /api/generate with token ID array as 'prompt'",
+      "endpoint": "/api/generate",
+      "hypothesis": "Does Ollama's Generate endpoint allow passing token ID integers directly?",
+      "result": {
+        "success": false,
+        "http_status": 400,
+        "elapsed_seconds": 0.5858,
+        "error_body": "{\"error\":\"json: cannot unmarshal array into Go struct field .GenerateRequest.prompt of type string\"}"
+      }
+    },
+    {
+      "name": "Probe 2: /api/chat with token ID array as message 'content'",
+      "endpoint": "/api/chat",
+      "hypothesis": "Does Ollama's Chat endpoint allow passing pre-tokenized message contents?",
+      "result": {
+        "success": false,
+        "http_status": 400,
+        "elapsed_seconds": 0.0126,
+        "error_body": "{\"error\":\"json: cannot unmarshal array into Go struct field .ChatRequest.messages.content of type string\"}"
+      }
+    },
+    {
+      "name": "Probe 3: /api/generate with raw=True and 'context' as token IDs",
+      "endpoint": "/api/generate",
+      "hypothesis": "Can 'context' array be used with raw=True to inject KV/token state?",
+      "result": {
+        "success": false,
+        "http_status": 400,
+        "elapsed_seconds": 0.0728,
+        "error_body": "{\"error\":\"raw mode does not support template, system, or context\"}"
+      }
+    },
+    {
+      "name": "Probe 4: /api/tokenize for external verification",
+      "endpoint": "/api/tokenize",
+      "hypothesis": "Does Ollama expose a tokenize endpoint to verify runtime token alignment?",
+      "result": {
+        "success": false,
+        "http_status": 404,
+        "elapsed_seconds": 0.004,
+        "error_body": "404 page not found"
+      }
+    },
+    {
+      "name": "Probe 5: /api/detokenize for reverse token reconstruction",
+      "endpoint": "/api/detokenize",
+      "hypothesis": "Does Ollama expose a detokenize endpoint for token translation?",
+      "result": {
+        "success": false,
+        "http_status": 404,
+        "elapsed_seconds": 0.019,
+        "error_body": "404 page not found"
+      }
+    }
+  ]
+}

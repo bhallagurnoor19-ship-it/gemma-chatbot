@@ -1,0 +1,90 @@
+[
+  {
+    "test": "Test_A_Direct_Ollama",
+    "repetition": 1,
+    "total_latency_s": 64.71,
+    "connect_s": 1.235,
+    "first_chunk_s": 1.235,
+    "ttft_s": 58.927,
+    "gen_duration_s": 5.274,
+    "token_count": 36,
+    "client_tps": 6.83,
+    "response_text": "The sky appears blue because Earth's atmosphere scatters shorter wavelengths of sunlight, such as blue and violet, much more effectively than longer wavelengths through a process known as Rayleigh scattering.",
+    "ollama_stats": {
+      "total_duration_ms": 64696.0335,
+      "load_duration_ms": 8.1923,
+      "prompt_eval_count": 61,
+      "prompt_eval_duration_ms": 642.189,
+      "eval_count": 369,
+      "eval_duration_ms": 63931.835
+    }
+  },
+  {
+    "test": "Test_A_Direct_Ollama",
+    "repetition": 2,
+    "total_latency_s": 63.066,
+    "connect_s": 0.853,
+    "first_chunk_s": 0.853,
+    "ttft_s": 56.533,
+    "gen_duration_s": 6.532,
+    "token_count": 40,
+    "client_tps": 6.12,
+    "response_text": "The sky appears blue because of Rayleigh scattering, a phenomenon where shorter wavelengths of sunlight, such as blue and violet, are scattered in all directions by the molecules and small particles in Earth's atmosphere.",
+    "ollama_stats": {
+      "total_duration_ms": 63054.7415,
+      "load_duration_ms": 3.621,
+      "prompt_eval_count": 61,
+      "prompt_eval_duration_ms": 399.994,
+      "eval_count": 353,
+      "eval_duration_ms": 62598.303
+    }
+  },
+  {
+    "test": "Test_B_Flask_API",
+    "repetition": 1,
+    "total_latency_s": 81.439,
+    "connect_s": 0.098,
+    "first_chunk_s": 0.098,
+    "ttft_s": 74.814,
+    "gen_duration_s": 6.623,
+    "token_count": 38,
+    "client_tps": 5.74,
+    "response_text": "The sky appears blue because of Rayleigh scattering, a phenomenon where the Earth's atmosphere scatters shorter wavelengths of sunlight\u2014particularly blue and violet\u2014much more efficiently than longer wavelengths like red."
+  },
+  {
+    "test": "Test_B_Flask_API",
+    "repetition": 2,
+    "total_latency_s": 68.258,
+    "connect_s": 0.064,
+    "first_chunk_s": 0.064,
+    "ttft_s": 63.867,
+    "gen_duration_s": 4.387,
+    "token_count": 36,
+    "client_tps": 8.21,
+    "response_text": "The sky appears blue because Earth's atmosphere scatters shorter wavelengths of sunlight, such as blue and violet light, more effectively than longer wavelengths through a phenomenon known as Rayleigh scattering."
+  },
+  {
+    "test": "Test_C_Browser_Payload",
+    "repetition": 1,
+    "total_latency_s": 55.298,
+    "connect_s": 0.071,
+    "first_chunk_s": 0.071,
+    "ttft_s": 50.068,
+    "gen_duration_s": 5.228,
+    "token_count": 36,
+    "client_tps": 6.89,
+    "response_text": "The sky appears blue because Earth's atmosphere scatters shorter wavelengths of sunlight, such as blue and violet, much more effectively than longer wavelengths, a phenomenon known as Rayleigh scattering."
+  },
+  {
+    "test": "Test_C_Browser_Payload",
+    "repetition": 2,
+    "total_latency_s": 67.678,
+    "connect_s": 0.056,
+    "first_chunk_s": 0.056,
+    "ttft_s": 61.922,
+    "gen_duration_s": 5.277,
+    "token_count": 41,
+    "client_tps": 7.77,
+    "response_text": "The sky appears blue because of Rayleigh scattering, a phenomenon where the Earth's atmosphere scatters shorter wavelengths of sunlight, such as blue and violet, much more effectively than longer wavelengths like red and orange."
+  }
+]

@@ -1,0 +1,3478 @@
+[
+  {
+    "id": "AQ01",
+    "category": "document",
+    "question": "What is the minimum number of availability zones per region and what availability percentage is maintained according to the cloud deployment guide?",
+    "expected_answer": "According to Chapter 1 of the Cloud Deployment Guide, all compute nodes are distributed across a minimum of 3 availability zones per region to maintain 99.995% availability.",
+    "expected_facts": [
+      "minimum of 3 availability zones",
+      "99.995% availability",
+      "availability zones"
+    ],
+    "expected_sources": [
+      "cloud_deployment_guide.pdf"
+    ],
+    "expected_locations": [
+      "Page 1"
+    ],
+    "evidence_requirements": "Must cite cloud_deployment_guide.pdf Page 1 and specify a minimum of 3 availability zones and 99.995% availability.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 3,
+    "retrieved_chunks": [
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.6226,
+        "score": 0.6226,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3839,
+        "score": 0.3839,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "Failover is initiated if the primary cluster fails 5 consecutive health probes spanning a 120-second evaluation win\nor if regional packet loss exceeds..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.35,
+        "score": 0.35,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 3: DISASTER RECOVERY OBJECTIVES AND STORAGE BACKUP RTO/RPO\nBusiness continuity and disaster recovery procedures define strict recovery metrics..."
+      }
+    ],
+    "context_tokens_approx": 606,
+    "generated_answer": "According to the cloud deployment guide, compute nodes are distributed across a **minimum of 3 availability zones per region** to maintain **99.995% availability** [Document: cloud_deployment_guide.pdf, Page 1].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 8900.72,
+    "ttft_ms": 8875.77,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:20:23"
+  },
+  {
+    "id": "AQ02",
+    "category": "document",
+    "question": "What CIDR blocks are assigned to the primary, secondary, and disaster recovery regions in the cloud deployment guide?",
+    "expected_answer": "In Chapter 1 of the Cloud Deployment Guide, the assigned CIDR blocks are: Primary Region (US-East): 10.120.0.0/16, Secondary Region (US-West): 10.121.0.0/16, and Disaster Recovery Region (EU-Central): 10.122.0.0/16.",
+    "expected_facts": [
+      "10.120.0.0/16",
+      "10.121.0.0/16",
+      "10.122.0.0/16",
+      "US-East",
+      "US-West",
+      "EU-Central"
+    ],
+    "expected_sources": [
+      "cloud_deployment_guide.pdf"
+    ],
+    "expected_locations": [
+      "Page 1"
+    ],
+    "evidence_requirements": "Must cite cloud_deployment_guide.pdf Page 1 and list all three regional non-overlapping CIDR blocks.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.6586,
+        "score": 0.6586,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3657,
+        "score": 0.3657,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "Failover is initiated if the primary cluster fails 5 consecutive health probes spanning a 120-second evaluation win\nor if regional packet loss exceeds..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3625,
+        "score": 0.3625,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 3: DISASTER RECOVERY OBJECTIVES AND STORAGE BACKUP RTO/RPO\nBusiness continuity and disaster recovery procedures define strict recovery metrics..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3148,
+        "score": 0.3148,
+        "page_number": 2,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 2: MUTUAL TLS SECURITY PROTOCOLS AND CERTIFICATE ROTATION\nAll internal microservice-to-microservice communication requires mutual TLS (mTLS) w..."
+      }
+    ],
+    "context_tokens_approx": 784,
+    "generated_answer": "Based on the provided cloud deployment guide, the CIDR blocks assigned to each region are:\n\n* **Primary Region (US-East):** 10.120.0.0/16 [Document: cloud_deployment_guide.pdf, Page 1]\n* **Secondary Region (US-West):** 10.121.0.0/16 [Document: cloud_deployment_guide.pdf, Page 1]\n* **Disaster Recovery Region (EU-Central):** 10.122.0.0/16 [Document: cloud_deployment_guide.pdf, Page 1]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 8775.86,
+    "ttft_ms": 8564.36,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:20:34"
+  },
+  {
+    "id": "AQ03",
+    "category": "document",
+    "question": "Which specific cipher suite and TLS version are permitted for internal mesh communications in the cloud deployment guide?",
+    "expected_answer": "According to Chapter 2 of the Cloud Deployment Guide, all internal microservice communication requires mutual TLS (mTLS) with TLS 1.3, and the only permitted cipher suite is ECDHE-ECDSA-AES256-GCM-SHA384.",
+    "expected_facts": [
+      "ECDHE-ECDSA-AES256-GCM-SHA384",
+      "TLS 1.3",
+      "mTLS"
+    ],
+    "expected_sources": [
+      "cloud_deployment_guide.pdf"
+    ],
+    "expected_locations": [
+      "Page 2"
+    ],
+    "evidence_requirements": "Must cite cloud_deployment_guide.pdf Page 2 and specify ECDHE-ECDSA-AES256-GCM-SHA384 and TLS 1.3.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.6291,
+        "score": 0.6291,
+        "page_number": 2,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 2: MUTUAL TLS SECURITY PROTOCOLS AND CERTIFICATE ROTATION\nAll internal microservice-to-microservice communication requires mutual TLS (mTLS) w..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.4806,
+        "score": 0.4806,
+        "page_number": 2,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "- Identity Attestation: Every workload must prove identity using SPIFFE IDs formatted as spiffe://internal.mesh/ns\nAny communication attempt lacking a..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.4518,
+        "score": 0.4518,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.3603,
+        "score": 0.3603,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "## 3. Data Serialization and Correlation Identifiers\n- Data format: Standard UTF-8 JSON payloads with `Content-Type: application/json`.\n- Maximum requ..."
+      }
+    ],
+    "context_tokens_approx": 684,
+    "generated_answer": "Based on the provided documentation, the only permitted cipher suite for internal mesh communications is **ECDHE-ECDSA-AES256-GCM-SHA384** [Document: cloud_deployment_guide.pdf, Page 2]. \n\n*(Note: While the exact TLS version is not explicitly spelled out alongside the cipher suite name in the text, ECDHE-ECDSA-AES256-GCM-SHA384 is a standard cipher suite associated with **TLS 1.2 and TLS 1.3**; however, only the cipher suite itself is explicitly named in the provided reference text [Document: cloud_deployment_guide.pdf, Page 2].)*",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 8720.02,
+    "ttft_ms": 8393.48,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:20:45"
+  },
+  {
+    "id": "AQ04",
+    "category": "document",
+    "question": "What is the standard certificate rotation window and when is automated renewal triggered in the cloud deployment guide?",
+    "expected_answer": "In Chapter 2 of the Cloud Deployment Guide, the standard certificate rotation window is 90 days, and the automated certificate renewal trigger occurs 30 days prior to the expiration date. Workloads attest identity using SPIFFE IDs.",
+    "expected_facts": [
+      "90 days",
+      "30 days prior to expiration",
+      "SPIFFE"
+    ],
+    "expected_sources": [
+      "cloud_deployment_guide.pdf"
+    ],
+    "expected_locations": [
+      "Page 2"
+    ],
+    "evidence_requirements": "Must cite cloud_deployment_guide.pdf Page 2 and specify the 90-day rotation and 30-day renewal threshold.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.5057,
+        "score": 0.5057,
+        "page_number": 2,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 2: MUTUAL TLS SECURITY PROTOCOLS AND CERTIFICATE ROTATION\nAll internal microservice-to-microservice communication requires mutual TLS (mTLS) w..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.4057,
+        "score": 0.4057,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.3788,
+        "score": 0.3788,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "Key Parameters:\n- Token expiration period: 3600 seconds (1 hour). Refresh tokens remain valid for 14 days.\n- Rate Limit Quota: 1200 requests per minut..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3636,
+        "score": 0.3636,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "Failover is initiated if the primary cluster fails 5 consecutive health probes spanning a 120-second evaluation win\nor if regional packet loss exceeds..."
+      }
+    ],
+    "context_tokens_approx": 702,
+    "generated_answer": "Based on the provided cloud deployment guide:\n\n* **Standard certificate rotation window:** 90 days [Document: cloud_deployment_guide.pdf, Page 2]\n* **Automated certificate renewal trigger:** 30 days prior to the expiration date [Document: cloud_deployment_guide.pdf, Page 2]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 9062.84,
+    "ttft_ms": 8433.31,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:20:57"
+  },
+  {
+    "id": "AQ05",
+    "category": "document",
+    "question": "What are the RTO and RPO targets defined for tier-1 transactional systems in the cloud deployment guide?",
+    "expected_answer": "According to Chapter 3 of the Cloud Deployment Guide, the Recovery Time Objective (RTO) is strictly under 15 minutes for complete regional failover, and the Recovery Point Objective (RPO) is strictly under 60 seconds of transaction data loss.",
+    "expected_facts": [
+      "RTO",
+      "15 minutes",
+      "RPO",
+      "60 seconds",
+      "tier-1"
+    ],
+    "expected_sources": [
+      "cloud_deployment_guide.pdf"
+    ],
+    "expected_locations": [
+      "Page 3"
+    ],
+    "evidence_requirements": "Must cite cloud_deployment_guide.pdf Page 3 and state RTO < 15 minutes and RPO < 60 seconds.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 3,
+    "retrieved_chunks": [
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.5734,
+        "score": 0.5734,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 3: DISASTER RECOVERY OBJECTIVES AND STORAGE BACKUP RTO/RPO\nBusiness continuity and disaster recovery procedures define strict recovery metrics..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.4416,
+        "score": 0.4416,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3283,
+        "score": 0.3283,
+        "page_number": 2,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 2: MUTUAL TLS SECURITY PROTOCOLS AND CERTIFICATE ROTATION\nAll internal microservice-to-microservice communication requires mutual TLS (mTLS) w..."
+      }
+    ],
+    "context_tokens_approx": 697,
+    "generated_answer": "Based on the cloud deployment guide, the recovery metrics defined for tier-1 transactional systems are:\n\n* **Recovery Time Objective (RTO):** Strictly under 15 minutes for complete regional failover [Document: cloud_deployment_guide.pdf, Page 3].\n* **Recovery Point Objective (RPO):** Strictly under 60 seconds of transaction data loss [Document: cloud_deployment_guide.pdf, Page 3].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 8469.57,
+    "ttft_ms": 8264.3,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:21:07"
+  },
+  {
+    "id": "AQ06",
+    "category": "document",
+    "question": "What conditions trigger automatic failover between regions according to the cloud deployment guide?",
+    "expected_answer": "Chapter 3 specifies that automatic failover is triggered if the primary cluster fails 5 consecutive health probes spanning a 120-second evaluation window, or if regional packet loss exceeds 45% for longer than 90 continuous seconds.",
+    "expected_facts": [
+      "5 consecutive health probes",
+      "120-second evaluation window",
+      "packet loss exceeds 45%",
+      "90 continuous seconds"
+    ],
+    "expected_sources": [
+      "cloud_deployment_guide.pdf"
+    ],
+    "expected_locations": [
+      "Page 3"
+    ],
+    "evidence_requirements": "Must cite cloud_deployment_guide.pdf Page 3 and mention 5 consecutive failed probes / 120s or 45% packet loss / 90s.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.6115,
+        "score": 0.6115,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "Failover is initiated if the primary cluster fails 5 consecutive health probes spanning a 120-second evaluation win\nor if regional packet loss exceeds..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.577,
+        "score": 0.577,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.4554,
+        "score": 0.4554,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 3: DISASTER RECOVERY OBJECTIVES AND STORAGE BACKUP RTO/RPO\nBusiness continuity and disaster recovery procedures define strict recovery metrics..."
+      },
+      {
+        "file_name": "incident_runbook.txt",
+        "source_path": "data/documents/incident_runbook.txt",
+        "category": "document",
+        "similarity": 0.3354,
+        "score": 0.3354,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "REMEDIATION STEPS:\n1. Clear idle and hung connections by running:\n    poolctl drain --pool=gemma_primary --force --timeout=10\n2. If connection acquisi..."
+      }
+    ],
+    "context_tokens_approx": 727,
+    "generated_answer": "According to the cloud deployment guide, automatic failover is initiated if either of the following conditions is met:\n\n1. The primary cluster fails **5 consecutive health probes** spanning a 120-second evaluation window [Document: cloud_deployment_guide.pdf, Page 3].\n2. Regional packet loss exceeds **45%** for longer than **90 continuous seconds** [Document: cloud_deployment_guide.pdf, Page 3].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7934.55,
+    "ttft_ms": 7075.74,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:21:17"
+  },
+  {
+    "id": "AQ07",
+    "category": "document",
+    "question": "What are the production and staging base URLs defined in the API specification?",
+    "expected_answer": "According to Section 1 of api_specifications.md, the Production Base URL is https://api.enterprise-gemma.io/v2 and the Staging Base URL is https://staging-api.enterprise-gemma.io/v2.",
+    "expected_facts": [
+      "https://api.enterprise-gemma.io/v2",
+      "https://staging-api.enterprise-gemma.io/v2"
+    ],
+    "expected_sources": [
+      "api_specifications.md"
+    ],
+    "expected_locations": [
+      "Lines 1-7"
+    ],
+    "evidence_requirements": "Must cite api_specifications.md and state both exact URLs.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.6191,
+        "score": 0.6191,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "# Enterprise API Specification v2.4\n\n## 1. Overview and Base URLs\nThe Enterprise AI Platform provides a high-throughput REST and streaming API.\n- Prod..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.3819,
+        "score": 0.3819,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "## 3. Data Serialization and Correlation Identifiers\n- Data format: Standard UTF-8 JSON payloads with `Content-Type: application/json`.\n- Maximum requ..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.336,
+        "score": 0.336,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "Key Parameters:\n- Token expiration period: 3600 seconds (1 hour). Refresh tokens remain valid for 14 days.\n- Rate Limit Quota: 1200 requests per minut..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.335,
+        "score": 0.335,
+        "page_number": 2,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "- Identity Attestation: Every workload must prove identity using SPIFFE IDs formatted as spiffe://internal.mesh/ns\nAny communication attempt lacking a..."
+      }
+    ],
+    "context_tokens_approx": 550,
+    "generated_answer": "Based on the provided API specification, the base URLs are:\n\n* **Production Base URL:** `https://api.enterprise-gemma.io/v2` [Document: api_specifications.md, Page 1]\n* **Staging Base URL:** `https://staging-api.enterprise-gemma.io/v2` [Document: api_specifications.md, Page 1]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6489.66,
+    "ttft_ms": 6293.15,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:21:26"
+  },
+  {
+    "id": "AQ08",
+    "category": "document",
+    "question": "What are the rate limit quota, burst capacity, and token expiration period in the API specification?",
+    "expected_answer": "Section 2 of api_specifications.md specifies a rate limit quota of 1200 requests per minute per authenticated client ID, a burst capacity of up to 250 requests over a rolling 5-second window, and a JWT token expiration period of 3600 seconds (1 hour).",
+    "expected_facts": [
+      "1200 requests per minute",
+      "250 requests",
+      "rolling 5-second window",
+      "3600 seconds"
+    ],
+    "expected_sources": [
+      "api_specifications.md"
+    ],
+    "expected_locations": [
+      "Lines 8-18"
+    ],
+    "evidence_requirements": "Must cite api_specifications.md and include 1200 req/min, 250 burst, and 3600s expiration.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.6757,
+        "score": 0.6757,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "Key Parameters:\n- Token expiration period: 3600 seconds (1 hour). Refresh tokens remain valid for 14 days.\n- Rate Limit Quota: 1200 requests per minut..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.4884,
+        "score": 0.4884,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "# Enterprise API Specification v2.4\n\n## 1. Overview and Base URLs\nThe Enterprise AI Platform provides a high-throughput REST and streaming API.\n- Prod..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.428,
+        "score": 0.428,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "## 3. Data Serialization and Correlation Identifiers\n- Data format: Standard UTF-8 JSON payloads with `Content-Type: application/json`.\n- Maximum requ..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3401,
+        "score": 0.3401,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      }
+    ],
+    "context_tokens_approx": 676,
+    "generated_answer": "Based on the provided API specification, here are the details for the rate limit quota, burst capacity, and token expiration period:\n\n* **Rate Limit Quota:** 1200 requests per minute per authenticated client ID [Document: api_specifications.md, Page 1].\n* **Burst Capacity:** Up to 250 requests over a rolling 5-second window [Document: api_specifications.md, Page 1].\n* **Token Expiration Period:** 3600 seconds (1 hour), while refresh tokens remain valid for 14 days [Document: api_specifications.md, Page 1].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6530.3,
+    "ttft_ms": 6263.21,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:21:35"
+  },
+  {
+    "id": "AQ09",
+    "category": "document",
+    "question": "What is the maximum request payload size and what is the mandatory correlation header in the API specification?",
+    "expected_answer": "Section 3 of api_specifications.md specifies that the maximum request payload size is 15 megabytes (15,728,640 bytes) and every API request must supply the mandatory correlation header X-Request-Correlation-ID: <UUID-v4>.",
+    "expected_facts": [
+      "15 megabytes",
+      "15,728,640 bytes",
+      "X-Request-Correlation-ID"
+    ],
+    "expected_sources": [
+      "api_specifications.md"
+    ],
+    "expected_locations": [
+      "Lines 19-24"
+    ],
+    "evidence_requirements": "Must cite api_specifications.md and state 15 MB (15,728,640 bytes) and X-Request-Correlation-ID.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.7662,
+        "score": 0.7662,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "## 3. Data Serialization and Correlation Identifiers\n- Data format: Standard UTF-8 JSON payloads with `Content-Type: application/json`.\n- Maximum requ..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.4014,
+        "score": 0.4014,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "Key Parameters:\n- Token expiration period: 3600 seconds (1 hour). Refresh tokens remain valid for 14 days.\n- Rate Limit Quota: 1200 requests per minut..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.3995,
+        "score": 0.3995,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "# Enterprise API Specification v2.4\n\n## 1. Overview and Base URLs\nThe Enterprise AI Platform provides a high-throughput REST and streaming API.\n- Prod..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3394,
+        "score": 0.3394,
+        "page_number": 2,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 2: MUTUAL TLS SECURITY PROTOCOLS AND CERTIFICATE ROTATION\nAll internal microservice-to-microservice communication requires mutual TLS (mTLS) w..."
+      }
+    ],
+    "context_tokens_approx": 659,
+    "generated_answer": "Based on the provided API specification:\n\n* **Maximum request payload size:** 15 megabytes (15,728,640 bytes) [Document: api_specifications.md, Page 1].\n* **Mandatory correlation header:** `X-Request-Correlation-ID: <UUID-v4>` [Document: api_specifications.md, Page 1].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6087.31,
+    "ttft_ms": 5985.23,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:21:43"
+  },
+  {
+    "id": "AQ10",
+    "category": "document",
+    "question": "What are the diagnostic command in Step 1 and the initial remediation command in the connection pool runbook?",
+    "expected_answer": "In incident_runbook.txt, the Step 1 diagnostic command is 'poolctl stat --pool=gemma_primary --verbose' to verify connections against the 250-connection limit. The Step 1 remediation command is 'poolctl drain --pool=gemma_primary --force --timeout=10'.",
+    "expected_facts": [
+      "poolctl stat --pool=gemma_primary --verbose",
+      "poolctl drain --pool=gemma_primary --force --timeout=10",
+      "250 active connections"
+    ],
+    "expected_sources": [
+      "incident_runbook.txt"
+    ],
+    "expected_locations": [
+      "Lines 9-22"
+    ],
+    "evidence_requirements": "Must cite incident_runbook.txt and provide both exact poolctl commands.",
+    "abstention_expected": false,
+    "rag_mode": "documents",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "incident_runbook.txt",
+        "source_path": "data/documents/incident_runbook.txt",
+        "category": "document",
+        "similarity": 0.596,
+        "score": 0.596,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "REMEDIATION STEPS:\n1. Clear idle and hung connections by running:\n    poolctl drain --pool=gemma_primary --force --timeout=10\n2. If connection acquisi..."
+      },
+      {
+        "file_name": "incident_runbook.txt",
+        "source_path": "data/documents/incident_runbook.txt",
+        "category": "document",
+        "similarity": 0.5107,
+        "score": 0.5107,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "OPERATIONAL INCIDENT RUNBOOK\nTopic: Database Connection Pool Starvation (Incident Code: ERR-503-POOL)\nSeverity: Severity-1 (High Impact)\n\nSYMPTOMS:\nDo..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3602,
+        "score": 0.3602,
+        "page_number": 3,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 3: DISASTER RECOVERY OBJECTIVES AND STORAGE BACKUP RTO/RPO\nBusiness continuity and disaster recovery procedures define strict recovery metrics..."
+      },
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.3477,
+        "score": 0.3477,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      }
+    ],
+    "context_tokens_approx": 810,
+    "generated_answer": "Based on the provided incident runbook:\n\n* **Diagnostic Command (Step 1):** \n  ```bash\n  poolctl stat --pool=gemma_primary --verbose\n  ```\n  [Document: incident_runbook.txt, Page 1]\n\n* **Initial Remediation Command (Step 1 of Remediation Steps):** \n  ```bash\n  poolctl drain --pool=gemma_primary --force --timeout=10\n  ```\n  [Document: incident_runbook.txt, Page 1]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 5918.25,
+    "ttft_ms": 5800.78,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:21:51"
+  },
+  {
+    "id": "AQ11",
+    "category": "codebase",
+    "question": "What HTTP routes and endpoints are implemented in app.py?",
+    "expected_answer": "In app.py, the implemented HTTP routes are GET / (UI index), GET /api/health (health check), GET & POST /api/settings (configuration), POST /api/settings/verify-gemini (API key validation), GET /api/models (list Ollama models), GET /api/aider/info (Aider metadata), POST /api/chat (SSE streaming chat), and POST /api/upload (image uploads).",
+    "expected_facts": [
+      "/api/chat",
+      "/api/health",
+      "/api/settings",
+      "/api/models",
+      "/api/upload"
+    ],
+    "expected_sources": [
+      "app.py"
+    ],
+    "expected_locations": [
+      "Lines 240-390"
+    ],
+    "evidence_requirements": "Must cite app.py and list the main API routes including /api/chat, /api/health, /api/settings.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "tests_rag_phase5.py",
+        "source_path": "tests_rag_phase5.py",
+        "category": "codebase",
+        "similarity": 0.487,
+        "score": 0.4286,
+        "page_number": null,
+        "start_line": 691,
+        "end_line": 723,
+        "symbol_name": "TestRAGPhase5Integration.test_14_flask_routes_intact",
+        "content_snippet": "def test_14_flask_routes_intact(self):\n        \"\"\"Verify that all Flask routes exist, route rules count >= 12, and basic endpoints respond.\"\"\"\n       ..."
+      },
+      {
+        "file_name": "run_app.py",
+        "source_path": "run_app.py",
+        "category": "codebase",
+        "similarity": 0.3965,
+        "score": 0.4282,
+        "page_number": null,
+        "start_line": 19,
+        "end_line": 22,
+        "symbol_name": "global",
+        "content_snippet": "APP_DIR = os.path.dirname(os.path.abspath(__file__))\nPORT = 5000\nSERVER_URL = f\"http://localhost:{PORT}\"\nOLLAMA_URL = \"http://localhost:11434/api/tags..."
+      },
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.383,
+        "score": 0.4136,
+        "page_number": null,
+        "start_line": 34,
+        "end_line": 36,
+        "symbol_name": "global",
+        "content_snippet": "APP_DIR = os.path.dirname(os.path.abspath(__file__))\nENV_FILE = os.path.join(APP_DIR, \".env\")\nload_dotenv(ENV_FILE)"
+      },
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.3678,
+        "score": 0.3972,
+        "page_number": null,
+        "start_line": 244,
+        "end_line": 246,
+        "symbol_name": "index",
+        "content_snippet": "def index():\n    \"\"\"Serve the chat UI.\"\"\"\n    return render_template(\"index.html\")"
+      }
+    ],
+    "context_tokens_approx": 605,
+    "generated_answer": "Based on the provided codebase references, the exact list of expected Flask endpoints and route rules defined in the test suite (`test_14_flask_routes_intact`) consists of [Code: tests_rag_phase5.py, Lines 691-723]:\n\n* `index`\n* `health` (responding at `/api/health`)\n* `get_settings`\n* `update_settings`\n* `verify_gemini`\n* `list_models` (responding at `/api/models`)\n* `aider_info`\n* `chat`\n* `upload_image`\n* `voice_status`\n* `transcribe_audio_endpoint`\n\n*(Note: The test also asserts that the total number of route rules is at least 12 [Code: tests_rag_phase5.py, Lines 691-694]).*",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6766.95,
+    "ttft_ms": 6289.29,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:22:00"
+  },
+  {
+    "id": "AQ12",
+    "category": "codebase",
+    "question": "How does classify_intent in app.py autonomously determine routing to pipeline, gemini, or chat?",
+    "expected_answer": "In app.py, classify_intent checks explicit_mode first. In 'auto' mode, it inspects the latest user message: if code fences or CODING_PATTERNS match, it selects 'pipeline' (DeepSeek + Qwen); if CURRENT_INFO_PATTERNS or DIFFICULT_REASONING_PATTERNS match, it selects 'gemini'; otherwise it defaults to local Gemma 4 ('chat').",
+    "expected_facts": [
+      "classify_intent",
+      "CODING_PATTERNS",
+      "pipeline",
+      "CURRENT_INFO_PATTERNS",
+      "DIFFICULT_REASONING_PATTERNS",
+      "gemini",
+      "chat"
+    ],
+    "expected_sources": [
+      "app.py"
+    ],
+    "expected_locations": [
+      "Lines 205-240"
+    ],
+    "evidence_requirements": "Must cite app.py and describe the three routing conditions: code -> pipeline, info/reasoning -> gemini, general -> chat.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.5505,
+        "score": 0.5945,
+        "page_number": null,
+        "start_line": 209,
+        "end_line": 239,
+        "symbol_name": "classify_intent",
+        "content_snippet": "def classify_intent(messages: list[dict], explicit_mode: str = \"auto\") -> str:\n    \"\"\"\n    Autonomously classifies user prompt according to the archit..."
+      },
+      {
+        "file_name": "service.py",
+        "source_path": "rag/service.py",
+        "category": "codebase",
+        "similarity": 0.482,
+        "score": 0.5206,
+        "page_number": null,
+        "start_line": 107,
+        "end_line": 155,
+        "symbol_name": "RAGService.detect_retrieval_mode",
+        "content_snippet": "def detect_retrieval_mode(self, query: str, explicit_mode: Optional[str] = \"auto\") -> str:\n        \"\"\"\n        Determine the effective retrieval mode:..."
+      },
+      {
+        "file_name": "retriever.py",
+        "source_path": "rag/retriever.py",
+        "category": "codebase",
+        "similarity": 0.4703,
+        "score": 0.5079,
+        "page_number": null,
+        "start_line": 436,
+        "end_line": 467,
+        "symbol_name": "UnifiedRetriever._detect_query_intent",
+        "content_snippet": "def _detect_query_intent(self, query: str) -> str:\n        \"\"\"\n        Classify query intent to guide source-aware ranking:\n        - 'test_query': qu..."
+      },
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.4496,
+        "score": 0.4856,
+        "page_number": null,
+        "start_line": 493,
+        "end_line": 612,
+        "symbol_name": "chat",
+        "content_snippet": "# Finished pipeline\n                aider_cmd = f\"aider --model ollama/{coder_m} --architect --editor-model ollama/{arch_m}\"\n                yield f\"d..."
+      }
+    ],
+    "context_tokens_approx": 1994,
+    "generated_answer": "Based on the codebase reference in `app.py`, the `classify_intent` function autonomously determines how to route a user prompt using the following step-by-step logic [Code: app.py, Lines 209-239]:\n\n1. **Explicit Mode Check:** \n   If an `explicit_mode` is provided and recognized (such as `\"gemini\"`, `\"pipeline\"`, `\"chat\"`, `\"deepseek\"`, `\"qwen\"`, or `\"gemma\"`), it immediately returns that mode (normalizing `\"gemma\"` to `\"chat\"`) [Code: app.py, Lines 215-219].\n\n2. **Extracting the Latest Message:** \n   If the mode is set to `\"auto\"`, it filters the message list for user messages (`role == \"user\"`). If no user messages are found, it defaults to `\"chat\"` [Code: app.py, Lines 221-225]. It then evaluates the content of the latest user message [Code: app.py, Lines 227-228]:\n\n3. **Routing Rules (Evaluated in Order):**\n   * **Coding Intent (`\"pipeline\"`):** If the content contains code blocks (`\"```\"`) or matches `CODING_PATTERNS`, it routes to the coding pipeline (DeepSeek Architect + Qwen Coder) [Code: app.py, Lines 230-232].\n   * **Current Info / Difficult Reasoning (`\"gemini\"`):** If the content matches `CURRENT_INFO_PATTERNS` or `DIFFICULT_REASONING_PATTERNS`, it routes to the Gemini API [Code: app.py, Lines 234-236].\n   * **Normal / Lightweight (`\"chat\"`):** If none of the above specific patterns match, it defaults to the local lightweight model (Local Gemma 4) [Code: app.py, Lines 238-239].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7508.37,
+    "ttft_ms": 6495.17,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:22:10"
+  },
+  {
+    "id": "AQ13",
+    "category": "codebase",
+    "question": "What model names and priorities are defined in CHAT_MODELS, ARCHITECT_MODELS, and CODER_MODELS in app.py?",
+    "expected_answer": "In app.py lines 95-101: CHAT_MODELS = ['gemma4:12b', 'gemma4:latest', 'gemma4', 'gemma3:latest', 'gemma:latest'], ARCHITECT_MODELS = ['deepseek-coder-v2:16b', 'deepseek-coder-v2:latest'], and CODER_MODELS = ['Qwen2.5-Coder:7B', 'qwen:latest'].",
+    "expected_facts": [
+      "gemma4:12b",
+      "deepseek-coder-v2:16b",
+      "Qwen2.5-Coder:7B",
+      "CHAT_MODELS",
+      "ARCHITECT_MODELS",
+      "CODER_MODELS"
+    ],
+    "expected_sources": [
+      "app.py"
+    ],
+    "expected_locations": [
+      "Lines 95-101"
+    ],
+    "evidence_requirements": "Must cite app.py and list gemma4:12b, deepseek-coder-v2:16b, and Qwen2.5-Coder:7B as top priorities.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.5691,
+        "score": 0.6146,
+        "page_number": null,
+        "start_line": 97,
+        "end_line": 99,
+        "symbol_name": "global",
+        "content_snippet": "CHAT_MODELS = [\"gemma4:12b\", \"gemma4:latest\", \"gemma4\", \"gemma3:latest\", \"gemma:latest\"]\nARCHITECT_MODELS = [\"deepseek-coder-v2:16b\", \"deepseek-coder-..."
+      },
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.4545,
+        "score": 0.4909,
+        "page_number": null,
+        "start_line": 38,
+        "end_line": 45,
+        "symbol_name": "global",
+        "content_snippet": "DEFAULT_GEMINI_MODEL = \"gemini-flash-lite-latest\"\nGEMINI_MODELS = [\n    {\"id\": \"gemini-flash-lite-latest\", \"name\": \"Gemini Flash-Lite (Default for Fre..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.4683,
+        "score": 0.4683,
+        "page_number": null,
+        "start_line": 211,
+        "end_line": 330,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"What HTTP endpoints and routes are defined in app.py?\",\n      \"expected_source\": \"app.py (Lines 120-200)\",\n   ..."
+      },
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.4273,
+        "score": 0.4615,
+        "page_number": null,
+        "start_line": 146,
+        "end_line": 161,
+        "symbol_name": "resolve_model",
+        "content_snippet": "def resolve_model(preference_list: list[str], available: list[str]) -> str:\n    \"\"\"Find the first matching installed model or fallback to first prefer..."
+      }
+    ],
+    "context_tokens_approx": 1847,
+    "generated_answer": "Based on `app.py` in the codebase, the model names and priorities defined for chat, architect, and coder models are as follows:\n\n* **`CHAT_MODELS`** [Code: app.py, Lines 97-99]:\n  ```python\n  [\"gemma4:12b\", \"gemma4:latest\", \"gemma4\", \"gemma3:latest\", \"gemma:latest\"]\n  ```\n\n* **`ARCHITECT_MODELS`** [Code: app.py, Lines 97-99]:\n  ```python\n  [\"deepseek-coder-v2:16b\", \"deepseek-coder-v2:latest\"]\n  ```\n\n* **`CODER_MODELS`** [Code: app.py, Lines 97-99]:\n  ```python\n  [\"Qwen2.5-Coder:7B\", \"qwen:latest\"]\n  ```",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6946.59,
+    "ttft_ms": 6538.13,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:22:19"
+  },
+  {
+    "id": "AQ14",
+    "category": "codebase",
+    "question": "How does VectorStoreManager initialize persistent ChromaDB storage and collections in rag/vector_store.py?",
+    "expected_answer": "In rag/vector_store.py, VectorStoreManager initializes ChromaDB using chromadb.PersistentClient(path=self.persist_directory). It calls client.get_or_create_collection with metadata={'hnsw:space': 'cosine'} to create two isolated collections: 'documents_collection' and 'codebase_collection'.",
+    "expected_facts": [
+      "PersistentClient",
+      "documents_collection",
+      "codebase_collection",
+      "get_or_create_collection",
+      "cosine"
+    ],
+    "expected_sources": [
+      "rag/vector_store.py"
+    ],
+    "expected_locations": [
+      "Lines 35-85"
+    ],
+    "evidence_requirements": "Must cite rag/vector_store.py and mention PersistentClient and the two isolated collections.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "vector_store.py",
+        "source_path": "rag/vector_store.py",
+        "category": "codebase",
+        "similarity": 0.6354,
+        "score": 0.6862,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 19,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nChromaDB Persistent Vector Store Implementation for Unified RAG\n- Uses chromadb.PersistentClient for in-process, persistent SQLite vector storage\n..."
+      },
+      {
+        "file_name": "vector_store.py",
+        "source_path": "rag/vector_store.py",
+        "category": "codebase",
+        "similarity": 0.6184,
+        "score": 0.6679,
+        "page_number": null,
+        "start_line": 53,
+        "end_line": 58,
+        "symbol_name": "VectorStoreManager",
+        "content_snippet": "class VectorStoreManager:\n    \"\"\"\n    Production-grade manager for persistent vector storage.\n    Supports separate, isolated collections for document..."
+      },
+      {
+        "file_name": "indexer.py",
+        "source_path": "rag/indexer.py",
+        "category": "codebase",
+        "similarity": 0.5413,
+        "score": 0.5846,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 37,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nIncremental Indexer & Manifest Orchestrator for Unified RAG\n- Manages SHA-256 content hashing to index only added, updated, or modified files\n- Pe..."
+      },
+      {
+        "file_name": "vector_store.py",
+        "source_path": "rag/vector_store.py",
+        "category": "codebase",
+        "similarity": 0.526,
+        "score": 0.5681,
+        "page_number": null,
+        "start_line": 64,
+        "end_line": 95,
+        "symbol_name": "VectorStoreManager.initialize",
+        "content_snippet": "def initialize(self) -> None:\n        \"\"\"Initialize the persistent ChromaDB client and provision isolated collections.\"\"\"\n        os.makedirs(self.per..."
+      }
+    ],
+    "context_tokens_approx": 1002,
+    "generated_answer": "Based on the provided codebase references, the `VectorStoreManager` implements persistent vector storage for the Unified RAG system with the following characteristics:\n\n* **Persistent Client:** It uses `chromadb.PersistentClient` for in-process, persistent SQLite vector storage [Code: vector_store.py, Lines 1-19].\n* **Isolated Collections:** It manages separate and isolated collections for documents and the codebase (`documents_collection` and `codebase_collection`) using cosine similarity [Code: vector_store.py, Lines 1-19, 53-58].\n* **Metadata Sanitization:** It sanitizes metadata to ensure strict compatibility with ChromaDB [Code: vector_store.py, Lines 1-19].\n* **Initialization:** It initializes cleanly at a configured persistence path (e.g., using `manager.initialize()`, which creates and verifies the persistence directory) [Code: tests_rag_phase2.py, Lines 115-121].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7094.18,
+    "ttft_ms": 6580.67,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:22:28"
+  },
+  {
+    "id": "AQ15",
+    "category": "codebase",
+    "question": "What parameters and endpoint does EmbeddingService use when calling Ollama in rag/embeddings.py?",
+    "expected_answer": "In rag/embeddings.py, EmbeddingService sends HTTP POST requests to '{base_url}/api/embed' with a JSON payload containing 'model' (self.model_name, default 'embeddinggemma') and 'input' (a single text string or batch list of strings), using timeout self.timeout (default 60 seconds).",
+    "expected_facts": [
+      "/api/embed",
+      "model",
+      "input",
+      "embeddinggemma",
+      "timeout"
+    ],
+    "expected_sources": [
+      "rag/embeddings.py"
+    ],
+    "expected_locations": [
+      "Lines 140-220"
+    ],
+    "evidence_requirements": "Must cite rag/embeddings.py and reference /api/embed, model, and input.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.6697,
+        "score": 0.7702,
+        "page_number": null,
+        "start_line": 25,
+        "end_line": 30,
+        "symbol_name": "global",
+        "content_snippet": "OLLAMA_BASE_URL = os.environ.get(\"OLLAMA_BASE_URL\", \"http://localhost:11434\")\nPRIMARY_EMBEDDING_MODEL = os.environ.get(\"RAG_EMBEDDING_MODEL\", \"embeddi..."
+      },
+      {
+        "file_name": "embeddings.py",
+        "source_path": "rag/embeddings.py",
+        "category": "codebase",
+        "similarity": 0.74,
+        "score": 0.74,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 19,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nShared Ollama Embedding Service Implementation for Unified RAG\n- Connects to local Ollama daemon (/api/embed endpoint)\n- Generates 768-dimensional..."
+      },
+      {
+        "file_name": "embeddings.py",
+        "source_path": "rag/embeddings.py",
+        "category": "codebase",
+        "similarity": 0.6385,
+        "score": 0.6385,
+        "page_number": null,
+        "start_line": 42,
+        "end_line": 47,
+        "symbol_name": "EmbeddingService",
+        "content_snippet": "class EmbeddingService:\n    \"\"\"\n    Shared, production-grade vector embedding generator using local Ollama.\n    Never silently switches models; strict..."
+      },
+      {
+        "file_name": "chatbot.py",
+        "source_path": "chatbot.py",
+        "category": "codebase",
+        "similarity": 0.5659,
+        "score": 0.5659,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 15,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nGemma Chatbot — A simple terminal chatbot powered by a local Gemma model via Ollama.\n\nUsage:\n    python chatbot.py\n\nPrerequisites:\n    - Ollama mu..."
+      }
+    ],
+    "context_tokens_approx": 520,
+    "generated_answer": "Based on the provided codebase references, the `EmbeddingService` in `rag/embeddings.py` connects to the local Ollama daemon using the following endpoint and parameters:\n\n* **Endpoint:** `/api/embed` (built upon `OLLAMA_BASE_URL`, which defaults to `http://localhost:11434`) [Code: embeddings.py, Lines 1-19, Code: config.py, Lines 25-30]\n* **Key Configuration Parameters:**\n  * **Embedding Dimension:** `768` (`EMBEDDING_DIMENSION`) [Code: config.py, Lines 25-30]\n  * **Batch Size:** `32` (`EMBEDDING_BATCH_SIZE`) [Code: config.py, Lines 25-30]\n  * **Timeout:** `60` seconds (`EMBEDDING_TIMEOUT_SECONDS`) [Code: config.py, Lines 25-30]\n  * **Primary Model:** `embeddinggemma` (`PRIMARY_EMBEDDING_MODEL`) [Code: config.py, Lines 25-30]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6612.99,
+    "ttft_ms": 6014.6,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:22:37"
+  },
+  {
+    "id": "AQ16",
+    "category": "codebase",
+    "question": "How does IncrementalIndexer compute file hashes in rag/indexer.py?",
+    "expected_answer": "In rag/indexer.py, compute_file_hash opens the file in binary mode ('rb') and reads it in 64 KB (65,536 bytes) chunks into hashlib.sha256(), returning sha256.hexdigest().",
+    "expected_facts": [
+      "hashlib.sha256()",
+      "65536",
+      "64KB",
+      "hexdigest()"
+    ],
+    "expected_sources": [
+      "rag/indexer.py"
+    ],
+    "expected_locations": [
+      "Lines 125-136"
+    ],
+    "evidence_requirements": "Must cite rag/indexer.py and mention hashlib.sha256() and 64KB (65536 byte) block reading.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "indexer.py",
+        "source_path": "rag/indexer.py",
+        "category": "codebase",
+        "similarity": 0.5391,
+        "score": 0.5822,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 37,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nIncremental Indexer & Manifest Orchestrator for Unified RAG\n- Manages SHA-256 content hashing to index only added, updated, or modified files\n- Pe..."
+      },
+      {
+        "file_name": "indexer.py",
+        "source_path": "rag/indexer.py",
+        "category": "codebase",
+        "similarity": 0.5354,
+        "score": 0.5782,
+        "page_number": null,
+        "start_line": 40,
+        "end_line": 46,
+        "symbol_name": "IncrementalIndexer",
+        "content_snippet": "class IncrementalIndexer:\n    \"\"\"\n    Orchestrates differential indexing across documentation and codebase.\n    Employs versioned generation replaceme..."
+      },
+      {
+        "file_name": "indexer.py",
+        "source_path": "rag/indexer.py",
+        "category": "codebase",
+        "similarity": 0.4515,
+        "score": 0.4876,
+        "page_number": null,
+        "start_line": 432,
+        "end_line": 551,
+        "symbol_name": "IncrementalIndexer.index_codebase",
+        "content_snippet": "def index_codebase(self, root_dir: Optional[str] = None) -> Dict[str, Any]:\n        \"\"\"\n        Scan and incrementally index codebase and config files..."
+      },
+      {
+        "file_name": "indexer.py",
+        "source_path": "rag/indexer.py",
+        "category": "codebase",
+        "similarity": 0.4378,
+        "score": 0.4728,
+        "page_number": null,
+        "start_line": 125,
+        "end_line": 135,
+        "symbol_name": "IncrementalIndexer.compute_file_hash",
+        "content_snippet": "def compute_file_hash(file_path: str) -> str:\n        \"\"\"Compute SHA-256 checksum of a file in 64KB blocks.\"\"\"\n        sha256 = hashlib.sha256()\n     ..."
+      }
+    ],
+    "context_tokens_approx": 1945,
+    "generated_answer": "Based on the provided codebase references, `IncrementalIndexer` utilizes SHA-256 content hashing to index only added, updated, or modified files [Code: indexer.py, Lines 1-37]. \n\nSpecifically, within the codebase indexing workflow (`index_codebase`), it computes the file hash by calling the method `self.compute_file_hash(abs_path)` for each discovered code file:\n\n```python\ncur_hash = self.compute_file_hash(abs_path)\n```\n*(As seen in [Code: indexer.py, Lines 432-551])*",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7167.88,
+    "ttft_ms": 6859.48,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:22:46"
+  },
+  {
+    "id": "AQ17",
+    "category": "codebase",
+    "question": "How does versioned chunk replacement in _safe_replace_file_entry in rag/indexer.py handle atomic staging and rollback?",
+    "expected_answer": "In rag/indexer.py, _safe_replace_file_entry generates a unique 8-character hex generation_id (uuid.uuid4().hex[:8]) for each indexing run. New chunks are stored in ChromaDB with generation-specific IDs. The manifest is committed atomically via save_manifest. If insertion or commit fails, newly staged chunk IDs are rolled back via delete_by_ids and the previous manifest entry is restored. Old chunks are deleted only after successful commit.",
+    "expected_facts": [
+      "generation_id",
+      "uuid.uuid4().hex[:8]",
+      "delete_by_ids",
+      "rollback",
+      "save_manifest"
+    ],
+    "expected_sources": [
+      "rag/indexer.py"
+    ],
+    "expected_locations": [
+      "Lines 210-285"
+    ],
+    "evidence_requirements": "Must cite rag/indexer.py and explain generation_id, delete_by_ids rollback, and post-commit cleanup.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "indexer.py",
+        "source_path": "rag/indexer.py",
+        "category": "codebase",
+        "similarity": 0.5627,
+        "score": 0.6077,
+        "page_number": null,
+        "start_line": 40,
+        "end_line": 46,
+        "symbol_name": "IncrementalIndexer",
+        "content_snippet": "class IncrementalIndexer:\n    \"\"\"\n    Orchestrates differential indexing across documentation and codebase.\n    Employs versioned generation replaceme..."
+      },
+      {
+        "file_name": "indexer.py",
+        "source_path": "rag/indexer.py",
+        "category": "codebase",
+        "similarity": 0.5447,
+        "score": 0.5883,
+        "page_number": null,
+        "start_line": 147,
+        "end_line": 266,
+        "symbol_name": "IncrementalIndexer._safe_replace_file_entry",
+        "content_snippet": "def _safe_replace_file_entry(\n        self,\n        collection_name: str,\n        manifest_category: str,\n        rel_path: str,\n        chunks: List[..."
+      },
+      {
+        "file_name": "indexer.py",
+        "source_path": "rag/indexer.py",
+        "category": "codebase",
+        "similarity": 0.5212,
+        "score": 0.5629,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 37,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nIncremental Indexer & Manifest Orchestrator for Unified RAG\n- Manages SHA-256 content hashing to index only added, updated, or modified files\n- Pe..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.4528,
+        "score": 0.4528,
+        "page_number": null,
+        "start_line": 211,
+        "end_line": 330,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"What HTTP endpoints and routes are defined in app.py?\",\n      \"expected_source\": \"app.py (Lines 120-200)\",\n   ..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the provided codebase reference (`indexer.py`), versioned chunk replacement in `_safe_replace_file_entry` handles atomic staging and rollback through a careful sequence of generation tracking, isolation, verification, and exception management [Code: indexer.py, Lines 147-266]. \n\nHere is how it accomplishes this step-by-step:\n\n### 1. Unique Generation ID & ID Versioning (Isolation)\n* **Unique Generation ID:** A unique 8-character hex identifier (`gen_id`) is assigned to each indexing/replacement operation using `uuid.uuid4().hex[:8]` [Code: indexer.py, Lines 188].\n* **Chunk ID Versioning:** For every new chunk, any previous generation tag is stripped, and the new generation tag (`:g{gen_id}`) is appended to the chunk ID (`v_id = f\"{clean_base}:g{gen_id}\"`). This ensures that new chunks never collide with or overwrite old chunks during the staging process [Code: indexer.py, Lines 189-197].\n\n### 2. Staging & Storage Verification\n* **Embedding and Insertion:** The new texts, metadatas, and versioned IDs are embedded and inserted directly into the vector store (`ChromaDB`) *before* the manifest is updated [Code: indexer.py, Lines 204-222].\n* **Verification:** The method explicitly queries the vector store collection (`col.get(ids=new_ids)`) to verify that all expected chunks were successfully stored and retrieved before proceeding [Code: indexer.py, Lines 225-230].\n\n### 3. Manifest Commit (The Atomic Switch)\n* Only after successful storage verification does the system update the manifest entry (`cat_manifest[rel_path]`) with the new `generation_id`, `chunk_ids`, and file metadataBased on the implementation of `_safe_replace_file_entry` in `indexer.py` [Code: indexer.py, Lines 147-266], versioned chunk replacement handles atomic staging and rollback through a carefully sequenced multi-step process:\n\n1. **Generation ID Assignment & ID Versioning (Steps 1 & 2):**\n   - A unique generation identifier (`gen_id`) is created using a truncated UUID (`uuid.uuid4().hex[:8]`) [Code: indexer.py, Line 187].\n   - For every chunk in the file, any previous generation tag (e.g., `:g1a2b3c4`) is stripped from the base ID using regex, and a new versioned ID is assigned in the format `{clean_base}:g{gen_id}` [Code: indexer.py, Lines 189-195]. This ensures that new chunks never collide with or overwrite old chunks during the staging phase.\n\n2. **Isolated Staging & Storage Verification (Steps 3 & 4):**\n   - Embeddings are generated and the *newly versioned* chunks are added directly to the vector store (`ChromaDB`) alongside the existing old-generation chunks [Code: indexer.py, Lines 204-220]. \n   - A storage verification check is immediately executed by querying the vector store collection for the newly added IDs to guarantee they were successfully persisted [Code: indexer.py, Lines 223-228].\n\n3. **Manifest Commit (Step 5):**\n   - Only after successful insertion and verification does the indexer update the in-memory manifest data structure with the new `generation_id`, `chunk_ids`, and metadata, pointing to the new generation [Code: indexer.py, Lines 239-251].\n\n4. **Rollback on Failure (Exception Handling):**\n   - If any exception or failure occurs *prior* to the manifest commit (such as an embedding failure, upsert mismatch, or storage verification failure), the code catches the exception in a `try...except staging_exc` block [Code: indexer.py, Lines 230-236].\n   - Inside the exception handler, it immediately performs a cleanup by deleting the newly inserted chunks (`new_ids`) from the vector store (`self.vector_store.delete_by_ids`) [Code: indexer.py, Lines 231-235]. \n   - Because the manifest is never updated or committed during a staging failure, the old generation chunks and previous manifest entries remain completely untouched and intact, achieving zero data loss and crash resilience.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 12398.4,
+    "ttft_ms": 7067.74,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:23:00"
+  },
+  {
+    "id": "AQ18",
+    "category": "codebase",
+    "question": "How does UnifiedRetriever enforce active generation filtering in rag/retriever.py?",
+    "expected_answer": "In rag/retriever.py, UnifiedRetriever loads the committed index manifest. For each candidate chunk, it verifies that the file exists in the active manifest and that the chunk's generation_id matches the active generation_id. If a chunk belongs to an uncommitted, obsolete, or orphaned generation, it is discarded.",
+    "expected_facts": [
+      "active_generation",
+      "cat_manifest",
+      "generation_id",
+      "chunk_ids"
+    ],
+    "expected_sources": [
+      "rag/retriever.py"
+    ],
+    "expected_locations": [
+      "Lines 315-345"
+    ],
+    "evidence_requirements": "Must cite rag/retriever.py and describe checking the manifest generation_id against the chunk generation_id.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "retriever.py",
+        "source_path": "rag/retriever.py",
+        "category": "codebase",
+        "similarity": 0.622,
+        "score": 0.6718,
+        "page_number": null,
+        "start_line": 109,
+        "end_line": 116,
+        "symbol_name": "UnifiedRetriever",
+        "content_snippet": "class UnifiedRetriever:\n    \"\"\"\n    Semantic search engine querying Document RAG and Codebase RAG collections.\n    Provides configurable top-k limits,..."
+      },
+      {
+        "file_name": "service.py",
+        "source_path": "rag/service.py",
+        "category": "codebase",
+        "similarity": 0.5543,
+        "score": 0.5986,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 17,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nRAG Service & Chatbot Integration Layer\n- Coordinates between user query routing, UnifiedRetriever, and PromptBuilder\n- Supports retrieval modes: ..."
+      },
+      {
+        "file_name": "__init__.py",
+        "source_path": "rag/__init__.py",
+        "category": "codebase",
+        "similarity": 0.4763,
+        "score": 0.5144,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 49,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nUnified RAG (Retrieval-Augmented Generation) Subsystem for Gemma Chatbot\nProvides Document RAG (PDF, TXT, MD) and Codebase RAG (Python AST, Projec..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.4991,
+        "score": 0.4991,
+        "page_number": null,
+        "start_line": 316,
+        "end_line": 435,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"How does UnifiedRetriever enforce active generation filtering using the committed manifest to prevent stale ch..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the provided codebase reference context, the exact implementation details of how `UnifiedRetriever` enforces active generation filtering within `rag/retriever.py` are truncated from the snippet. \n\nHowever, looking at the class docstring for `UnifiedRetriever` in `rag/retriever.py` and the automated test suite descriptions in `tests_rag_phase4_2.py`, we can outline its core design and purpose [Code: retriever.py, Lines 109-116, Code: tests_rag_phase4_2.py, Lines 1-37]:\n\n1. **Active Generation Filtering**: `UnifiedRetriever` enforces active generation filtering to ensure that uncommitted, stale, or orphaned generations are never returned to the user or prompt context [Code: retriever.py, Lines 109-116].\n2. **Manifest Integration**: It relies on committed manifest states (as tested in Phase 4.2) to verify which file chunks and generation versions are currently active, ensuring old generations are excluded after a manifest commit, and uncommitted or staged generations are ignored [Code: tests_rag_phase4_2.py, Lines 1-15].\n3. **Core Responsibilities**: As a semantic search engine querying both Document RAG and Codebase RAG collections, it combines top-$k$ limiting, cosine relevance thresholds, deduplication, and generation validation before returning chunks [Code: retriever.py, Lines 109-116].\n\n*(Note: For the exact line-by-line algorithmic implementation of this filtering mechanism, refer directly to `rag/retriever.py` lines 110–185, which house the specific search and filter logic.)*",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7916.72,
+    "ttft_ms": 6359.9,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:23:10"
+  },
+  {
+    "id": "AQ19",
+    "category": "codebase",
+    "question": "How does PromptBuilder format retrieved context and guard against prompt injection in rag/prompt_builder.py?",
+    "expected_answer": "In rag/prompt_builder.py, PromptBuilder prepends a prominent header: '### RETRIEVED REFERENCE CONTEXT (UNTRUSTED CONTENT)' with security notices instructing the model that reference context is passive factual data and not to follow instructions embedded within it. It formats structured citations ([Document: ..., Page X] or [Code: ..., Lines Y-Z]) and enforces a token/character budget.",
+    "expected_facts": [
+      "### RETRIEVED REFERENCE CONTEXT (UNTRUSTED CONTENT)",
+      "passive factual reference data",
+      "[Document: ..., Page X]",
+      "[Code: ..., Lines Y-Z]"
+    ],
+    "expected_sources": [
+      "rag/prompt_builder.py"
+    ],
+    "expected_locations": [
+      "Lines 43-112"
+    ],
+    "evidence_requirements": "Must cite rag/prompt_builder.py and mention the untrusted content header and structured citation tags.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "prompt_builder.py",
+        "source_path": "rag/prompt_builder.py",
+        "category": "codebase",
+        "similarity": 0.6339,
+        "score": 0.6846,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 16,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nContext Synthesis & Grounded Prompt Builder\n- Formats retrieved document and codebase chunks into structured reference blocks\n- Generates exact, v..."
+      },
+      {
+        "file_name": "service.py",
+        "source_path": "rag/service.py",
+        "category": "codebase",
+        "similarity": 0.5359,
+        "score": 0.5788,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 17,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nRAG Service & Chatbot Integration Layer\n- Coordinates between user query routing, UnifiedRetriever, and PromptBuilder\n- Supports retrieval modes: ..."
+      },
+      {
+        "file_name": "prompt_builder.py",
+        "source_path": "rag/prompt_builder.py",
+        "category": "codebase",
+        "similarity": 0.5294,
+        "score": 0.5718,
+        "page_number": null,
+        "start_line": 21,
+        "end_line": 33,
+        "symbol_name": "PromptBuilder",
+        "content_snippet": "class PromptBuilder:\n    \"\"\"\n    Builds grounded context payloads with strict untrusted-content framing,\n    verifiable source citations, and context ..."
+      },
+      {
+        "file_name": "prompt_builder.py",
+        "source_path": "rag/prompt_builder.py",
+        "category": "codebase",
+        "similarity": 0.4988,
+        "score": 0.5387,
+        "page_number": null,
+        "start_line": 211,
+        "end_line": 231,
+        "symbol_name": "PromptBuilder.build_grounded_prompt",
+        "content_snippet": "def build_grounded_prompt(\n        self,\n        user_prompt: str,\n        retrieved_chunks: Union[RetrievalResponse, List[Union[RetrievedChunk, Dict[..."
+      }
+    ],
+    "context_tokens_approx": 942,
+    "generated_answer": "Based on the provided codebase reference `rag/prompt_builder.py`, here is how `PromptBuilder` handles context formatting and prompt injection defense:\n\n### 1. Context Synthesis & Formatting\n`PromptBuilder` is responsible for formatting retrieved document and codebase chunks into structured reference blocks [Code: prompt_builder.py, Lines 1-16]. \n* It accepts retrieved chunks (either as a `RetrievalResponse` or a list of `RetrievedChunk`/`Dict` objects) [Code: prompt_builder.py, Lines 211-216].\n* It generates exact, verifiable citations (such as PDF page numbers, code line numbers, and symbol names) [Code: prompt_builder.py, Lines 1-16].\n* It assembles the final grounded prompt by combining a system instruction (if provided), the structured context block, and the user query using the `build_grounded_prompt` method [Code: prompt_builder.py, Lines 211-231]:\n  ```python\n  sections.append(f\"### SYSTEM INSTRUCTION\\n{system_instruction.strip()}\")\n  sections.append(context_block)\n  sections.append(f\"### USER QUERY\\n{user_prompt.strip()}\")\n  ```\n* It enforces a strict context character/token budget using a configurable empirical approximation (defaulting to `4.0` characters per token) to ensure truncation never produces malformed citations or unclosed code fences [Code: prompt_builder.py, Lines 1-16, 21-33].\n\n### 2. Prompt Injection Defense\n`PromptBuilder` specifically enforces **prompt injection defense** by treating retrieved context as untrusted content [Code: prompt_builder.py, Lines 1-16, 21-33]. It uses strict untrusted-content framing around the reference blocks [Code: prompt_builder.py, Lines 21-33] to isolate external retrieved data from the core system instructions and user queries, mitigating the risk of malicious instructions hidden within the retrieved documents or codebase chunks from being executed.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7465.23,
+    "ttft_ms": 6386.77,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:23:20"
+  },
+  {
+    "id": "AQ20",
+    "category": "codebase",
+    "question": "How does RAGService implement conservative auto-routing in rag/service.py?",
+    "expected_answer": "In rag/service.py, detect_retrieval_mode checks for explicit modes first. Under 'auto' mode, it uses regex heuristics: greetings and small talk (<=60 chars) return 'off' to avoid unnecessary retrieval; combined doc/code queries return 'both'; doc keywords return 'documents'; and codebase keywords return 'codebase'. The default fallback is 'off'.",
+    "expected_facts": [
+      "GREETINGS_PATTERN",
+      "SMALL_TALK_PATTERN",
+      "off",
+      "COMBINED_PATTERN",
+      "both",
+      "DOCUMENTS_PATTERN",
+      "CODEBASE_PATTERN"
+    ],
+    "expected_sources": [
+      "rag/service.py"
+    ],
+    "expected_locations": [
+      "Lines 128-156"
+    ],
+    "evidence_requirements": "Must cite rag/service.py and explain that greetings/small-talk return off and specific patterns trigger documents, codebase, or both.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "service.py",
+        "source_path": "rag/service.py",
+        "category": "codebase",
+        "similarity": 0.5222,
+        "score": 0.564,
+        "page_number": null,
+        "start_line": 91,
+        "end_line": 96,
+        "symbol_name": "RAGService",
+        "content_snippet": "class RAGService:\n    \"\"\"\n    High-level integration controller for the RAG subsystem.\n    Orchestrates query classification, retrieval execution, and..."
+      },
+      {
+        "file_name": "service.py",
+        "source_path": "rag/service.py",
+        "category": "codebase",
+        "similarity": 0.5112,
+        "score": 0.5521,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 17,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nRAG Service & Chatbot Integration Layer\n- Coordinates between user query routing, UnifiedRetriever, and PromptBuilder\n- Supports retrieval modes: ..."
+      },
+      {
+        "file_name": "service.py",
+        "source_path": "rag/service.py",
+        "category": "codebase",
+        "similarity": 0.4673,
+        "score": 0.5047,
+        "page_number": null,
+        "start_line": 291,
+        "end_line": 293,
+        "symbol_name": "detect_retrieval_mode",
+        "content_snippet": "def detect_retrieval_mode(query: str, explicit_mode: Optional[str] = \"auto\") -> str:\n    \"\"\"Convenience module function for query mode detection.\"\"\"\n ..."
+      },
+      {
+        "file_name": "__init__.py",
+        "source_path": "rag/__init__.py",
+        "category": "codebase",
+        "similarity": 0.4238,
+        "score": 0.4577,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 49,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nUnified RAG (Retrieval-Augmented Generation) Subsystem for Gemma Chatbot\nProvides Document RAG (PDF, TXT, MD) and Codebase RAG (Python AST, Projec..."
+      }
+    ],
+    "context_tokens_approx": 848,
+    "generated_answer": "Based on the provided codebase reference, `RAGService` provides conservative automated routing specifically designed to avoid unnecessary retrieval on greetings or general chat [Code: service.py, Lines 1-17]. \n\nWhile the exact internal implementation details of the routing logic are not fully displayed in the snippet, `RAGService` coordinates user query routing using components like `UnifiedRetriever` and `PromptBuilder`, and supports multiple retrieval modes including `'off'`, `'auto'`, `'documents'`, `'codebase'`, and `'both'` [Code: service.py, Lines 1-17]. Additionally, module-level convenience functions such as `detect_retrieval_mode` are exposed to handle query mode detection (`detect_retrieval_mode(query: str, explicit_mode: Optional[str] = \"auto\")`) [Code: service.py, Lines 291-293].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6795.53,
+    "ttft_ms": 6275.18,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:23:29"
+  },
+  {
+    "id": "AQ21",
+    "category": "frontend",
+    "question": "Where is the rag-mode-select element defined and what options does it provide in templates/index.html?",
+    "expected_answer": "In templates/index.html (lines 170-210), the RAG mode dropdown is defined as <select id='rag-mode-select'> containing five options: 'Auto' (value='auto'), 'Documents' (value='documents'), 'Codebase' (value='codebase'), 'Both' (value='both'), and 'Off' (value='off').",
+    "expected_facts": [
+      "rag-mode-select",
+      "Auto",
+      "Documents",
+      "Codebase",
+      "Both",
+      "Off"
+    ],
+    "expected_sources": [
+      "templates/index.html"
+    ],
+    "expected_locations": [
+      "Lines 170-210"
+    ],
+    "evidence_requirements": "Must cite templates/index.html and list all 5 options: Auto, Documents, Codebase, Both, Off.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4914,
+        "score": 0.5651,
+        "page_number": null,
+        "start_line": 526,
+        "end_line": 645,
+        "symbol_name": "index.html",
+        "content_snippet": ".rag-sources-section {\n      background: var(--surface-2);\n      border: 1px solid var(--border);\n      border-radius: 8px;\n      margin-bottom: 10px;..."
+      },
+      {
+        "file_name": "tests_rag_phase6.py",
+        "source_path": "tests_rag_phase6.py",
+        "category": "codebase",
+        "similarity": 0.6185,
+        "score": 0.5567,
+        "page_number": null,
+        "start_line": 135,
+        "end_line": 139,
+        "symbol_name": "TestFrontendRAGControls.test_01_template_contains_rag_mode_selector",
+        "content_snippet": "def test_01_template_contains_rag_mode_selector(self):\n        \"\"\"Verify #ragModeSelect exists in index.html with class rag-select.\"\"\"\n        self.as..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4711,
+        "score": 0.5418,
+        "page_number": null,
+        "start_line": 421,
+        "end_line": 540,
+        "symbol_name": "index.html",
+        "content_snippet": ".message.bot .bubble {\n      background: var(--bot-bg);\n      color: var(--bot-text);\n      border: 1px solid var(--border);\n      border-bottom-left-..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4601,
+        "score": 0.5291,
+        "page_number": null,
+        "start_line": 631,
+        "end_line": 750,
+        "symbol_name": "index.html",
+        "content_snippet": "color: #c084fc;\n      border: 1px solid rgba(168, 85, 247, 0.3);\n    }\n    .rag-source-name {\n      font-weight: 600;\n      color: var(--text);\n      ..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the codebase references, the `#ragModeSelect` element is tested in `tests_phase6.py` [Code: tests_rag_phase6.py, Lines 135-139], which verifies that it exists in `index.html` with the class `rag-select` inside a `rag-select-wrapper` container [Code: tests_rag_phase6.py, Lines 135-139].\n\nAccording to `test_02_selector_has_all_five_options_with_auto_default`, the element provides **5 options**, with **`auto`** set as the default selected option [Code: tests_rag_phase6.py, Lines 141-157]:\n\n1. `auto` (Default, has the `selected` attribute) [Code: tests_rag_phase6.py, Lines 141-157]\n2. `documents` [Code: tests_rag_phase6.py, Lines 141-157]\n3. `codebase` [Code: tests_rag_phase6.py, Lines 141-157]\n4. `both` [Code: tests_rag_phase6.py, Lines 141-157]\n5. `off` [Code: tests_rag_phase6.py, Lines 141-157]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7374.84,
+    "ttft_ms": 6345.72,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:23:38"
+  },
+  {
+    "id": "AQ22",
+    "category": "frontend",
+    "question": "How is the streaming pause and resume button implemented in templates/index.html?",
+    "expected_answer": "In templates/index.html (lines 2200-2450), the pause/resume functionality is handled by button '#btn-pause-stream'. Clicking it toggles 'isPaused'. When paused, incoming SSE tokens are queued in 'tokenBuffer', and when resumed via resumeStream(), buffered tokens are drained into the UI.",
+    "expected_facts": [
+      "btn-pause-stream",
+      "pauseStream",
+      "resumeStream",
+      "isPaused",
+      "tokenBuffer"
+    ],
+    "expected_sources": [
+      "templates/index.html"
+    ],
+    "expected_locations": [
+      "Lines 2200-2450"
+    ],
+    "evidence_requirements": "Must cite templates/index.html and mention btn-pause-stream and token buffering.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.5245,
+        "score": 0.6032,
+        "page_number": null,
+        "start_line": 946,
+        "end_line": 1065,
+        "symbol_name": "index.html",
+        "content_snippet": "cursor: pointer;\n      display: flex;\n      align-items: center;\n      gap: 4px;\n      transition: all 0.2s;\n    }\n    .banner-action-btn.pause-btn {\n..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4747,
+        "score": 0.5459,
+        "page_number": null,
+        "start_line": 841,
+        "end_line": 960,
+        "symbol_name": "index.html",
+        "content_snippet": "display: flex;\n      align-items: center;\n      gap: 6px;\n      font-size: 11px;\n      color: var(--text-dim);\n      padding: 0 4px;\n    }\n    .messag..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4547,
+        "score": 0.5229,
+        "page_number": null,
+        "start_line": 1681,
+        "end_line": 1800,
+        "symbol_name": "index.html",
+        "content_snippet": ".settings-footer {\n      display: flex;\n      align-items: center;\n      justify-content: flex-end;\n      gap: 10px;\n      padding: 12px 20px;\n      b..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4419,
+        "score": 0.5082,
+        "page_number": null,
+        "start_line": 3256,
+        "end_line": 3375,
+        "symbol_name": "index.html",
+        "content_snippet": "if (interruptedContext && interruptedContext.partialBotResponse) {\n        conversationHistory.push({ role: \"assistant\", content: interruptedContext.p..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the provided codebase from `index.html`, the streaming pause and resume interface is structured using CSS classes, button elements, and notification banners. \n\nHere is how it is implemented:\n\n### 1. The Pause / Interruption Banner Container\nThe main UI container for handling pause states is `.pause-banner`. It uses flexbox for alignment, is hidden by default (`display: none;`), and becomes active when the `.visible` class is appended [Code: index.html, Lines 895-909]:\n```css\n.pause-banner {\n  display: none;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n  padding: 9px 14px;\n  background: var(--surface-2);\n  border: 1px solid var(--border);\n  border-radius: 12px;\n  margin-bottom: 8px;\n  animation: slideDown 0.25s ease;\n}\n.pause-banner.visible { display: flex; }\n```\n\n### 2. Pulse Indicators for States\nInside the banner, a dynamic pulsing dot (`.pause-pulse-dot`) changes its behavior/color depending on whether the system is actively running or paused. For instance, when paused, a `.paused` modifier switches the dot color to a warning state [Code: index.html, Lines 916-935]:\n```css\n.pause-pulse-dot {\n  width: 8px; height: 8px;\n  border-radius: 50%;\n  background: var(--accent);\n  animation: pulseGlow 1.5s infinite;\n}\n.pause-banner.paused .pause-pulse-dot { background: var(--warning); }\n```\n\n### 3. Action Buttons (Pause & Resume)\nThe action buttons use specific style classes (`.banner-action-btn.pause-btn` and `.banner-action-btn.resume-btn`) that assign context-specific colors (such as warning orange for pausing and success green for resuming) with hover transition effects [Code: index.html, Lines 937-960]:\n```css\n.banner-action-btn {\n  background: var(--surface);\n  border: 1px solid var(--border);\n  color: var(--text);\n  padding: 5px 10px;\n  border-radius: 6px;\n  font-size: 11px;\n  font-weight: 500;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  gap: 4px;\n  transition: all 0.2s;\n}\n.banner-action-btn.pause-btn {\n  background: rgba(240, 160, 64, 0.15);\n  border-color: var(--warning);\n  color: var(--warning);\n}\n.banner-action-btn.pause-btn:hover { background: var(--warning); color: white; }\n\n.banner-action-btn.resume-btn {\n  background: rgba(74, 222, 128, 0.15);\n  border-color: var(--success);\n  color: var(--success);\n}\n.banner-action-btn.resume-btn:hover { background: var(--success); color: white; }\n```\n\n### 4. Paused Input Options Strip\nAdditionally, a secondary bar (`.paused-options-bar`) provides alternative input actions when execution is paused, allowing options like add-ons or alternate inputs to appear dynamically via the `.visible` toggle class [Code: index.html, Lines 962-975]:\n```css\n.paused-options-bar {\n  display: none;\n  align-items: center;\n  justify-content: space-between;\n  gap: 10px;\n  padding: 4px 0 8px 0;\n  font-size: 12px;\n}\n.paused-options-bar.visible { display: flex; }\n```",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 9914.6,
+    "ttft_ms": 7171.63,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:23:50"
+  },
+  {
+    "id": "AQ23",
+    "category": "frontend",
+    "question": "How does streamBotPipeline handle the citation SSE event in templates/index.html?",
+    "expected_answer": "In templates/index.html (lines 2500-2750), streamBotPipeline listens for SSE events of type 'citation' or parses 'rag_sources' from the 'route' event. It calls renderCitations() to display interactive source pills with CSS class 'citation-pill', showing the source file name, page number, or line range.",
+    "expected_facts": [
+      "citation",
+      "citation-pill",
+      "renderCitations",
+      "source_path",
+      "rag_sources"
+    ],
+    "expected_sources": [
+      "templates/index.html"
+    ],
+    "expected_locations": [
+      "Lines 2500-2750"
+    ],
+    "evidence_requirements": "Must cite templates/index.html and reference citation event and citation-pill rendering.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4662,
+        "score": 0.5361,
+        "page_number": null,
+        "start_line": 3466,
+        "end_line": 3585,
+        "symbol_name": "index.html",
+        "content_snippet": "try {\n              const data = JSON.parse(line.slice(6));\n\n              // ── 1. Route Announcement ──\n              if (data.type === \"route\") {\n ..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4389,
+        "score": 0.5047,
+        "page_number": null,
+        "start_line": 631,
+        "end_line": 750,
+        "symbol_name": "index.html",
+        "content_snippet": "color: #c084fc;\n      border: 1px solid rgba(168, 85, 247, 0.3);\n    }\n    .rag-source-name {\n      font-weight: 600;\n      color: var(--text);\n      ..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4346,
+        "score": 0.4998,
+        "page_number": null,
+        "start_line": 3361,
+        "end_line": 3480,
+        "symbol_name": "index.html",
+        "content_snippet": "pendingImages = []; renderPreviews();\n\n        await streamBotPipeline(combinedPrompt, images);\n      } else {\n        userInput.value = \"\"; userInput..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.417,
+        "score": 0.4795,
+        "page_number": null,
+        "start_line": 1891,
+        "end_line": 2010,
+        "symbol_name": "index.html",
+        "content_snippet": "<!-- Slider Window (Side Drawer) for Storing & Navigating Questions -->\n  <div class=\"slider-backdrop\" id=\"sliderBackdrop\" onclick=\"toggleSlider(false..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the codebase references provided from `index.html`, the handling of different event types within the streaming data parser (part of `streamBotPipeline`) is structured around checking `data.type`. \n\nHere is how the relevant components—specifically **Route Announcements**, **RAG Status Badges**, and **Sources Sections**—are handled when data arrives from the SSE stream [Code: index.html, Lines 3466-3532]:\n\n### 1. Route & Metadata Handling (`data.type === \"route\"`)\nWhen a route event is received (`data.type === \"route\"`), the code creates a meta-row element to house route banners and RAG citations [Code: index.html, Lines 3468-3507]:\n* **Route Banners:** Depending on `data.route` (e.g., `'pipeline'`, `'gemini'`, `'deepseek'`, `'qwen'`, or default local assistant), it generates an appropriate HTML banner and updates the pause banner text [Code: index.html, Lines 3472-3494].\n* **RAG Status Badge:** It calls `createRagStatusBadge(data.rag_mode, data.rag_status, data.rag_sources)` and appends the resulting badge to the meta row if available [Code: index.html, Lines 3496-3500].\n* **DOM Insertion:** The meta row is inserted into the bot bubble (`botBubbleEl`) either before the first child or appended [Code: index.html, Lines 3502-3506].\n\n### 2. RAG Sources Section (`data.rag_sources`)\nDirectly following the route announcement logic, the code checks if `data.rag_sources` is a valid array containing items (`data.rag_sources.length > 0`) [Code: index.html, Lines 3508-3513]:\n* It invokes `createSourcesSection(data.rag_sources)` to generate the UI elements for the retrieved sources [Code: index.html, Lines 3509].\n* If successfully created, it inserts the sources section right after the meta row (`metaRow.nextSibling`) inside the bot bubble [Code: index.html, LinesBased on the provided codebase, the handling of the event stream (Server-Sent Events, or SSE) parses incoming JSON lines via `JSON.parse(line.slice(6))` [Code: index.html, Line 3467]. \n\nSpecifically, regarding citations and RAG (Retrieval-Augmented Generation) data within the route announcement (`data.type === \"route\"`), the code handles it in the following ways [Code: index.html, Lines 3470-3510]:\n\n1. **RAG Status Badge Creation:** \n   It creates a RAG status badge using `createRagStatusBadge(data.rag_mode, data.rag_status, data.rag_sources)` and appends it to the metadata row (`metaRow`) if available [Code: index.html, Lines 3500-3503].\n   ```javascript\n   const ragBadge = createRagStatusBadge(data.rag_mode, data.rag_status, data.rag_sources);\n   if (ragBadge) {\n     metaRow.appendChild(ragBadge);\n   }\n   ```\n\n2. **RAG Sources Section / Citations:**\n   If `data.rag_sources` is a valid array containing items (`data.rag_sources.length > 0`), it generates a sources section using `createSourcesSection(data.rag_sources)` and inserts it right after the route/metadata elements into the bot bubble (`botBubbleEl`) [Code: index.html, Lines 3505-3510]:\n   ```javascript\n   if (Array.isArray(data.rag_sources) && data.rag_sources.length > 0) {\n     const sourcesEl = createSourcesSection(data.rag_sources);\n     if (sourcesEl) {\n       botBubbleEl.insertBefore(sourcesEl, metaRow.nextSibling);\n     }\n   }\n   ```",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 11171.2,
+    "ttft_ms": 6899.07,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:24:04"
+  },
+  {
+    "id": "AQ24",
+    "category": "frontend",
+    "question": "What CSS variables define the primary background and accent colors in dark and light themes in templates/index.html?",
+    "expected_answer": "In templates/index.html (lines 20-120), the CSS custom properties define the dark theme in :root with --bg-primary: #0f172a and --accent-primary: #38bdf8. The light theme is defined under [data-theme='light'] with --bg-primary: #f8fafc and --text-primary: #1e293b.",
+    "expected_facts": [
+      ":root",
+      "[data-theme=\"light\"]",
+      "--bg-primary",
+      "--accent-primary",
+      "#0f172a"
+    ],
+    "expected_sources": [
+      "templates/index.html"
+    ],
+    "expected_locations": [
+      "Lines 20-120"
+    ],
+    "evidence_requirements": "Must cite templates/index.html and mention :root and [data-theme='light'] with CSS variables.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4506,
+        "score": 0.5182,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 120,
+        "symbol_name": "index.html",
+        "content_snippet": "<!DOCTYPE html>\n<html lang=\"en\" data-theme=\"dark\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scal..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4239,
+        "score": 0.4875,
+        "page_number": null,
+        "start_line": 1366,
+        "end_line": 1485,
+        "symbol_name": "index.html",
+        "content_snippet": ".question-card {\n      background: var(--surface-2);\n      border: 1px solid var(--border);\n      border-radius: 8px;\n      padding: 10px 12px;\n      ..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4046,
+        "score": 0.4653,
+        "page_number": null,
+        "start_line": 1261,
+        "end_line": 1380,
+        "symbol_name": "index.html",
+        "content_snippet": "border-radius: 10px;\n      min-width: 16px;\n      text-align: center;\n    }\n\n    /* ── Slider Window (Side Drawer) ───────────────────────────────────..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.3983,
+        "score": 0.458,
+        "page_number": null,
+        "start_line": 106,
+        "end_line": 225,
+        "symbol_name": "index.html",
+        "content_snippet": "display: flex;\n      align-items: center;\n      gap: 10px;\n    }\n\n    .logo {\n      width: 36px; height: 36px;\n      background: var(--accent);\n      ..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the provided codebase reference, the CSS variables that define the primary background and accent colors in both dark and light themes are:\n\n### **Dark Theme (Default)** (`:root`)\n* **Primary Background:** `--bg: #0f0f13;` [Code: index.html, Lines 12-14]\n* **Accent Color:** `--accent: #7c6cf0;` [Code: index.html, Lines 20-21]\n\n### **Light Theme** (`[data-theme=\"light\"]`)\n* **Primary Background:** `--bg: #f4f6fb;` [Code: index.html, Lines 46-48]\n* **Accent Color:** `--accent: #5d4de6;` [Code: index.html, Lines 54-55]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7455.59,
+    "ttft_ms": 7070.86,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:24:13"
+  },
+  {
+    "id": "AQ25",
+    "category": "frontend",
+    "question": "How does loadAvailableModels populate the model selector dropdown in templates/index.html?",
+    "expected_answer": "In templates/index.html (lines 2000-2200), loadAvailableModels executes a GET request to '/api/models', parses the returned JSON list of installed Ollama models, and dynamically populates the options inside the '#model-select' dropdown.",
+    "expected_facts": [
+      "loadAvailableModels",
+      "/api/models",
+      "model-select",
+      "fetch"
+    ],
+    "expected_sources": [
+      "templates/index.html"
+    ],
+    "expected_locations": [
+      "Lines 2000-2200"
+    ],
+    "evidence_requirements": "Must cite templates/index.html and mention fetch('/api/models') and populating #model-select.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4392,
+        "score": 0.5051,
+        "page_number": null,
+        "start_line": 1681,
+        "end_line": 1800,
+        "symbol_name": "index.html",
+        "content_snippet": ".settings-footer {\n      display: flex;\n      align-items: center;\n      justify-content: flex-end;\n      gap: 10px;\n      padding: 12px 20px;\n      b..."
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.428,
+        "score": 0.4922,
+        "page_number": null,
+        "start_line": 2101,
+        "end_line": 2220,
+        "symbol_name": "index.html",
+        "content_snippet": "const typingInd         = document.getElementById(\"typingIndicator\");\n    const welcome           = document.getElementById(\"welcome\");\n    const stat..."
+      },
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.4909,
+        "score": 0.4909,
+        "page_number": null,
+        "start_line": 354,
+        "end_line": 357,
+        "symbol_name": "list_models",
+        "content_snippet": "def list_models():\n    \"\"\"List available models.\"\"\"\n    available = get_available_ollama_models()\n    return {\"models\": available}"
+      },
+      {
+        "file_name": "index.html",
+        "source_path": "templates/index.html",
+        "category": "codebase",
+        "similarity": 0.4211,
+        "score": 0.4843,
+        "page_number": null,
+        "start_line": 2836,
+        "end_line": 2955,
+        "symbol_name": "index.html",
+        "content_snippet": "a.click();\n      a.remove();\n    }\n\n    function goToQuestion(id) {\n      const el = document.getElementById(id);\n      if (el) {\n        toggleSlider..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the codebase provided, `loadAvailableModels` is not explicitly shown in full within the retrieved snippets, but we can see how the backend supplies the models and how the frontend dropdown elements are structured. \n\nHere is how the model population mechanism works across the stack based on the codebase:\n\n1. **Backend Endpoint (`app.py`)**:\n   The backend exposes a route/function named `list_models()` which calls `get_available_ollama_models()` [Code: app.py, Lines 354-357].\n   ```python\n   def list_models():\n       \"\"\"List available models.\"\"\"\n       available = get_available_ollama_models()\n       return {\"models\": available}\n   ```\n   The `get_available_ollama_models()` function makes an HTTP GET request to the local Ollama API endpoint (`{OLLAMA_BASE_URL}/api/tags`) and extracts the model names into a Python list of strings [Code: app.py, Lines 135-143]:\n   ```python\n   def get_available_ollama_models() -> list[str]:\n       \"\"\"Retrieve list of currently installed models in Ollama.\"\"\"\n       try:\n           resp = http_requests.get(f\"{OLLAMA_BASE_URL}/api/tags\", timeout=4)\n           if resp.status_code == 200:\n               return [m.get(\"name\", \"\") for m in resp.json().get(\"models\", [])]\n       except Exception:\n           pass\n       return []\n   ```\n\n2. **Frontend Selector Element (`index.html`)**:\n   The HTML template contains select elements for handling model and mode switching, such as the autonomous routing mode dropdown (`id=\"modeSelect\"`) and the RAG mode selector (`id=\"ragModeSelect\"`), which are dynamically populated or managed via the frontend JavaScript interacting with these endpoints [Code: index.html, Lines 1716-1740].\n\n*(Note: If a specific `loadAvailableModels` JavaScript function exists outside the provided snippet range, it typically fetches from the backend's `/api/models` or equivalent route, parses the JSON response containing the `\"models\"` array, and programmatically appends `<option>` elements to the target `<select>` dropdown DOM element.)*",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7598.57,
+    "ttft_ms": 6384.58,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:24:23"
+  },
+  {
+    "id": "AQ26",
+    "category": "config",
+    "question": "What is the default SIMILARITY_DISTANCE_THRESHOLD and what is the MAX_CONTEXT_TOKENS limit in rag/config.py?",
+    "expected_answer": "In rag/config.py (lines 39-44), SIMILARITY_DISTANCE_THRESHOLD is defined as 0.70 (cosine distance cutoff), and MAX_CONTEXT_TOKENS is set to 2000 tokens.",
+    "expected_facts": [
+      "SIMILARITY_DISTANCE_THRESHOLD",
+      "0.70",
+      "0.7",
+      "MAX_CONTEXT_TOKENS",
+      "2000"
+    ],
+    "expected_sources": [
+      "rag/config.py"
+    ],
+    "expected_locations": [
+      "Lines 39-44"
+    ],
+    "evidence_requirements": "Must cite rag/config.py and state SIMILARITY_DISTANCE_THRESHOLD = 0.70 and MAX_CONTEXT_TOKENS = 2000.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.6837,
+        "score": 0.7863,
+        "page_number": null,
+        "start_line": 40,
+        "end_line": 43,
+        "symbol_name": "global",
+        "content_snippet": "DEFAULT_TOP_K = 4\nMAX_CONTEXT_TOKENS = 2000\nSIMILARITY_DISTANCE_THRESHOLD = 0.70  # Cosine distance cutoff\nMAX_FILE_SIZE_BYTES = 10 * 1024 * 1024  # 1..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.5153,
+        "score": 0.5926,
+        "page_number": null,
+        "start_line": 25,
+        "end_line": 30,
+        "symbol_name": "global",
+        "content_snippet": "OLLAMA_BASE_URL = os.environ.get(\"OLLAMA_BASE_URL\", \"http://localhost:11434\")\nPRIMARY_EMBEDDING_MODEL = os.environ.get(\"RAG_EMBEDDING_MODEL\", \"embeddi..."
+      },
+      {
+        "file_name": "prompt_builder.py",
+        "source_path": "rag/prompt_builder.py",
+        "category": "codebase",
+        "similarity": 0.5873,
+        "score": 0.5873,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 16,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nContext Synthesis & Grounded Prompt Builder\n- Formats retrieved document and codebase chunks into structured reference blocks\n- Generates exact, v..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.5083,
+        "score": 0.5845,
+        "page_number": null,
+        "start_line": 211,
+        "end_line": 330,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"What HTTP endpoints and routes are defined in app.py?\",\n      \"expected_source\": \"app.py (Lines 120-200)\",\n   ..."
+      }
+    ],
+    "context_tokens_approx": 1786,
+    "generated_answer": "Based on the codebase references provided in `rag/config.py`:\n\n* **`SIMILARITY_DISTANCE_THRESHOLD`**: `0.70` (cosine distance cutoff) [Code: config.py, Lines 40-43]\n* **`MAX_CONTEXT_TOKENS`**: `2000` [Code: config.py, Lines 40-43]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7147.9,
+    "ttft_ms": 6944.55,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:24:32"
+  },
+  {
+    "id": "AQ27",
+    "category": "config",
+    "question": "What file extensions are supported in SUPPORTED_CODE_EXTENSIONS in rag/config.py?",
+    "expected_answer": "In rag/config.py (lines 56-73), SUPPORTED_CODE_EXTENSIONS includes: .py, .json, .yaml, .yml, .toml, .bat, .vbs, .sh, .ps1, .sql, .js, .ts, .css, .html, and .htm.",
+    "expected_facts": [
+      ".py",
+      ".json",
+      ".yaml",
+      ".html",
+      ".htm",
+      ".css",
+      ".js",
+      "SUPPORTED_CODE_EXTENSIONS"
+    ],
+    "expected_sources": [
+      "rag/config.py"
+    ],
+    "expected_locations": [
+      "Lines 56-73"
+    ],
+    "evidence_requirements": "Must cite rag/config.py and list the code extensions including .py, .html, .json, .yaml.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.6652,
+        "score": 0.765,
+        "page_number": null,
+        "start_line": 56,
+        "end_line": 72,
+        "symbol_name": "global",
+        "content_snippet": "SUPPORTED_CODE_EXTENSIONS: Set[str] = {\n    \".py\",\n    \".json\",\n    \".yaml\",\n    \".yml\",\n    \".toml\",\n    \".bat\",\n    \".vbs\",\n    \".sh\",\n    \".ps1\",\n ..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.5712,
+        "score": 0.6569,
+        "page_number": null,
+        "start_line": 46,
+        "end_line": 54,
+        "symbol_name": "global",
+        "content_snippet": "SUPPORTED_DOC_EXTENSIONS: Set[str] = {\n    \".pdf\",\n    \".txt\",\n    \".md\",\n    \".markdown\",\n    \".rst\",\n    \".html\",\n    \".htm\",\n}"
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.4695,
+        "score": 0.5399,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 9,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nCentralized Configuration & Security Rules for Unified RAG Subsystem\n- Manages paths, collection identifiers, embedding configurations, and securi..."
+      },
+      {
+        "file_name": "codebase_pipeline.py",
+        "source_path": "rag/codebase_pipeline.py",
+        "category": "codebase",
+        "similarity": 0.5393,
+        "score": 0.5393,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 22,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nCodebase Ingestion & Structure-Aware AST Parsing Pipeline\n- Extracts Python classes, methods, functions, docstrings, imports, decorators, and line..."
+      }
+    ],
+    "context_tokens_approx": 507,
+    "generated_answer": "Based on the provided codebase, the file extensions supported in `SUPPORTED_CODE_EXTENSIONS` (defined in `config.py`) are:\n\n* `.py`\n* `.json`\n* `.yaml`\n* `.yml`\n* `.toml`\n* `.bat`\n* `.vbs`\n* `.sh`\n* `.ps1`\n* `.sql`\n* `.js`\n* `.ts`\n* `.css`\n* `.html`\n* `.htm`\n\n[Code: config.py, Lines 56-72]",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6692.1,
+    "ttft_ms": 6485.75,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:24:41"
+  },
+  {
+    "id": "AQ28",
+    "category": "config",
+    "question": "What filenames and patterns are blacklisted in HARDCODED_SECURITY_BLACKLIST in rag/config.py?",
+    "expected_answer": "In rag/config.py (lines 105-114), HARDCODED_SECURITY_BLACKLIST includes: .env, .env.local, .env.production, .env.development, .git, server.log, and launcher.log.",
+    "expected_facts": [
+      ".env",
+      ".env.local",
+      ".env.production",
+      ".git",
+      "server.log",
+      "launcher.log",
+      "HARDCODED_SECURITY_BLACKLIST"
+    ],
+    "expected_sources": [
+      "rag/config.py"
+    ],
+    "expected_locations": [
+      "Lines 105-114"
+    ],
+    "evidence_requirements": "Must cite rag/config.py and mention .env files, .git, and log files.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.6743,
+        "score": 0.7754,
+        "page_number": null,
+        "start_line": 105,
+        "end_line": 113,
+        "symbol_name": "global",
+        "content_snippet": "HARDCODED_SECURITY_BLACKLIST: Set[str] = {\n    \".env\",\n    \".env.local\",\n    \".env.production\",\n    \".env.development\",\n    \".git\",\n    \"server.log\",\n..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.5676,
+        "score": 0.6527,
+        "page_number": null,
+        "start_line": 115,
+        "end_line": 131,
+        "symbol_name": "global",
+        "content_snippet": "HARDCODED_EXT_BLACKLIST: Set[str] = {\n    \".key\",\n    \".pem\",\n    \".crt\",\n    \".pfx\",\n    \".secret\",\n    \".token\",\n    \".sqlite\",\n    \".sqlite3\",\n    ..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.5445,
+        "score": 0.6262,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 9,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nCentralized Configuration & Security Rules for Unified RAG Subsystem\n- Manages paths, collection identifiers, embedding configurations, and securi..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.5352,
+        "score": 0.6155,
+        "page_number": null,
+        "start_line": 149,
+        "end_line": 198,
+        "symbol_name": "is_path_ignored",
+        "content_snippet": "def is_path_ignored(target_path: str, base_dir: str = PROJECT_ROOT) -> bool:\n    \"\"\"\n    Evaluate whether a file or directory path is excluded from RA..."
+      }
+    ],
+    "context_tokens_approx": 796,
+    "generated_answer": "Based on the codebase references provided, the filenames blacklisted in `HARDCODED_SECURITY_BLACKLIST` in `config.py` are:\n\n* `\".env\"`\n* `\".env.local\"`\n* `\".env.production\"`\n* `\".env.development\"`\n* `\".git\"`\n* `\"server.log\"`\n* `\"launcher.log\"`\n\n*(Note: Additionally, the `is_path_ignored` function also automatically checks if any basename starts with `.env`)* [Code: config.py, Lines 105-113, 149-169].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6722.03,
+    "ttft_ms": 6502.31,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:24:50"
+  },
+  {
+    "id": "AQ29",
+    "category": "config",
+    "question": "What are the default DOC_CHUNK_SIZE, DOC_CHUNK_OVERLAP, and EMBEDDING_DIMENSION in rag/config.py?",
+    "expected_answer": "In rag/config.py, DOC_CHUNK_SIZE is 750 characters, DOC_CHUNK_OVERLAP is 120 characters, and EMBEDDING_DIMENSION is 768 dimensions (matching embeddinggemma).",
+    "expected_facts": [
+      "DOC_CHUNK_SIZE = 750",
+      "DOC_CHUNK_OVERLAP = 120",
+      "EMBEDDING_DIMENSION = 768"
+    ],
+    "expected_sources": [
+      "rag/config.py"
+    ],
+    "expected_locations": [
+      "Lines 28-35"
+    ],
+    "evidence_requirements": "Must cite rag/config.py and state 750, 120, and 768.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "document_pipeline.py",
+        "source_path": "rag/document_pipeline.py",
+        "category": "codebase",
+        "similarity": 0.652,
+        "score": 0.652,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 31,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nDocument Ingestion & Structure-Aware Chunking Pipeline\n- Ingests PDF (via PyMuPDF), Markdown, TXT, RST, and HTML\n- Performs page-isolated chunking..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.551,
+        "score": 0.6337,
+        "page_number": null,
+        "start_line": 25,
+        "end_line": 30,
+        "symbol_name": "global",
+        "content_snippet": "OLLAMA_BASE_URL = os.environ.get(\"OLLAMA_BASE_URL\", \"http://localhost:11434\")\nPRIMARY_EMBEDDING_MODEL = os.environ.get(\"RAG_EMBEDDING_MODEL\", \"embeddi..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.5144,
+        "score": 0.5916,
+        "page_number": null,
+        "start_line": 12,
+        "end_line": 18,
+        "symbol_name": "global",
+        "content_snippet": "PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\nDATA_DIR = os.path.join(PROJECT_ROOT, \"data\")\nDOCUMENTS_DIR = os.path.join(..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.4928,
+        "score": 0.5667,
+        "page_number": null,
+        "start_line": 40,
+        "end_line": 43,
+        "symbol_name": "global",
+        "content_snippet": "DEFAULT_TOP_K = 4\nMAX_CONTEXT_TOKENS = 2000\nSIMILARITY_DISTANCE_THRESHOLD = 0.70  # Cosine distance cutoff\nMAX_FILE_SIZE_BYTES = 10 * 1024 * 1024  # 1..."
+      }
+    ],
+    "context_tokens_approx": 591,
+    "generated_answer": "Based on the provided codebase references:\n\n* **EMBEDDING_DIMENSION**: `768` [Code: config.py, Line 28]\n\nHowever, the specific default values for **DOC_CHUNK_SIZE** and **DOC_CHUNK_OVERLAP** are imported from `rag.config` into `document_pipeline.py` [Code: document_pipeline.py, Lines 22-23] and passed as defaults in `DocumentPipeline.__init__` [Code: document_pipeline.py, Lines 131-137], but their raw integer values are not defined within the provided snippets of `config.py`.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 6787.92,
+    "ttft_ms": 6420.77,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:24:59"
+  },
+  {
+    "id": "AQ30",
+    "category": "config",
+    "question": "How does is_path_ignored in rag/config.py evaluate paths against .ragignore rules and hardcoded rules?",
+    "expected_answer": "In rag/config.py (lines 149-199), is_path_ignored first tests against HARDCODED_SECURITY_BLACKLIST, HARDCODED_EXT_BLACKLIST, and internal directories (__pycache__, chroma_db, .git). Then it loads patterns from .ragignore via load_ragignore_patterns and evaluates them using fnmatch against the relative path, basename, and path segments.",
+    "expected_facts": [
+      "HARDCODED_SECURITY_BLACKLIST",
+      "HARDCODED_EXT_BLACKLIST",
+      "load_ragignore_patterns",
+      "fnmatch",
+      "is_path_ignored"
+    ],
+    "expected_sources": [
+      "rag/config.py"
+    ],
+    "expected_locations": [
+      "Lines 149-199"
+    ],
+    "evidence_requirements": "Must cite rag/config.py and describe the two-step evaluation: hardcoded blacklist then fnmatch on .ragignore patterns.",
+    "abstention_expected": false,
+    "rag_mode": "codebase",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.6292,
+        "score": 0.7236,
+        "page_number": null,
+        "start_line": 149,
+        "end_line": 198,
+        "symbol_name": "is_path_ignored",
+        "content_snippet": "def is_path_ignored(target_path: str, base_dir: str = PROJECT_ROOT) -> bool:\n    \"\"\"\n    Evaluate whether a file or directory path is excluded from RA..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.5592,
+        "score": 0.6431,
+        "page_number": null,
+        "start_line": 134,
+        "end_line": 146,
+        "symbol_name": "load_ragignore_patterns",
+        "content_snippet": "def load_ragignore_patterns(ragignore_file: str = RAGIGNORE_PATH) -> List[str]:\n    \"\"\"Load exclusion patterns from .ragignore file.\"\"\"\n    patterns =..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.5565,
+        "score": 0.64,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 9,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nCentralized Configuration & Security Rules for Unified RAG Subsystem\n- Manages paths, collection identifiers, embedding configurations, and securi..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.4979,
+        "score": 0.5726,
+        "page_number": null,
+        "start_line": 12,
+        "end_line": 18,
+        "symbol_name": "global",
+        "content_snippet": "PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\nDATA_DIR = os.path.join(PROJECT_ROOT, \"data\")\nDOCUMENTS_DIR = os.path.join(..."
+      }
+    ],
+    "context_tokens_approx": 932,
+    "generated_answer": "Based on the `is_path_ignored` implementation in `config.py`, the function evaluates paths in a specific order: first using a hardcoded security safety net, and then using dynamic `.ragignore` pattern matching [Code: config.py, Lines 149-198]. \n\nHere is the step-by-step breakdown of how it evaluates paths:\n\n### 1. Path Normalization & Preparation\n* It converts both the `target_path` and `base_dir` into absolute paths (`os.path.abspath`) [Code: config.py, Lines 155-156].\n* It computes the relative path of the target from the base directory, handling Windows cross-drive exceptions gracefully [Code: config.py, Lines 158-163].\n* It standardizes path separators to forward slashes (`/`) (`norm_rel`), extracts the `basename`, and isolates the file extension (`ext`) [Code: config.py, Lines 165-167].\n\n### 2. Hardcoded Security Checks (Infallible Safety Net)\nBefore checking any user-defined ignore rules, the function immediately returns `True` (meaning the path is ignored) if it matches any of the following criteria [Code: config.py, Lines 169-178]:\n* **Blacklisted Names / Environment Files:** If the lowercased basename is in `HARDCODED_SECURITY_BLACKLIST` or starts with `.env`.\n* **Blacklisted Extensions:** If the file extension (`ext.lower()`) is in `HARDCODED_EXT_BLACKLIST`.\n* **Internal Directories:** If any part of the relative path (`norm_rel.split(\"/\")`) matches any of the following restricted internal directory names:\n  * `.git`\n  * `__pycache__`\n  * `.app_profile`\n  * `.test_profile`\n  * `chroma_db`\n  * `manifests`\n\n### 3. Dynamic `.ragignore` Pattern Matching\nIf the path passes the hardcoded safety net, the function loads patterns from the `.ragignore` file using `load_ragignore_patterns()` (ignoring empty lines and comments starting with `#`) [Code: config.py, Lines 134-146, 180]. \n\nIt loops through each pattern and cleans it (stripping trailing slashes and normalizing backslashes) [Code: config.py, Lines 181-183]:\n* **Direct Path or Basename Match:** It checks if `fnmatch` matches either the normalized relative path (`norm_rel`) or the `basename` against the clean pattern [Code: config.py, Lines 186-187].\n* **Directory Pattern vs. File Pattern Match:** \n  * If the pattern ends with a `/` (`is_dir_pattern`), it checks if any individual directory component (`part`) in the path matches the pattern using `fnmatch` [Code: config.py, Lines 189-192].\n  * If it is a file/wildcard pattern, it checks if `fnmatch` matches the wildcard-wrapped relative path (`*{clean_pat}*`) or the exact `basename` [Code: config.py, Lines 193-195].\n\nIf any of these conditions match, it returns `True`. If all checks pass without a match, it returns `False` [Code: config.py, Lines 186-198].",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 8770.36,
+    "ttft_ms": 7054.89,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:25:10"
+  },
+  {
+    "id": "AQ31",
+    "category": "multi_source",
+    "question": "Compare the X-Request-Correlation-ID header requirement in api_specifications.md with correlation header handling in app.py.",
+    "expected_answer": "api_specifications.md (Section 3) requires every API request to supply 'X-Request-Correlation-ID: <UUID-v4>' (or the gateway auto-injects one). In app.py, the web service handles incoming requests via Flask endpoints like /api/chat, and RAG retrieval passes query strings while maintaining request context.",
+    "expected_facts": [
+      "X-Request-Correlation-ID",
+      "UUID-v4",
+      "api_specifications.md",
+      "app.py",
+      "/api/chat"
+    ],
+    "expected_sources": [
+      "api_specifications.md",
+      "app.py"
+    ],
+    "expected_locations": [
+      "api_specifications.md: Lines 19-24",
+      "app.py: Lines 387-420"
+    ],
+    "evidence_requirements": "Must cite both api_specifications.md and app.py, discussing correlation tracing across specification and code.",
+    "abstention_expected": false,
+    "rag_mode": "both",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.5471,
+        "score": 0.5471,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "## 3. Data Serialization and Correlation Identifiers\n- Data format: Standard UTF-8 JSON payloads with `Content-Type: application/json`.\n- Maximum requ..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.3824,
+        "score": 0.3824,
+        "page_number": null,
+        "start_line": 316,
+        "end_line": 435,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"How does UnifiedRetriever enforce active generation filtering using the committed manifest to prevent stale ch..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.3681,
+        "score": 0.3681,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "# Enterprise API Specification v2.4\n\n## 1. Overview and Base URLs\nThe Enterprise AI Platform provides a high-throughput REST and streaming API.\n- Prod..."
+      },
+      {
+        "file_name": "run_app.py",
+        "source_path": "run_app.py",
+        "category": "codebase",
+        "similarity": 0.3233,
+        "score": 0.3492,
+        "page_number": null,
+        "start_line": 19,
+        "end_line": 22,
+        "symbol_name": "global",
+        "content_snippet": "APP_DIR = os.path.dirname(os.path.abspath(__file__))\nPORT = 5000\nSERVER_URL = f\"http://localhost:{PORT}\"\nOLLAMA_URL = \"http://localhost:11434/api/tags..."
+      }
+    ],
+    "context_tokens_approx": 1813,
+    "generated_answer": "Based on the retrieved reference context, here is a comparison of the `X-Request-Correlation-ID` header requirement specified in the documentation and its handling/implementation details:\n\n### 1. Specification Requirement (`api_specifications.md`)\nAccording to the **Enterprise API Specification v2.4**, correlation identifiers are strictly governed by the following rules:\n* **Mandatory Header:** Every API request must supply the header `X-Request-Correlation-ID` formatted as a `<UUID-v4>` [Document: api_specifications.md, Page 1].\n* **Gateway Behavior on Omission:** If a client omits this header, the API gateway automatically steps in to auto-generate a UUIDv4 and logs a compliance warning [Document: api_specifications.md,Based on the retrieved reference context, here is a comparison of the `X-Request-Correlation-ID` header requirements and handling:\n\n### 1. Specification Requirement (`api_specifications.md`)\nAccording to the Enterprise API Specification:\n* **Mandatory Header:** Every API request must supply the header `X-Request-Correlation-ID: <UUID-v4>` [Document: api_specifications.md, Page 1].\n* **Gateway Behavior:** If this correlation header is omitted by the client, the API gateway automatically injects an auto-generated UUIDv4 and logs a compliance warning [Document: api_specifications.md, Page 1].\n\n### 2. Request Handling Implementation (`app.py`)\n*While the specific source code lines for correlation header handling in `app.py` are not fully printed in the truncated context, related integration tests for `app.py` (such as `TestRAGPhase5Integration.test_14_flask_routes_intact`) confirm that Flask routes and endpoint handling are actively managed within the application framework [Code: tests_rag_phase5.py, Lines 691-723].* \n\nIn a typical architecture aligned with these specifications, `app.py` or the application middleware would expect to read, validate, or propagate the `X-Request-Correlation-ID` header injected or supplied upstream to maintain end-to-end request tracing across services.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 9298.37,
+    "ttft_ms": 6364.12,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:25:21"
+  },
+  {
+    "id": "AQ32",
+    "category": "multi_source",
+    "question": "Compare the database connection pool limit in incident_runbook.txt with ChromaDB client initialization in rag/vector_store.py.",
+    "expected_answer": "incident_runbook.txt specifies that the relational database connection pool ('gemma_primary') is capped at 250 active connections, monitored via poolctl. In contrast, rag/vector_store.py initializes local persistent vector storage using chromadb.PersistentClient(path=self.persist_directory) managing two isolated SQLite collections without an external connection pool.",
+    "expected_facts": [
+      "250 active connections",
+      "poolctl",
+      "gemma_primary",
+      "chromadb.PersistentClient",
+      "documents_collection",
+      "codebase_collection"
+    ],
+    "expected_sources": [
+      "incident_runbook.txt",
+      "rag/vector_store.py"
+    ],
+    "expected_locations": [
+      "incident_runbook.txt: Lines 9-22",
+      "rag/vector_store.py: Lines 35-85"
+    ],
+    "evidence_requirements": "Must cite both incident_runbook.txt and rag/vector_store.py, contrasting the 250 pool limit with ChromaDB PersistentClient.",
+    "abstention_expected": false,
+    "rag_mode": "both",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "vector_store.py",
+        "source_path": "rag/vector_store.py",
+        "category": "codebase",
+        "similarity": 0.5703,
+        "score": 0.5703,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 19,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nChromaDB Persistent Vector Store Implementation for Unified RAG\n- Uses chromadb.PersistentClient for in-process, persistent SQLite vector storage\n..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.5157,
+        "score": 0.5157,
+        "page_number": null,
+        "start_line": 421,
+        "end_line": 509,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"both\",\n      \"query\": \"Compare database connection pooling in incident_runbook.txt with ChromaDB storage in rag/vector_store.py.\",\n      ..."
+      },
+      {
+        "file_name": "retriever.py",
+        "source_path": "rag/retriever.py",
+        "category": "codebase",
+        "similarity": 0.5119,
+        "score": 0.5119,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 28,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nUnified Hybrid Semantic Retriever for Document and Codebase Collections\n- Queries isolated ChromaDB collections (documents_collection and codebase..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.5043,
+        "score": 0.5043,
+        "page_number": null,
+        "start_line": 316,
+        "end_line": 435,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"How does UnifiedRetriever enforce active generation filtering using the committed manifest to prevent stale ch..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the provided codebase references and context, the reference material mentions a query comparing database connection pooling in `incident_runbook.txt` with ChromaDB storage in `rag/vector_store.py` (Evaluation ID Q25) [Code: evaluation_results.json, Lines 421-432], but **the actual content (text or source code) of `incident_runbook.txt` and the initialization logic inside `rag/vector_store.py` is not provided** in the retrieved context. \n\nSpecifically:\n* `vector_store.py` is noted as using `chromadb.PersistentClient` for in-process, persistent SQLite vector storage managing isolated document and codebase collections with cosine similarity [Code: vector_store.py, Lines 1-19].\n* However, the exact connection pool limit from `incident_runbook.txt` and the exact lines of client initialization in `rag/vector_store.py` are absent from the retrieved references. \n\nTo provide a complete comparison, please provide the contents of `incident_runbook.txt` and the implementation details from `rag/vector_store.py`.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 9030.81,
+    "ttft_ms": 8391.71,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:25:32"
+  },
+  {
+    "id": "AQ33",
+    "category": "multi_source",
+    "question": "Compare the maximum API request payload size in api_specifications.md with MAX_FILE_SIZE_BYTES in rag/config.py and MAX_CONTENT_LENGTH in app.py.",
+    "expected_answer": "api_specifications.md sets the maximum API request payload size to 15 megabytes (15,728,640 bytes). rag/config.py enforces MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024 (10 MB) for individual document/code indexing. In app.py line 101, Flask's app.config['MAX_CONTENT_LENGTH'] is set to 25 * 1024 * 1024 (25 MB) to accommodate multipart uploads.",
+    "expected_facts": [
+      "15 megabytes",
+      "15,728,640 bytes",
+      "10 * 1024 * 1024",
+      "10 MB",
+      "25 * 1024 * 1024",
+      "25 MB"
+    ],
+    "expected_sources": [
+      "api_specifications.md",
+      "rag/config.py",
+      "app.py"
+    ],
+    "expected_locations": [
+      "api_specifications.md: Lines 19-24",
+      "rag/config.py: Lines 43-44",
+      "app.py: Line 101"
+    ],
+    "evidence_requirements": "Must cite api_specifications.md (15 MB), rag/config.py (10 MB), and app.py (25 MB).",
+    "abstention_expected": false,
+    "rag_mode": "both",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.487,
+        "score": 0.56,
+        "page_number": null,
+        "start_line": 316,
+        "end_line": 435,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"How does UnifiedRetriever enforce active generation filtering using the committed manifest to prevent stale ch..."
+      },
+      {
+        "file_name": "api_specifications.md",
+        "source_path": "data/documents/api_specifications.md",
+        "category": "document",
+        "similarity": 0.5575,
+        "score": 0.5575,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "## 3. Data Serialization and Correlation Identifiers\n- Data format: Standard UTF-8 JSON payloads with `Content-Type: application/json`.\n- Maximum requ..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.4393,
+        "score": 0.5052,
+        "page_number": null,
+        "start_line": 421,
+        "end_line": 509,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"both\",\n      \"query\": \"Compare database connection pooling in incident_runbook.txt with ChromaDB storage in rag/vector_store.py.\",\n      ..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.4337,
+        "score": 0.4988,
+        "page_number": null,
+        "start_line": 106,
+        "end_line": 225,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"documents\",\n      \"query\": \"What are the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for tier-1 databases?\",..."
+      }
+    ],
+    "context_tokens_approx": 1996,
+    "generated_answer": "Based on the provided reference context, here are the details regarding the maximum API request payload size:\n\n* **From `api_specifications.md` (Page 1):** \n  The maximum request payload size for API requests is **15 megabytes (15,728,640 bytes)**, using standard UTF-8 JSON payloads with `Content-Type: application/json` [Document: api_specifications.md, Page 1]. \n\n* **From `rag/config.py` and `app.py`:**\n  The provided reference context does not contain the exact code lines or numerical values for `MAX_FILE_SIZE_BYTES` in `rag/config.py` or `MAX_CONTENT_LENGTH` in `app.py`. Therefore, a direct comparison between the API specification size and those configuration variables cannot be made from the retrieved context alone.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 10857.85,
+    "ttft_ms": 10471.63,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:25:45"
+  },
+  {
+    "id": "AQ34",
+    "category": "multi_source",
+    "question": "Compare the multi-region topology in cloud_deployment_guide.pdf with the local server launcher in run_app.py and app.py.",
+    "expected_answer": "cloud_deployment_guide.pdf describes a global cloud architecture across US-East, US-West, and EU-Central with VPC peering and Route 53 health failover. In contrast, run_app.py and app.py run a local Flask service bound to localhost (127.0.0.1:5000) communicating locally with Ollama (localhost:11434).",
+    "expected_facts": [
+      "US-East",
+      "US-West",
+      "EU-Central",
+      "run_app.py",
+      "127.0.0.1",
+      "5000",
+      "localhost"
+    ],
+    "expected_sources": [
+      "cloud_deployment_guide.pdf",
+      "run_app.py",
+      "app.py"
+    ],
+    "expected_locations": [
+      "cloud_deployment_guide.pdf: Page 1",
+      "run_app.py: Lines 1-50"
+    ],
+    "evidence_requirements": "Must cite cloud_deployment_guide.pdf and run_app.py/app.py, contrasting multi-region cloud with local 127.0.0.1:5000.",
+    "abstention_expected": false,
+    "rag_mode": "both",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "cloud_deployment_guide.pdf",
+        "source_path": "data/documents/cloud_deployment_guide.pdf",
+        "category": "document",
+        "similarity": 0.5757,
+        "score": 0.5757,
+        "page_number": 1,
+        "start_line": null,
+        "end_line": null,
+        "symbol_name": null,
+        "content_snippet": "CHAPTER 1: MULTI-REGION CLUSTER ARCHITECTURE AND NETWORK TOPOLOGY\nThe cloud infrastructure is organized into a multi-region active-active topology spa..."
+      },
+      {
+        "file_name": "run_app.py",
+        "source_path": "run_app.py",
+        "category": "codebase",
+        "similarity": 0.3812,
+        "score": 0.4117,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 17,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nStandalone Desktop Launcher for AI Coding Assistant & Chatbot\n- Ensures Ollama is active\n- Starts Flask server in background\n- Opens standalone bo..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.4105,
+        "score": 0.4105,
+        "page_number": null,
+        "start_line": 316,
+        "end_line": 435,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"How does UnifiedRetriever enforce active generation filtering using the committed manifest to prevent stale ch..."
+      },
+      {
+        "file_name": "app.py",
+        "source_path": "app.py",
+        "category": "codebase",
+        "similarity": 0.3759,
+        "score": 0.406,
+        "page_number": null,
+        "start_line": 855,
+        "end_line": 863,
+        "symbol_name": "global",
+        "content_snippet": "if __name__ == \"__main__\":\n    print(\"\\n[AI Assistant] Autonomous Multi-Model Chatbot starting...\")\n    print(\"    * General Chat & Vision: Gemma 4 (g..."
+      }
+    ],
+    "context_tokens_approx": 1962,
+    "generated_answer": "Based on the provided reference context, here is a comparison between the **multi-region topology** described in the cloud deployment guide and the **local deployment/server configuration** referenced in the codebase:\n\n### 1. Multi-Region Topology (`cloud_deployment_guide.pdf`)\n* **Architecture:** Organized into a multi-region active-active topology spanning three distinct locations:\n  * Primary Region (US-East): CIDR block `10.120.0.0/16`\n  * Secondary Region (US-West): CIDR block `10.121.0.0/16`\n  * Disaster Recovery Region (EU-Central): CIDR block `10.122.0.0/16`\n* **Connectivity & Routing:** Each region connects via dedicated VPC peering with non-overlapping CIDR blocks [Document: cloud_deployment_guide.pdf, Page 1]. Redundant edge ingress gateways utilize BGP anycast routing to terminate public TLS connections [Document: cloud_deployment_guide.pdf, Page 1].\n* **High Availability:** Compute nodes are distributed across a minimum of 3 availability zones per region to sustain high availability (99.995%), with strict caps on intra-region network latency between availability zones [Document: cloud_deployment_guide.pdf, Page 1].\n\n### 2. Local Deployment (`run_app.py` and `app.py`)\n* In contrast to the distributed, multi-region cloud topology spanning multiple global data centers with complex BGP routing and VPC peering, files like `run_app.py` and `app.py` handle **local server launching and application execution** (as indicated by local test references and script setups for development/testing environments). \n* While the cloud deployment guide governs enterprise-scale, fault-tolerant infrastructure across international availability zones, the local launcher scripts (`run_app.py`) and application entrypoints (`app.py`) are designed for running and testing the service locally or in single-instance environments.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 11702.21,
+    "ttft_ms": 10580.29,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:25:59"
+  },
+  {
+    "id": "AQ35",
+    "category": "multi_source",
+    "question": "Compare the timeout thresholds in incident_runbook.txt, EMBEDDING_TIMEOUT_SECONDS in rag/config.py, and request timeouts in app.py.",
+    "expected_answer": "incident_runbook.txt defines connection acquisition latency thresholds of 850 milliseconds and a 10-second pool drain timeout. rag/config.py defines EMBEDDING_TIMEOUT_SECONDS = 60. app.py enforces a 180-second timeout for local Gemma chat requests and a 240-second timeout for DeepSeek and Qwen pipeline requests.",
+    "expected_facts": [
+      "850 milliseconds",
+      "EMBEDDING_TIMEOUT_SECONDS = 60",
+      "180",
+      "240",
+      "incident_runbook.txt",
+      "config.py",
+      "app.py"
+    ],
+    "expected_sources": [
+      "incident_runbook.txt",
+      "rag/config.py",
+      "app.py"
+    ],
+    "expected_locations": [
+      "incident_runbook.txt: Lines 18-24",
+      "rag/config.py: Line 30",
+      "app.py: Lines 440-690"
+    ],
+    "evidence_requirements": "Must cite incident_runbook.txt (850ms/10s), rag/config.py (60s), and app.py (180s/240s).",
+    "abstention_expected": false,
+    "rag_mode": "both",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.5122,
+        "score": 0.589,
+        "page_number": null,
+        "start_line": 316,
+        "end_line": 435,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"How does UnifiedRetriever enforce active generation filtering using the committed manifest to prevent stale ch..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.464,
+        "score": 0.5336,
+        "page_number": null,
+        "start_line": 106,
+        "end_line": 225,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"documents\",\n      \"query\": \"What are the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for tier-1 databases?\",..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.4618,
+        "score": 0.5311,
+        "page_number": null,
+        "start_line": 421,
+        "end_line": 509,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"both\",\n      \"query\": \"Compare database connection pooling in incident_runbook.txt with ChromaDB storage in rag/vector_store.py.\",\n      ..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.4465,
+        "score": 0.5135,
+        "page_number": null,
+        "start_line": 211,
+        "end_line": 330,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"What HTTP endpoints and routes are defined in app.py?\",\n      \"expected_source\": \"app.py (Lines 120-200)\",\n   ..."
+      }
+    ],
+    "context_tokens_approx": 1995,
+    "generated_answer": "Based on the provided codebase reference data, the specific text or configuration details regarding the timeout thresholds in `incident_runbook.txt`, `EMBEDDING_TIMEOUT_SECONDS` in `rag/config.py`, and the request timeouts in `app.py` are not included in the retrievable context chunks. \n\n*(Note: As seen in evaluation entry **Q22**, queries attempting to cross-reference `incident_runbook.txt` with configuration or application files frequently fail due to missing or mismatched retrieval results across modalities [Code: evaluation_results.json, Lines 360-379].)*",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 10357.7,
+    "ttft_ms": 9931.52,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:26:12"
+  },
+  {
+    "id": "AQ36",
+    "category": "unanswerable",
+    "question": "What is the Kubernetes cluster autoscaler scale-down delay threshold configured for worker nodes in the repository?",
+    "expected_answer": "I do not have information about a Kubernetes cluster autoscaler or scale-down delay thresholds in the provided context or repository. This repository does not contain Kubernetes deployment manifests or autoscaler configurations.",
+    "expected_facts": [
+      "not present",
+      "not configured",
+      "no kubernetes",
+      "unavailable"
+    ],
+    "expected_sources": [
+      "None (Absent)"
+    ],
+    "expected_locations": [
+      "N/A"
+    ],
+    "evidence_requirements": "Model must explicitly abstain and state that no Kubernetes autoscaler configuration exists in the repository.",
+    "abstention_expected": true,
+    "rag_mode": "auto",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.3564,
+        "score": 0.4099,
+        "page_number": null,
+        "start_line": 106,
+        "end_line": 225,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"documents\",\n      \"query\": \"What are the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for tier-1 databases?\",..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.355,
+        "score": 0.4082,
+        "page_number": null,
+        "start_line": 421,
+        "end_line": 509,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"both\",\n      \"query\": \"Compare database connection pooling in incident_runbook.txt with ChromaDB storage in rag/vector_store.py.\",\n      ..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.3533,
+        "score": 0.4063,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 120,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "{\n  \"timestamp\": \"2026-11-06 03:32:04\",\n  \"benchmarks\": {\n    \"single_embed_latency_mean_ms\": 3474.48,\n    \"single_embed_latency_std_ms\": 2420.01,\n   ..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.3207,
+        "score": 0.3688,
+        "page_number": null,
+        "start_line": 211,
+        "end_line": 330,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"What HTTP endpoints and routes are defined in app.py?\",\n      \"expected_source\": \"app.py (Lines 120-200)\",\n   ..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the provided evaluation results data (`evaluation_results.json`), the query regarding the Kubernetes cluster autoscaler scale-down delay threshold (Query ID `Q26`) is classified as an **absent/unanswerable question** with an expected source of \"None (Absent)\" [Code: evaluation_results.json, Lines 421-509]. \n\nThe reference context does not contain any information about a Kubernetes cluster autoscaler scale-down delay threshold configured for worker nodes.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 10502.39,
+    "ttft_ms": 10272.3,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:26:25"
+  },
+  {
+    "id": "AQ37",
+    "category": "unanswerable",
+    "question": "What is the Redis cache eviction policy and maxmemory configuration in the repository?",
+    "expected_answer": "There is no Redis cache configuration or eviction policy defined in this repository. The project uses ChromaDB for vector retrieval and local memory for state, without Redis caching.",
+    "expected_facts": [
+      "not present",
+      "no redis",
+      "not configured",
+      "unavailable"
+    ],
+    "expected_sources": [
+      "None (Absent)"
+    ],
+    "expected_locations": [
+      "N/A"
+    ],
+    "evidence_requirements": "Model must explicitly abstain and state that Redis caching is not configured.",
+    "abstention_expected": true,
+    "rag_mode": "auto",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "success",
+    "retrieved_chunks_count": 4,
+    "retrieved_chunks": [
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.3784,
+        "score": 0.4352,
+        "page_number": null,
+        "start_line": 1,
+        "end_line": 9,
+        "symbol_name": "module",
+        "content_snippet": "\"\"\"\nCentralized Configuration & Security Rules for Unified RAG Subsystem\n- Manages paths, collection identifiers, embedding configurations, and securi..."
+      },
+      {
+        "file_name": "config.py",
+        "source_path": "rag/config.py",
+        "category": "codebase",
+        "similarity": 0.3698,
+        "score": 0.4253,
+        "page_number": null,
+        "start_line": 40,
+        "end_line": 43,
+        "symbol_name": "global",
+        "content_snippet": "DEFAULT_TOP_K = 4\nMAX_CONTEXT_TOKENS = 2000\nSIMILARITY_DISTANCE_THRESHOLD = 0.70  # Cosine distance cutoff\nMAX_FILE_SIZE_BYTES = 10 * 1024 * 1024  # 1..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.3681,
+        "score": 0.4233,
+        "page_number": null,
+        "start_line": 211,
+        "end_line": 330,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"codebase\",\n      \"query\": \"What HTTP endpoints and routes are defined in app.py?\",\n      \"expected_source\": \"app.py (Lines 120-200)\",\n   ..."
+      },
+      {
+        "file_name": "evaluation_results.json",
+        "source_path": "data/evaluation_results.json",
+        "category": "codebase",
+        "similarity": 0.361,
+        "score": 0.4151,
+        "page_number": null,
+        "start_line": 106,
+        "end_line": 225,
+        "symbol_name": "evaluation_results.json",
+        "content_snippet": "\"rag_mode\": \"documents\",\n      \"query\": \"What are the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) targets for tier-1 databases?\",..."
+      }
+    ],
+    "context_tokens_approx": 1997,
+    "generated_answer": "Based on the provided codebase references and retrieved context, there is no mention of a Redis cache eviction policy or a `maxmemory` configuration. \n\nThe reference context covers:\n- Centralized configuration and security rules for the Unified RAG Subsystem (`config.py`) [Code: config.py, Lines 1-9, Symbol: module]\n- Default top-k, max context tokens, cosine distance thresholds, and maximum file size limits (10 MB per file) (`config.py`) [Code: config.py, Lines 40-43, Symbol: global]\n- Integration test cases for codebase retrieval mode (`tests_rag_phase5.py`) [Code: tests_rag_phase5.py, Lines 157-168]\n- Evaluation results regarding HTTP endpoints, intent classification, CODER_MODELS, HTML/SSE processing, file hashing, incremental indexing, and active generation filtering (`evaluation_results.json`) [Code: evaluation_results.json, Lines 211-330]\n\nBecause the reference context does not contain information about Redis, that specific configuration cannot be answered from the provided codebase data.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 10098.91,
+    "ttft_ms": 9562.74,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:26:37"
+  },
+  {
+    "id": "AQ38",
+    "category": "unanswerable",
+    "question": "What is the OAuth2 client secret and redirect URI for Google Drive cloud synchronization?",
+    "expected_answer": "This repository does not contain OAuth2 client secrets or Google Drive cloud synchronization integration. Cloud AI integration is handled via the Gemini API, and no Google Drive credentials exist in the project.",
+    "expected_facts": [
+      "not present",
+      "no oauth2",
+      "no google drive",
+      "not configured"
+    ],
+    "expected_sources": [
+      "None (Absent)"
+    ],
+    "expected_locations": [
+      "N/A"
+    ],
+    "evidence_requirements": "Model must explicitly abstain and state that Google Drive synchronization credentials do not exist.",
+    "abstention_expected": true,
+    "rag_mode": "auto",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "off",
+    "retrieved_chunks_count": 0,
+    "retrieved_chunks": [],
+    "context_tokens_approx": 0,
+    "generated_answer": "As a general rule for standard applications (like commercial software or custom personal scripts), **there is no universal, public OAuth2 client secret for Google Drive sync.** \n\nHere is why, along with how it works depending on your use case:\n\n### 1. For Standard/Commercial Apps\nIf you are developing your own application that integrates with Google Drive, you must generate your own Client ID and Client Secret by registering a project in the **Google Cloud Console**. \n* **Client ID:** Publicly identifies your app.\n* **Client Secret:** Acts like a password for your app and **must be kept confidential**. Because it must be kept secret, it is unique to your project and cannot be shared publicly.\n* **Redirect URI:** Defined by you in the Google Cloud Console (e.g., `http://localhost`, `https://oauth.pstmn.io/v1/callback`, or a custom domain URI).\n\n### 2. For Open-Source or Existing Tools (like rclone, Cyberduck, etc.)\nIf you are asking because you are configuring an open-source tool or command-line utility for cloud synchronization (such as `rclone`), these tools often fall into one of two categories:\n* **Built-in Default Credentials:** Some popular open-source tools come with a pre-configured Google Client ID and Client Secret embedded in their source code. These are shared among all users of that specific tool. \n* **\"Bring Your Own\" Credentials:** Because Google limits how many users can authenticate through a single shared set of credentials, many power-user tools require you to create your own free Google Cloud Console project and input *your own* Client ID and Secret.\n\n### Where to get them:\nIf you need a Client ID and Secret for your own use or development:\n1. Go to the [Google Cloud Console](https://console.cloud.google.com/).\n2. Create a new project.\n3. Navigate to **APIs & Services** > **Credentials**.\n4. Click **Create Credentials** > **OAuth client ID**.\n5. Select your application type (e.g., *Desktop app*, *Web application*).\n6. Set your authorized **Redirect URI**.\n7. Google will generate your **Client ID** and **Client Secret**.\n\n*Note: Never expose your production OAuth client secret in public code repositories like GitHub.*",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 7765.52,
+    "ttft_ms": 5913.21,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:26:45"
+  },
+  {
+    "id": "AQ39",
+    "category": "unanswerable",
+    "question": "How is the Stripe payment webhook HMAC signature verified in the payment gateway module?",
+    "expected_answer": "The project does not contain a payment gateway or Stripe webhook integration. There is no Stripe signature verification or billing module implemented in this codebase.",
+    "expected_facts": [
+      "not present",
+      "no stripe",
+      "no payment",
+      "not configured"
+    ],
+    "expected_sources": [
+      "None (Absent)"
+    ],
+    "expected_locations": [
+      "N/A"
+    ],
+    "evidence_requirements": "Model must explicitly abstain and state that Stripe payment processing is not implemented.",
+    "abstention_expected": true,
+    "rag_mode": "auto",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "off",
+    "retrieved_chunks_count": 0,
+    "retrieved_chunks": [],
+    "context_tokens_approx": 0,
+    "generated_answer": "Verifying a Stripe webhook HMAC signature in a payment gateway module is a critical security step. It ensures that the incoming HTTP request actually originated from Stripe and has not been tampered with in transit.\n\nStripe uses a cryptographic signature system based on **HMAC (Hash-based Message Authentication Code)** with **SHA-256**. \n\nHere is the step-by-step breakdown of how a robust payment gateway module verifies this signature, followed by code examples in common backend languages.\n\n---\n\n### The Verification Process (Step-by-Step)\n\n1. **Capture the Raw Body:** \n   You must obtain the **exact, raw, unparsed request body** as a string or byte array. If your web framework (like Express.js) automatically parses the incoming JSON body into an object, the signature validation will fail because JSON key ordering or whitespace might change.\n\n2. **Extract the Signature Header:** \n   Stripe includes a signature in the `Stripe-Signature` header of every webhook request. This header contains a timestamp (`t`) and one or more signatures (`v1`, `v0`, etc.). \n   *Example header:* `t=1614556800,v1=5257a869e7eceebaed...`\n\n3. **Construct the Signed Payload:** \n   Create the string that Stripe used to generate the signature by concatenating:\n   * The timestamp (`t`) value as a string.\n   * The character `.` (dot).\n   * The raw request body.\n\n4. **Compute the Expected HMAC:** \n   Compute an HMAC using SHA-256. \n   * **Key:** Your Stripe Webhook Secret (starts with `whsec_...`), converted to bytes.\n   * **Message:** The constructed signed payload from Step 3.\n\n5. **Compare Signatures:** \n   Compare the signature you computed in Step 4 with the `v1` signature extracted from the header in Step 2. To prevent timing attacks, you **must use a constant-time string comparison function** rather than a standard equality operator (`==`).\n\n6. **Check the Timestamp (Replay Attack Prevention):** \n   Check the timestamp (`t`) against the current system time to ensure the request is not too old (Stripe recommends a tolerance of 5 minutes, i.e., `300` seconds).\n\n---\n\n### Code Examples\n\n#### 1. Node.js (Using the official `stripe` SDK - Recommended)\nThe official Stripe SDK handles raw body management and verification for you, which is the safest approach.\n\n```javascript\nconst stripe = require('stripe')('sk_test_...');\nconst endpointSecret = 'whsec_YourWebhookSecretHere';\n\napp.post('/webhook', express.raw({type: 'application/json'}), (request, response) => {\n  const sig = request.headers['stripe-signature'];\n  let event;\n\n  try {\n    // The SDK verifies the signature and checks the timestamp automatically\n    event = stripe.webhooks.constructEvent(request.body, sig, endpointSecret);\n  } catch (err) {\n    console.error(`Webhook signature verification failed: ${err.message}`);\n    return response.status(400).send(`Webhook Error: ${err.message}`);\n  }\n\n  // Handle the event\n  switch (event.type) {\n    case 'payment_intent.succeeded':\n      const paymentIntent = event.data.object;\n      // TODO: Fulfill the purchase / update database\n      break;\n    default:\n      console.log(`Unhandled event type ${event.type}`);\n  }\n\n  response.json({received: true});\n});\n```\n\n#### 2. Python / FastAPI or Flask (Manual Verification Logic)\nIf you are writing a custom module or using a framework without the Stripe SDK helper, here is how the logic works under the hood:\n\n```python\nimport time\nimport hmac\nimport hashlib\nfrom fastapi import FastAPI, Header, Request, HTTPException\n\napp = FastAPI()\nendpoint_secret = \"whsec_YourWebhookSecretHere\"\n\n@app.post(\"/webhook\")\nasync def stripe_webhook(request: Request, stripe_signature: str = Header(None)):\n    if not stripe_signature:\n        raise HTTPException(status_code=400, detail=\"Missing Stripe-Signature header\")\n\n    # 1. Get raw body as bytes\n    payload = await request.body()\n\n    try:\n        # 2. Parse the signature header (t=timestamp, v1=signature)\n        sig_items = dict(item.split(\"=\") for item in stripe_signature.split(\",\"))\n        timestamp = sig_items.get(\"t\")\n        received_sig = sig_items.get(\"v1\")\n\n        if not timestamp or not received_sig:\n            raise HTTPException(status_code=400, detail=\"Invalid signature header format\")\n\n        # 3. Check timestamp tolerance (e.g., 5 minutes = 300 seconds)\n        if abs(time.time() - int(timestamp)) > 300:\n            raise HTTPException(status_code=400, detail=\"Timestamp outside the tolerance zone\")\n\n        # 4. Construct the signed payload\n        signed_payload = f\"{timestamp}.\".encode('utf-8') + payload\n\n        # 5. Compute HMAC SHA-256\n        computed_sig = hmac.new(\n            endpoint_secret.encode('utf-8'),\n            signed_payload,\n            hashlib.sha256\n        ).hexdigest()\n\n        # 6. Constant-time comparison to prevent timing attacks\n        if not hmac.compare_digest(computed_sig, received_sig):\n            raise HTTPException(status_code=400, detail=\"Signature mismatch\")\n\n    except Exception as e:\n        raise HTTPException(status_code=400, detail=f\"Webhook Error: {str(e)}\")\n\n    # Proceed with processing the event...\n    return {\"status\": \"success\"}\n```\n\n---\n\n### Best Practices for Payment Gateway Modules\n\n1. **Always use the official SDK helper** (`stripe.webhooks.constructEvent` or equivalent in PHP/Ruby/Python) if available. Re-inventing the wheel manually opens the door to bugs in timing-attack prevention or body-parsing discrepancies.\n2. **Handle body parsers carefully:** Ensure your web server does not parse the webhook route as JSON *before* you can access the raw string/buffer. \n3. **Return a `2xx` HTTP status quickly:** Acknowledge receipt of the webhook immediately after verification (and before heavy database operations) so Stripe knows the delivery succeeded and doesn't retry unnecessarily.",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 10393.85,
+    "ttft_ms": 5674.59,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:26:55"
+  },
+  {
+    "id": "AQ40",
+    "category": "unanswerable",
+    "question": "What GraphQL mutation is used to update user billing addresses and tax identification numbers in the project?",
+    "expected_answer": "This repository does not use GraphQL or contain any GraphQL mutations for user billing or tax information. The backend is built using Flask REST endpoints without GraphQL schemas.",
+    "expected_facts": [
+      "not present",
+      "no graphql",
+      "no mutation",
+      "not configured"
+    ],
+    "expected_sources": [
+      "None (Absent)"
+    ],
+    "expected_locations": [
+      "N/A"
+    ],
+    "evidence_requirements": "Model must explicitly abstain and state that GraphQL mutations and user billing schemas do not exist.",
+    "abstention_expected": true,
+    "rag_mode": "auto",
+    "model_mode_requested": "gemini",
+    "effective_route": "gemini",
+    "retrieval_status": "off",
+    "retrieved_chunks_count": 0,
+    "retrieved_chunks": [],
+    "context_tokens_approx": 0,
+    "generated_answer": "To provide the exact GraphQL mutation for updating user billing addresses and tax identification numbers, I need a little more context about **which specific project, platform, or e-commerce engine** you are working with (for example: Shopify, Magento/Adobe Commerce, Spree, Saleor, or a custom project). \n\nHowever, since different systems use different schemas, here are the most common patterns used in popular GraphQL APIs for handling this:\n\n### 1. Shopify Storefront / Admin API\nShopify typically handles customer information via customer mutations. For updating a customer's address:\n* **Mutation:** `customerUpdate` or `customerAddressUpdate`\n* *Note:* Tax identification numbers (like VAT numbers) are often handled through customer metafields or specific localized billing fields depending on whether you are using the Storefront API or Admin API.\n\n### 2. Magento / Adobe Commerce (PWA Studio)\nAdobe Commerce uses specific mutations for customer billing agreements and addresses.\n* **Mutation:** `updateCustomer` or `updateCustomerAddress`\n* **Example structure:**\n```graphql\nmutation {\n  updateCustomerAddress(\n    id: 12345\n    input: {\n      street: [\"123 Main St\"]\n      city: \"Austin\"\n      region: \"TX\"\n      postcode: \"78701\"\n      country_code: US\n      telephone: \"555-555-5555\"\n      # Tax ID might be included as a custom attribute or specific input depending on the module\n    }\n  ) {\n    customer {\n      addresses {\n        id\n        street\n        city\n      }\n    }\n  }\n}\n```\n\n### 3. Saleor Commerce\nSaleor manages billing addresses primarily through checkout or account mutations.\n* **Mutations:** `accountAddressUpdate` or `checkoutBillingAddressUpdate`\n\n---\n\n### How to find it in your specific project:\nIf this is a custom project or a different platform, you can find the exact mutation by looking at your project's GraphQL schema (often accessible via a Playground/GraphiQL interface at `/graphql` or by inspecting your `.graphql` schema files). \n\nTry searching your codebase for:\n* `mutation` + `Address` (e.g., `updateAddress`, `billingAddress`)\n* `taxId`, `vatId`, or `taxIdentification`\n\n**If you can share the name of the framework, platform, or the schema snippet you are working with, I can write the exact mutation for you!**",
+    "success": true,
+    "error": null,
+    "total_latency_ms": 8328.38,
+    "ttft_ms": 6487.58,
+    "stage_events": [
+      {
+        "type": "stage_start",
+        "stage": "gemini",
+        "model": "gemini-flash-lite-latest",
+        "title": "Gemini Cloud Assistant (gemini-flash-lite-latest)"
+      }
+    ],
+    "timestamp": "2026-11-06 05:27:03"
+  }
+]

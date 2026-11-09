@@ -1,0 +1,8 @@
+{
+  "collection_isolation": true,
+  "retrieval_modes_verified": true,
+  "empty_query_resilient": true,
+  "missing_manifest_handled": true,
+  "pdf_intelligence_inspection": true,
+  "model_lifecycle_lease_ok": true
+}

@@ -1,0 +1,11 @@
+{
+  "wal_mode_active": true,
+  "sync_mode_normal": true,
+  "crash_1_user_persisted": true,
+  "crash_2_ack_valid": true,
+  "crash_3_processing_resilient": true,
+  "crash_4_failure_recorded": true,
+  "crash_5_no_orphan_asst": true,
+  "crash_6_cached_replay_recovery": true,
+  "reconciliation_successful": true
+}

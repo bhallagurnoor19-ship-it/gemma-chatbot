@@ -1,0 +1,24 @@
+OPERATIONAL INCIDENT RUNBOOK
+Topic: Database Connection Pool Starvation (Incident Code: ERR-503-POOL)
+Severity: Severity-1 (High Impact)
+
+SYMPTOMS:
+Downstream web services report HTTP 503 Service Unavailable with log message:
+"Timeout waiting for idle database connection in pool 'gemma_primary'".
+
+DIAGNOSTIC PROCEDURE:
+Step 1: Execute pool diagnostic command:
+    poolctl stat --pool=gemma_primary --verbose
+Verify active vs idle connections. The default pool size limit is 250 active connections.
+
+Step 2: Check database lock contention:
+    dbadmin locks --threshold=5000ms
+Identify any blocked transactions holding table-level locks.
+
+REMEDIATION STEPS:
+1. Clear idle and hung connections by running:
+    poolctl drain --pool=gemma_primary --force --timeout=10
+2. If connection acquisition latency remains above 850 milliseconds for more than 3 consecutive health probes,
+   immediately trigger connection pool restart:
+    systemctl restart gemma-poolmgr.service
+3. Escalate to the Level 3 Database SRE on-call engineer if pool availability is not restored within 5 minutes.

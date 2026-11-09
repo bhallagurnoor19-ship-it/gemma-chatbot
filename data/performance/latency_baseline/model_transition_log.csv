@@ -1,0 +1,17 @@
+scenario_id,step_name,models_before,models_after,route,fast_path,load_duration_s
+Scenario_A,Cold_First_Greeting,,gemma4:12b,chat,False,12.82
+Scenario_B,Warm_Greeting_1,gemma4:12b,gemma4:12b,chat,True,
+Scenario_B,Warm_Greeting_2,gemma4:12b,gemma4:12b,chat,True,
+Scenario_C,Turn_1_hey,gemma4:12b,gemma4:12b,chat,True,
+Scenario_C,Turn_2_How are you?,gemma4:12b,gemma4:12b,chat,True,
+Scenario_C,Turn_3_Explain what a finit,gemma4:12b,gemma4:12b,chat,True,
+Scenario_C,Turn_4_Give me a short exam,gemma4:12b,gemma4:12b,chat,True,
+Scenario_D,RAG_OFF,gemma4:12b,gemma4:12b,chat,True,
+Scenario_D,RAG_AUTO,gemma4:12b,gemma4:12b,chat,True,
+Scenario_D,RAG_DOCUMENTS,gemma4:12b,gemma4:12b;embeddinggemma:latest,chat,True,1.51
+Scenario_E,Fresh_0_turns,gemma4:12b;embeddinggemma:latest,gemma4:12b,chat,True,
+Scenario_E,History_5_turns,gemma4:12b,gemma4:12b,chat,True,
+Scenario_E,History_10_turns,gemma4:12b,gemma4:12b,chat,True,
+Scenario_F,Coding_Request_1_Pipeline,gemma4:12b,Qwen2.5-Coder:7B,pipeline,False,7.54
+Scenario_F,Coding_Request_2_Pipeline,Qwen2.5-Coder:7B,Qwen2.5-Coder:7B,pipeline,False,7.04
+Scenario_G,Return_To_General_Chat_Hey,Qwen2.5-Coder:7B,gemma4:12b,chat,False,15.34

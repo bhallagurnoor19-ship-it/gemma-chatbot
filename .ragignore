@@ -1,0 +1,90 @@
+# ==============================================================================
+# .ragignore - Unified RAG Ingestion Exclusion Rules
+# Files matching these patterns will NEVER be parsed or indexed into vector store.
+# ==============================================================================
+
+# ── Secrets, Credentials & Environment ────────────────────────────────────────
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.crt
+*.pfx
+*.secret
+*.token
+*id_rsa*
+*id_ed25519*
+
+# ── Application Runtime Logs & App Profiles ───────────────────────────────────
+server.log
+launcher.log
+*.log
+.app_profile/
+.test_profile/
+
+# ── Vector Store & Database Persistence ───────────────────────────────────────
+data/chroma_db/
+data/manifests/
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+*.db
+
+# ── Python Runtime Artifacts & Caches ─────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ── Version Control & IDE Files ───────────────────────────────────────────────
+.git/
+.gitignore
+.gitattributes
+.hg/
+.svn/
+.vscode/
+.idea/
+
+# ── Binary Files, Archives & Native Executables ───────────────────────────────
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.iso
+*.whl
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# ── Media & Image Files (handled by multimodal vision, not text RAG) ──────────
+*.ico
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.mp3
+*.wav
+*.mp4
+*.webm
+*.avi
+*.mov
+
+# ── Temporary, Cache & Scratch Files ──────────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.swp
+~*
+scratch/

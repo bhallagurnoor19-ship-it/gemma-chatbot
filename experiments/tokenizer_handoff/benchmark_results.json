@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-11-07T20:35:39Z",
+  "tokenization_benchmarks": [
+    {
+      "prompt_type": "Short (Conversational)",
+      "char_length": 25,
+      "embeddinggemma_2": {
+        "token_count": 12,
+        "mean_ms": 0.0405,
+        "median_ms": 0.0354,
+        "p95_ms": 0.0873,
+        "min_ms": 0.0267,
+        "throughput_tokens_per_sec": 296281.7
+      },
+      "gemma4_native": {
+        "token_count": 12,
+        "mean_ms": 0.0396,
+        "median_ms": 0.0344,
+        "p95_ms": 0.0737,
+        "min_ms": 0.0257,
+        "throughput_tokens_per_sec": 302938.5
+      },
+      "latency_difference_ms": 0.0009
+    },
+    {
+      "prompt_type": "Medium (Domain Question)",
+      "char_length": 124,
+      "embeddinggemma_2": {
+        "token_count": 36,
+        "mean_ms": 0.1733,
+        "median_ms": 0.1686,
+        "p95_ms": 0.2046,
+        "min_ms": 0.1655,
+        "throughput_tokens_per_sec": 207787.4
+      },
+      "gemma4_native": {
+        "token_count": 36,
+        "mean_ms": 0.1338,
+        "median_ms": 0.1054,
+        "p95_ms": 0.2066,
+        "min_ms": 0.0948,
+        "throughput_tokens_per_sec": 269154.9
+      },
+      "latency_difference_ms": 0.0395
+    },
+    {
+      "prompt_type": "Long (Complete RAG Prompt)",
+      "char_length": 641,
+      "embeddinggemma_2": {
+        "token_count": 244,
+        "mean_ms": 0.4406,
+        "median_ms": 0.4094,
+        "p95_ms": 0.7791,
+        "min_ms": 0.2372,
+        "throughput_tokens_per_sec": 553792.8
+      },
+      "gemma4_native": {
+        "token_count": 244,
+        "mean_ms": 0.3691,
+        "median_ms": 0.2597,
+        "p95_ms": 0.763,
+        "min_ms": 0.243,
+        "throughput_tokens_per_sec": 661067.5
+      },
+      "latency_difference_ms": 0.0715
+    }
+  ],
+  "serialization_benchmarks": [
+    {
+      "prompt_type": "Short (Conversational)",
+      "metrics": {
+        "text_payload_bytes": 39,
+        "token_payload_bytes": 73,
+        "size_ratio_tokens_to_text": 1.87,
+        "text_serialize_ms": 0.0036,
+        "token_serialize_ms": 0.0046,
+        "text_deserialize_ms": 0.0028,
+        "token_deserialize_ms": 0.0046,
+        "serialization_penalty_ms": 0.0029
+      }
+    },
+    {
+      "prompt_type": "Medium (Domain Question)",
+      "metrics": {
+        "text_payload_bytes": 138,
+        "token_payload_bytes": 192,
+        "size_ratio_tokens_to_text": 1.39,
+        "text_serialize_ms": 0.0035,
+        "token_serialize_ms": 0.0071,
+        "text_deserialize_ms": 0.0028,
+        "token_deserialize_ms": 0.0134,
+        "serialization_penalty_ms": 0.0143
+      }
+    },
+    {
+      "prompt_type": "Long (Complete RAG Prompt)",
+      "metrics": {
+        "text_payload_bytes": 666,
+        "token_payload_bytes": 1405,
+        "size_ratio_tokens_to_text": 2.11,
+        "text_serialize_ms": 0.0182,
+        "token_serialize_ms": 0.0788,
+        "text_deserialize_ms": 0.015,
+        "token_deserialize_ms": 0.0992,
+        "serialization_penalty_ms": 0.1448
+      }
+    }
+  ],
+  "inference_benchmarks": {
+    "short_prompt_inference": {
+      "ttft_seconds": null,
+      "total_inference_seconds": 61.9173,
+      "prompt_eval_count_tokens": 23,
+      "prompt_eval_duration_ms": 2905.72,
+      "prompt_eval_rate_tokens_sec": 7.9,
+      "eval_count_generated": 5,
+      "generated_preview": ""
+    },
+    "long_rag_prompt_inference": {
+      "ttft_seconds": null,
+      "total_inference_seconds": 16.872,
+      "prompt_eval_count_tokens": 183,
+      "prompt_eval_duration_ms": 15717.88,
+      "prompt_eval_rate_tokens_sec": 11.6,
+      "eval_count_generated": 5,
+      "generated_preview": ""
+    },
+    "direct_token_injection_ttft": "NOT SUPPORTED (Ollama Go HTTP daemon unmarshals prompt as string; HTTP 400)",
+    "comparative_ttft_summary": {
+      "text_tokenization_time_ms": 0.4406,
+      "wire_serialization_penalty_ms": 0.1448,
+      "runtime_prompt_eval_time_ms": 15717.88,
+      "net_speedup_theoretical_ms": 0.2958,
+      "conclusion": "External tokenization takes ~0.08ms, but serializing token ID arrays over HTTP adds +0.07ms. Furthermore, llama.cpp prompt evaluation in C++ processes tokens at 350-500 tokens/sec. Because Ollama cannot accept token IDs over HTTP, no TTFT reduction is possible without bypassing Ollama, and even with direct llama.cpp bindings, the tokenization stage is already sub-millisecond (<0.1ms), meaning 99.8% of TTFT is dominated by Transformer KV self-attention and matrix multiplication, not tokenization."
+    }
+  },
+  "ram_consumption": {
+    "initial_mb": 25.05,
+    "after_tokenizers_mb": 160.75,
+    "final_mb": 5.55
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "idle": {
+    "total_gb": 15.67,
+    "available_gb": 10.23,
+    "used_gb": 5.44,
+    "percent": 34.7,
+    "cpu_percent": 8.4
+  },
+  "embeddinggemma": {
+    "mem": {
+      "total_gb": 15.67,
+      "available_gb": 9.48,
+      "used_gb": 6.19,
+      "percent": 39.5,
+      "cpu_percent": 17.4
+    },
+    "ps": "NAME                     ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nembeddinggemma:latest    85462619ee72    680 MB    100% CPU     2048       4 minutes from now"
+  },
+  "deepseek_4096": {
+    "mem": {
+      "total_gb": 15.67,
+      "available_gb": 0.84,
+      "used_gb": 14.83,
+      "percent": 94.6,
+      "cpu_percent": 17.4
+    },
+    "ps": "NAME                     ID              SIZE     PROCESSOR    CONTEXT    UNTIL              \ndeepseek-coder-v2:16b    63fb193b3a9b    10 GB    100% CPU     4096       4 minutes from now"
+  },
+  "deepseek_8192": {
+    "mem": {
+      "total_gb": 15.67,
+      "available_gb": 0.35,
+      "used_gb": 15.32,
+      "percent": 97.8,
+      "cpu_percent": 30.9
+    },
+    "ps": "NAME                     ID              SIZE     PROCESSOR    CONTEXT    UNTIL              \ndeepseek-coder-v2:16b    63fb193b3a9b    11 GB    100% CPU     8192       4 minutes from now"
+  },
+  "simultaneous": {
+    "mem": {
+      "total_gb": 15.67,
+      "available_gb": 0.24,
+      "used_gb": 15.43,
+      "percent": 98.5,
+      "cpu_percent": 33.4
+    },
+    "ps": "NAME                     ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nembeddinggemma:latest    85462619ee72    680 MB    100% CPU     2048       4 minutes from now    \ndeepseek-coder-v2:16b    63fb193b3a9b    11 GB     100% CPU     8192       4 minutes from now"
+  },
+  "recovery": {
+    "mem": {
+      "total_gb": 15.67,
+      "available_gb": 9.54,
+      "used_gb": 6.13,
+      "percent": 39.1,
+      "cpu_percent": 14.0
+    },
+    "ps": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL"
+  },
+  "routing": [
+    {
+      "category": "Greeting",
+      "prompt": "Hello! How can you help me today?",
+      "route": "gemini",
+      "expected": "chat",
+      "status": "FAILED (got gemini, expected chat)"
+    },
+    {
+      "category": "Architectural assessment",
+      "prompt": "Please conduct a comprehensive architectural assessment of our microservices system design.",
+      "route": "deepseek",
+      "expected": "deepseek",
+      "status": "PASSED"
+    },
+    {
+      "category": "Design question",
+      "prompt": "What are the trade-offs of microservices vs monolithic architecture?",
+      "route": "chat",
+      "expected": "deepseek",
+      "status": "FAILED (got chat, expected deepseek)"
+    },
+    {
+      "category": "Explicit coding request",
+      "prompt": "Write a python script to parse CSV files and save to SQLite database.",
+      "route": "pipeline",
+      "expected": "pipeline",
+      "status": "PASSED"
+    }
+  ]
+}

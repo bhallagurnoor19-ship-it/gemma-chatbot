@@ -1,0 +1,786 @@
+{
+  "doc_2cbe7144a185": {
+    "doc_id": "doc_2cbe7144a185",
+    "original_filename": "FLAT-_5th_-Dec2025-2.pdf",
+    "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_2cbe7144a185.pdf",
+    "file_size_bytes": 274506,
+    "page_count": 2,
+    "status": "completed",
+    "created_at": 1794095444.4712977,
+    "sha256": "acba0565e7a15749a04314935f4c76ea3120027589ef47891994e90395ee13f6",
+    "error_message": null,
+    "summary_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_2cbe7144a185_summary.md",
+    "json_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_2cbe7144a185_inspection.json",
+    "inspection_result": {
+      "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_2cbe7144a185.pdf",
+      "file_name": "doc_2cbe7144a185.pdf",
+      "file_size_bytes": 274506,
+      "sha256": "acba0565e7a15749a04314935f4c76ea3120027589ef47891994e90395ee13f6",
+      "page_count": 2,
+      "is_encrypted": false,
+      "metadata": {
+        "format": "PDF 1.3",
+        "title": "Formal Language and Automata Theory",
+        "author": "BRpaper",
+        "subject": "Formal Language and Automata Theory",
+        "keywords": "",
+        "creator": "BRpaper",
+        "producer": "react-pdf",
+        "creationDate": "D:20261013183526Z",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "page_classifications_summary": {
+        "DIGITAL_TEXT": 0,
+        "SCANNED_IMAGE": 2,
+        "MIXED_CONTENT": 0,
+        "INTENTIONALLY_BLANK": 0,
+        "UNCERTAIN": 0
+      },
+      "ocr_available": true,
+      "ocr_engine_info": {
+        "is_available": true,
+        "tessdata_dir": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "status": "Tessdata found at C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "pymupdf_version": "2.1",
+        "mupdf_version": "1.28.6"
+      },
+      "total_inspection_duration_ms": 4406.40920000078,
+      "pages": [
+        {
+          "page_number": 0,
+          "display_page_number": 1,
+          "width": 952.0,
+          "height": 1347.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams preparatory\n4\nRoll No. Brack eLLTo\n~\ntotal No. of Pages 02\nTotal No. of Questions : 09\nB.Tech. (CSE)\n(Sem:-5)\n:\nFORMAL LANGUAGE AND AUTOMATA THEORY\nSubject Code : BTCS-502-18\nM.Code : 78321\n:\nDate of Examination : 24-11-2025\nTime : 3 Hrs.\nsaved\nMax. Marks : 60\nINSTRUCTIONS TO CANDIDATES :\n.\n4.\nSECTION-A Is COMPULSORY consisting of TEN questions carrying TWO marks\neach.\nP2\n2.\nSECTION-B contains FIVE questions carrying FIVE, marks each,\nand students\n~\nhave to attempt any FOUR questions.\n:\n3.\nSECTION-C contains THREE questions carrying TEN marks each and students\n;\nhave to attempt any TWO questions.\nSECTION -A\n1.\nWrite briefly:\na,\nCompare PDA with FA.\nb.\nState kleen's theorem\n7\n:\nc. Discuss\nthe importance ofArden's theorem\nd. What is\na PDA? Discuss with example.\ne.\nDifferentiate between type | and2 grammar.\nf\nWhat is ambiguity in context free grammar?\ng. Give any 2 uses ofAutomatatheory.\né\nbh. What is a formal language?\ni.\nWhat is left recursion?\nj. Give an example ofproduction rule in automata.\na\nwww_brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 2382.337600000028,
+          "total_duration_ms": 2529.0124000021024,
+          "ocr_error": null
+        },
+        {
+          "page_number": 1,
+          "display_page_number": 2,
+          "width": 952.0,
+          "height": 1347.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams paper\n:\nSECTION - B\n2.\nConvert this NFA to DFA:\ni]\n01\n1\n;\n7\n.\n3.\nConvert the given Mealy machine into Moore machine :\nCP)\nojo\nqi\nee\n1/0 ZS\n0/4.\n1/0\nae\nr\n4.\nCheck whether the given FA accepts the language set L = {0, 10, 110, 1100......}. Also,\ndiscuss the importance of Language acceptance.\na\n1\ni\neo)\n:\n=)\nSee\n0\n5.\nWhat are closure properties? Explain any four.\n6.\n| What is the significance ofpumping lemma for checking regular languages?\nSECTION -C\n7.\nDiscuss in detail the hierarchy representing various types of Grammar, Languages and\nMachines.\n8\nDifferentiate between Moore and mealy machine and steps for conversion to each other.\n9,\nDiscuss church Turing thesis in detail along with various types ofTM.\ni\ni\nile\nNo. or Making of passing request on any\n-\nDi\n¢ of Identity by writing Mobile\nNOTE: Disclosur page ofAnswer Sheet will lead to UMC against the Student.\n2 | M-78324\nwww.brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 1781.4681999989261,
+          "total_duration_ms": 1867.168100001436,
+          "ocr_error": null
+        }
+      ]
+    }
+  },
+  "doc_681905b5a645": {
+    "doc_id": "doc_681905b5a645",
+    "original_filename": "FLAT-_5th_-Dec2025-2.pdf",
+    "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_681905b5a645.pdf",
+    "file_size_bytes": 274506,
+    "page_count": 2,
+    "status": "completed",
+    "created_at": 1794096077.8744314,
+    "sha256": "acba0565e7a15749a04314935f4c76ea3120027589ef47891994e90395ee13f6",
+    "error_message": null,
+    "summary_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_681905b5a645_summary.md",
+    "json_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_681905b5a645_inspection.json",
+    "inspection_result": {
+      "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_681905b5a645.pdf",
+      "file_name": "doc_681905b5a645.pdf",
+      "file_size_bytes": 274506,
+      "sha256": "acba0565e7a15749a04314935f4c76ea3120027589ef47891994e90395ee13f6",
+      "page_count": 2,
+      "is_encrypted": false,
+      "metadata": {
+        "format": "PDF 1.3",
+        "title": "Formal Language and Automata Theory",
+        "author": "BRpaper",
+        "subject": "Formal Language and Automata Theory",
+        "keywords": "",
+        "creator": "BRpaper",
+        "producer": "react-pdf",
+        "creationDate": "D:20261013183526Z",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "page_classifications_summary": {
+        "DIGITAL_TEXT": 0,
+        "SCANNED_IMAGE": 2,
+        "MIXED_CONTENT": 0,
+        "INTENTIONALLY_BLANK": 0,
+        "UNCERTAIN": 0
+      },
+      "ocr_available": true,
+      "ocr_engine_info": {
+        "is_available": true,
+        "tessdata_dir": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "status": "Tessdata found at C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "pymupdf_version": "2.1",
+        "mupdf_version": "1.28.6"
+      },
+      "total_inspection_duration_ms": 1082.5227000023006,
+      "pages": [
+        {
+          "page_number": 0,
+          "display_page_number": 1,
+          "width": 952.0,
+          "height": 1347.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams preparatory\n4\nRoll No. Brack eLLTo\n~\ntotal No. of Pages 02\nTotal No. of Questions : 09\nB.Tech. (CSE)\n(Sem:-5)\n:\nFORMAL LANGUAGE AND AUTOMATA THEORY\nSubject Code : BTCS-502-18\nM.Code : 78321\n:\nDate of Examination : 24-11-2025\nTime : 3 Hrs.\nsaved\nMax. Marks : 60\nINSTRUCTIONS TO CANDIDATES :\n.\n4.\nSECTION-A Is COMPULSORY consisting of TEN questions carrying TWO marks\neach.\nP2\n2.\nSECTION-B contains FIVE questions carrying FIVE, marks each,\nand students\n~\nhave to attempt any FOUR questions.\n:\n3.\nSECTION-C contains THREE questions carrying TEN marks each and students\n;\nhave to attempt any TWO questions.\nSECTION -A\n1.\nWrite briefly:\na,\nCompare PDA with FA.\nb.\nState kleen's theorem\n7\n:\nc. Discuss\nthe importance ofArden's theorem\nd. What is\na PDA? Discuss with example.\ne.\nDifferentiate between type | and2 grammar.\nf\nWhat is ambiguity in context free grammar?\ng. Give any 2 uses ofAutomatatheory.\né\nbh. What is a formal language?\ni.\nWhat is left recursion?\nj. Give an example ofproduction rule in automata.\na\nwww_brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 573.7193999993906,
+          "total_duration_ms": 611.7025000021385,
+          "ocr_error": null
+        },
+        {
+          "page_number": 1,
+          "display_page_number": 2,
+          "width": 952.0,
+          "height": 1347.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams paper\n:\nSECTION - B\n2.\nConvert this NFA to DFA:\ni]\n01\n1\n;\n7\n.\n3.\nConvert the given Mealy machine into Moore machine :\nCP)\nojo\nqi\nee\n1/0 ZS\n0/4.\n1/0\nae\nr\n4.\nCheck whether the given FA accepts the language set L = {0, 10, 110, 1100......}. Also,\ndiscuss the importance of Language acceptance.\na\n1\ni\neo)\n:\n=)\nSee\n0\n5.\nWhat are closure properties? Explain any four.\n6.\n| What is the significance ofpumping lemma for checking regular languages?\nSECTION -C\n7.\nDiscuss in detail the hierarchy representing various types of Grammar, Languages and\nMachines.\n8\nDifferentiate between Moore and mealy machine and steps for conversion to each other.\n9,\nDiscuss church Turing thesis in detail along with various types ofTM.\ni\ni\nile\nNo. or Making of passing request on any\n-\nDi\n¢ of Identity by writing Mobile\nNOTE: Disclosur page ofAnswer Sheet will lead to UMC against the Student.\n2 | M-78324\nwww.brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 449.9294999986887,
+          "total_duration_ms": 470.02509999947506,
+          "ocr_error": null
+        }
+      ]
+    }
+  },
+  "doc_b0d012b488d6": {
+    "doc_id": "doc_b0d012b488d6",
+    "original_filename": "FLAT-_5th_-Dec2025-2.pdf",
+    "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_b0d012b488d6.pdf",
+    "file_size_bytes": 274506,
+    "page_count": 2,
+    "status": "completed",
+    "created_at": 1794096140.1005185,
+    "sha256": "acba0565e7a15749a04314935f4c76ea3120027589ef47891994e90395ee13f6",
+    "error_message": null,
+    "summary_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_b0d012b488d6_summary.md",
+    "json_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_b0d012b488d6_inspection.json",
+    "inspection_result": {
+      "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_b0d012b488d6.pdf",
+      "file_name": "doc_b0d012b488d6.pdf",
+      "file_size_bytes": 274506,
+      "sha256": "acba0565e7a15749a04314935f4c76ea3120027589ef47891994e90395ee13f6",
+      "page_count": 2,
+      "is_encrypted": false,
+      "metadata": {
+        "format": "PDF 1.3",
+        "title": "Formal Language and Automata Theory",
+        "author": "BRpaper",
+        "subject": "Formal Language and Automata Theory",
+        "keywords": "",
+        "creator": "BRpaper",
+        "producer": "react-pdf",
+        "creationDate": "D:20261013183526Z",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "page_classifications_summary": {
+        "DIGITAL_TEXT": 0,
+        "SCANNED_IMAGE": 2,
+        "MIXED_CONTENT": 0,
+        "INTENTIONALLY_BLANK": 0,
+        "UNCERTAIN": 0
+      },
+      "ocr_available": true,
+      "ocr_engine_info": {
+        "is_available": true,
+        "tessdata_dir": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "status": "Tessdata found at C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "pymupdf_version": "2.1",
+        "mupdf_version": "1.28.6"
+      },
+      "total_inspection_duration_ms": 1230.647799999133,
+      "pages": [
+        {
+          "page_number": 0,
+          "display_page_number": 1,
+          "width": 952.0,
+          "height": 1347.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams preparatory\n4\nRoll No. Brack eLLTo\n~\ntotal No. of Pages 02\nTotal No. of Questions : 09\nB.Tech. (CSE)\n(Sem:-5)\n:\nFORMAL LANGUAGE AND AUTOMATA THEORY\nSubject Code : BTCS-502-18\nM.Code : 78321\n:\nDate of Examination : 24-11-2025\nTime : 3 Hrs.\nsaved\nMax. Marks : 60\nINSTRUCTIONS TO CANDIDATES :\n.\n4.\nSECTION-A Is COMPULSORY consisting of TEN questions carrying TWO marks\neach.\nP2\n2.\nSECTION-B contains FIVE questions carrying FIVE, marks each,\nand students\n~\nhave to attempt any FOUR questions.\n:\n3.\nSECTION-C contains THREE questions carrying TEN marks each and students\n;\nhave to attempt any TWO questions.\nSECTION -A\n1.\nWrite briefly:\na,\nCompare PDA with FA.\nb.\nState kleen's theorem\n7\n:\nc. Discuss\nthe importance ofArden's theorem\nd. What is\na PDA? Discuss with example.\ne.\nDifferentiate between type | and2 grammar.\nf\nWhat is ambiguity in context free grammar?\ng. Give any 2 uses ofAutomatatheory.\né\nbh. What is a formal language?\ni.\nWhat is left recursion?\nj. Give an example ofproduction rule in automata.\na\nwww_brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 631.4550999995845,
+          "total_duration_ms": 656.7227999985334,
+          "ocr_error": null
+        },
+        {
+          "page_number": 1,
+          "display_page_number": 2,
+          "width": 952.0,
+          "height": 1347.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams paper\n:\nSECTION - B\n2.\nConvert this NFA to DFA:\ni]\n01\n1\n;\n7\n.\n3.\nConvert the given Mealy machine into Moore machine :\nCP)\nojo\nqi\nee\n1/0 ZS\n0/4.\n1/0\nae\nr\n4.\nCheck whether the given FA accepts the language set L = {0, 10, 110, 1100......}. Also,\ndiscuss the importance of Language acceptance.\na\n1\ni\neo)\n:\n=)\nSee\n0\n5.\nWhat are closure properties? Explain any four.\n6.\n| What is the significance ofpumping lemma for checking regular languages?\nSECTION -C\n7.\nDiscuss in detail the hierarchy representing various types of Grammar, Languages and\nMachines.\n8\nDifferentiate between Moore and mealy machine and steps for conversion to each other.\n9,\nDiscuss church Turing thesis in detail along with various types ofTM.\ni\ni\nile\nNo. or Making of passing request on any\n-\nDi\n¢ of Identity by writing Mobile\nNOTE: Disclosur page ofAnswer Sheet will lead to UMC against the Student.\n2 | M-78324\nwww.brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 547.8861999981746,
+          "total_duration_ms": 572.8430000017397,
+          "ocr_error": null
+        }
+      ]
+    }
+  },
+  "doc_8c3bd019b7d8": {
+    "doc_id": "doc_8c3bd019b7d8",
+    "original_filename": "FLAT-_5th_-Dec2024.pdf",
+    "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_8c3bd019b7d8.pdf",
+    "file_size_bytes": 1482458,
+    "page_count": 2,
+    "status": "completed",
+    "created_at": 1794096888.9734597,
+    "sha256": "8d02c1bd70d01605ec593087bcedc1263424c6f3f571fc10ef5131938f410be7",
+    "error_message": null,
+    "summary_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_8c3bd019b7d8_summary.md",
+    "json_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_8c3bd019b7d8_inspection.json",
+    "inspection_result": {
+      "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_8c3bd019b7d8.pdf",
+      "file_name": "doc_8c3bd019b7d8.pdf",
+      "file_size_bytes": 1482458,
+      "sha256": "8d02c1bd70d01605ec593087bcedc1263424c6f3f571fc10ef5131938f410be7",
+      "page_count": 2,
+      "is_encrypted": false,
+      "metadata": {
+        "format": "PDF 1.3",
+        "title": "Formal Language and Automata Theory",
+        "author": "BRpaper",
+        "subject": "Formal Language and Automata Theory",
+        "keywords": "",
+        "creator": "BRpaper",
+        "producer": "react-pdf",
+        "creationDate": "D:20260823181253Z",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "page_classifications_summary": {
+        "DIGITAL_TEXT": 0,
+        "SCANNED_IMAGE": 2,
+        "MIXED_CONTENT": 0,
+        "INTENTIONALLY_BLANK": 0,
+        "UNCERTAIN": 0
+      },
+      "ocr_available": true,
+      "ocr_engine_info": {
+        "is_available": true,
+        "tessdata_dir": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "status": "Tessdata found at C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "pymupdf_version": "2.1",
+        "mupdf_version": "1.28.6"
+      },
+      "total_inspection_duration_ms": 13303.166600002442,
+      "pages": [
+        {
+          "page_number": 0,
+          "display_page_number": 1,
+          "width": 2201.0,
+          "height": 2547.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams preparatory\na\nRoll No.a Lever |\n|\nTotal No. of Pages : 02\nTotal No. of Questions\n: 09\nB.Tech. (Artificial Intelligence & Machine Learning/CS&E) (Sem-5)\nFORMAL LANGUAGE & AUTOMATA THEORY\nSubject Code : BTCS 502-18\nM.Code\n: 93172\nDate of Examination\n: 22-11-2024\n.\nTime\n: 3 Hrs.\n_\nMax. Marks\n: 60\nINSTRUCTIONS TO CANDIDATES :\nx\n4,\nSECTION-A is COMPULSORY consisting of TEN questions carrying TWO marks\neach.\n2.\nSECTION-B contains FIVE questions carrying FIVE marks each and students\nhave to attempt any FOUR questions.\n3.\nSECTION-C contains THREE questions carrying TEN marks each and students\nhave to attempt any TWO questions.\n.\nSECTION-A\n|\n|\n1.\nWrite briefly:\na) Differentiate between NFA and DFA.\n:\nb) State Pumping Lemma for Context Free Languages.\nc)\nState Kleene's theorem.\nd) Define union of two languages.\n_\n¢) Explain the concept ofUnit Production.\nf) Give example of language that ts recursive.\ng) Define leftmost and rightmost derivation.\nh) What is ambiguity in CFGs?\ni) WhatisGriebach Normal Form?\n|\nj)\nDefine decidability.\n.\n|\n1 | M-93172\nfa\naN\n($2)-20\nHe\nSe)\n\\eo\nwww.brpaper.com\n.",
+          "ocr_executed": true,
+          "ocr_duration_ms": 6471.811300001718,
+          "total_duration_ms": 6927.715599998919,
+          "ocr_error": null
+        },
+        {
+          "page_number": 1,
+          "display_page_number": 2,
+          "width": 2188.0,
+          "height": 2668.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "©\nBR paner\n|\nSECTION-B\n|\n2,\nGive regular expression to each ofthe subsets of {a,b}\na) Set ofall strings containing exactly 2a's\nb) Set of all strings containing substring 28.\n3,\nConstruct a Finite Automata equivalent to the regular expression.\n|\n(0+1)* (00+! 1) (0+1)*\n|\n4.\nExplain in brief the various types of languages. Also name the automata accepting those\nlanguages.\n5.\nWhat are the steps needed to reduce a context free grammar to an equivalent grammar in\nChomsky Normal Form.\n|\n6.\nWhat is Turing Machine? Discuss its halting problem.\n|\nSECTION-C\n7.\nShow the equivalence ofDFA andNDFA.\ng\nDesign aTuring Machine M to recognize the language (2°3\" | n21}.-\n9,\nWrite short notes on:\n|\n|\na) Context Sensitive Languages\n—\nb) Closure Properties in CFLs\nc) NP Complete Problems\n|\nd) Church Turing, Thesis.\nNOTE: Disclosure ofIdentity bywriting Mobile No. orMaking of passing request on any\n|\npage ofAnswer Sheet will lead toUMC against the Student.\n2 | m-93172\nae\n|\n“ao\n|\n~ (§2)-20\nwww.brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 5946.263900001213,
+          "total_duration_ms": 6364.882400001079,
+          "ocr_error": null
+        }
+      ]
+    }
+  },
+  "doc_f5dd9cfc9bcb": {
+    "doc_id": "doc_f5dd9cfc9bcb",
+    "original_filename": "FLAT-_5th_-Dec2025.pdf",
+    "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_f5dd9cfc9bcb.pdf",
+    "file_size_bytes": 821487,
+    "page_count": 2,
+    "status": "completed",
+    "created_at": 1794096896.8123083,
+    "sha256": "10927533ebc31164eeecd900c187f76c55cba2e824140aa69e9939a3fcbe2b7e",
+    "error_message": null,
+    "summary_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_f5dd9cfc9bcb_summary.md",
+    "json_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_f5dd9cfc9bcb_inspection.json",
+    "inspection_result": {
+      "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_f5dd9cfc9bcb.pdf",
+      "file_name": "doc_f5dd9cfc9bcb.pdf",
+      "file_size_bytes": 821487,
+      "sha256": "10927533ebc31164eeecd900c187f76c55cba2e824140aa69e9939a3fcbe2b7e",
+      "page_count": 2,
+      "is_encrypted": false,
+      "metadata": {
+        "format": "PDF 1.3",
+        "title": "Formal Language and Automata Theory",
+        "author": "BRpaper",
+        "subject": "Formal Language and Automata Theory",
+        "keywords": "",
+        "creator": "BRpaper",
+        "producer": "react-pdf",
+        "creationDate": "D:20260918171800Z",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "page_classifications_summary": {
+        "DIGITAL_TEXT": 0,
+        "SCANNED_IMAGE": 2,
+        "MIXED_CONTENT": 0,
+        "INTENTIONALLY_BLANK": 0,
+        "UNCERTAIN": 0
+      },
+      "ocr_available": true,
+      "ocr_engine_info": {
+        "is_available": true,
+        "tessdata_dir": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "status": "Tessdata found at C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "pymupdf_version": "2.1",
+        "mupdf_version": "1.28.6"
+      },
+      "total_inspection_duration_ms": 14989.033300000301,
+      "pages": [
+        {
+          "page_number": 0,
+          "display_page_number": 1,
+          "width": 2209.0,
+          "height": 2880.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "BR paper\nexams preparatory\nRoltNo,\n|\n|\n| tL\nETE\nET\nETI\n.\nTotal No. of Pages: 02\n‘Total No. of Questions: 09\nB.Tech (CSE/AIDS/AIML/LOT/CSE-DS), Semester 5\"\nFORMAL LANGUAGES AND AUTOMATA THEORY\nSubject\nCode: BT'CSS02-18\nM.Code: 7832 1/93172/93938/92360/92343\nDate of Examination: 17-11-2025\nTime: 3 Hrs,\nMax. Marks: 60\nINSTRUCTIONS TO CANDIDATES:\nI.\nSECTION-Ais COMPULSORY consisting of TEN questions carrying TWO marks cach.\n2.\nSECTION-B contains FIVE questions carrying FIVE marks each and students have to\nattempt any FOUR questions.\n~,\n3.\nSECTION C contains THREE questions carrying TEN marks each and students have to\nattempt anv TWO questions.\nQ.\n“Question\nCourse\n|\nBloom’\n|\nNo.\n|\n_\n|\nae\nOutcome | s Level\n|\n|\nSECTION-A\n|\n1] Answer briefly:\nae\neee\n_a. | Recall about the acceptability ofa string using DFA.\nps|\nCO-|\nb,\n| Classify four tuples of\na grammar G with the help ofan-cxample,\nCO-|\nec.| Recall the difference between DFA and NFA; Givean example.\nCO-2 = Gl\nd.\n| Outline the steps for minimizing a finite automaton and summarize |\nCO-2\nL2\nwhy minimization is required.\n:\n2\n|\nWhen is a CFGsaidto be in GNF?\nCO-3\n| LL |\nConsider the grammar\nCO-3\nL2\nS—aAS/a\nA— SbA|SS\n| ba\na\nShow how the string aabbaa is generated and illustrate its derivation\nExplain the importance of LBAs in formal language theory.\nCO-4\nfH Outline the closure properties ofTuring-recognizable languages.\nCOs] 12\nCompare SAT and 3-SAT and prove that 3-SAT is NP-complete.\nCO-6\nState Rice’s Theorem.\n;\n|\nCO-6\n| LI\n2, | Identify the language L= {a\"b\"e™d™\n| n=l, m= 1! and categorize its | CO-|\nL3\nstructure by analyzing an appropriate grammar representation,\n|\nExplain about Arden’s theorem, for constructing the RE from given | CO-2\nPA.\n4,\n| Consider grammar with productions\n|\n~CO-3\nL5\nE—\n|\nE—- EFeE\n|\n(E> E*E\nE— (E)\nI £/0/11.4.)9\nDetermine whether the above grammar is ambiguous for the given\nstring o) = 3*2+5\n|\n=}\n-\n|\n1\nM-78321/93172/93938/92360/92343\nwww.brpaper. com\n© Scanned with OKEN Scanner",
+          "ocr_executed": true,
+          "ocr_duration_ms": 8758.902099998522,
+          "total_duration_ms": 9191.305699998338,
+          "ocr_error": null
+        },
+        {
+          "page_number": 1,
+          "display_page_number": 2,
+          "width": 2209.0,
+          "height": 2880.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "BR paper\nexams preparatory\n5. | Construct a LBA which can accept L =\n| ww*\n| w belongs tofore*:] cod |\nL6\n|\n6,\n| Appraise the importance of polynomial reductions in classifving\nCO-6\n[3\n|\nproblems.\n.\n-\n7\n__SECTION-C\n—\n7.\n| Identify the automata machines that accept different languages\nCO-|\n[3\n|\naccording to the Chomsky hierarchy.\n—\n8. | What is PDA? Identify how does a PDA handle the recognition of\nCO-4\n13\ncontext free languages and what role does its stack play in this\n9, | Evaluate a Turing Machine that recognizes all strings having equal\nCO-5\nL5\nnumbers of 0's and I's and conclude its correctness.\n_\n|\nNote: Disclosure of identity by writing mobile number or making of passing request on any\npaper of Answer Sheet will lead to UMC against the student.\ni. '\n2 M-78321/93172/93938/92360/92343\nwww.brpaper. com\n© Scanned with OKEN Scanner",
+          "ocr_executed": true,
+          "ocr_duration_ms": 5367.1270000013465,
+          "total_duration_ms": 5774.881900000764,
+          "ocr_error": null
+        }
+      ]
+    }
+  },
+  "doc_107fa78da87a": {
+    "doc_id": "doc_107fa78da87a",
+    "original_filename": "FLAT-_5th_-Dec2025-2.pdf",
+    "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_107fa78da87a.pdf",
+    "file_size_bytes": 274506,
+    "page_count": 2,
+    "status": "completed",
+    "created_at": 1794096902.3420131,
+    "sha256": "acba0565e7a15749a04314935f4c76ea3120027589ef47891994e90395ee13f6",
+    "error_message": null,
+    "summary_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_107fa78da87a_summary.md",
+    "json_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_107fa78da87a_inspection.json",
+    "inspection_result": {
+      "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_107fa78da87a.pdf",
+      "file_name": "doc_107fa78da87a.pdf",
+      "file_size_bytes": 274506,
+      "sha256": "acba0565e7a15749a04314935f4c76ea3120027589ef47891994e90395ee13f6",
+      "page_count": 2,
+      "is_encrypted": false,
+      "metadata": {
+        "format": "PDF 1.3",
+        "title": "Formal Language and Automata Theory",
+        "author": "BRpaper",
+        "subject": "Formal Language and Automata Theory",
+        "keywords": "",
+        "creator": "BRpaper",
+        "producer": "react-pdf",
+        "creationDate": "D:20261013183526Z",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "page_classifications_summary": {
+        "DIGITAL_TEXT": 0,
+        "SCANNED_IMAGE": 2,
+        "MIXED_CONTENT": 0,
+        "INTENTIONALLY_BLANK": 0,
+        "UNCERTAIN": 0
+      },
+      "ocr_available": true,
+      "ocr_engine_info": {
+        "is_available": true,
+        "tessdata_dir": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "status": "Tessdata found at C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "pymupdf_version": "2.1",
+        "mupdf_version": "1.28.6"
+      },
+      "total_inspection_duration_ms": 11272.863499998493,
+      "pages": [
+        {
+          "page_number": 0,
+          "display_page_number": 1,
+          "width": 952.0,
+          "height": 1347.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams preparatory\n4\nRoll No. Brack eLLTo\n~\ntotal No. of Pages 02\nTotal No. of Questions : 09\nB.Tech. (CSE)\n(Sem:-5)\n:\nFORMAL LANGUAGE AND AUTOMATA THEORY\nSubject Code : BTCS-502-18\nM.Code : 78321\n:\nDate of Examination : 24-11-2025\nTime : 3 Hrs.\nsaved\nMax. Marks : 60\nINSTRUCTIONS TO CANDIDATES :\n.\n4.\nSECTION-A Is COMPULSORY consisting of TEN questions carrying TWO marks\neach.\nP2\n2.\nSECTION-B contains FIVE questions carrying FIVE, marks each,\nand students\n~\nhave to attempt any FOUR questions.\n:\n3.\nSECTION-C contains THREE questions carrying TEN marks each and students\n;\nhave to attempt any TWO questions.\nSECTION -A\n1.\nWrite briefly:\na,\nCompare PDA with FA.\nb.\nState kleen's theorem\n7\n:\nc. Discuss\nthe importance ofArden's theorem\nd. What is\na PDA? Discuss with example.\ne.\nDifferentiate between type | and2 grammar.\nf\nWhat is ambiguity in context free grammar?\ng. Give any 2 uses ofAutomatatheory.\né\nbh. What is a formal language?\ni.\nWhat is left recursion?\nj. Give an example ofproduction rule in automata.\na\nwww_brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 2840.5921999983548,
+          "total_duration_ms": 2943.2867000032275,
+          "ocr_error": null
+        },
+        {
+          "page_number": 1,
+          "display_page_number": 2,
+          "width": 952.0,
+          "height": 1347.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams paper\n:\nSECTION - B\n2.\nConvert this NFA to DFA:\ni]\n01\n1\n;\n7\n.\n3.\nConvert the given Mealy machine into Moore machine :\nCP)\nojo\nqi\nee\n1/0 ZS\n0/4.\n1/0\nae\nr\n4.\nCheck whether the given FA accepts the language set L = {0, 10, 110, 1100......}. Also,\ndiscuss the importance of Language acceptance.\na\n1\ni\neo)\n:\n=)\nSee\n0\n5.\nWhat are closure properties? Explain any four.\n6.\n| What is the significance ofpumping lemma for checking regular languages?\nSECTION -C\n7.\nDiscuss in detail the hierarchy representing various types of Grammar, Languages and\nMachines.\n8\nDifferentiate between Moore and mealy machine and steps for conversion to each other.\n9,\nDiscuss church Turing thesis in detail along with various types ofTM.\ni\ni\nile\nNo. or Making of passing request on any\n-\nDi\n¢ of Identity by writing Mobile\nNOTE: Disclosur page ofAnswer Sheet will lead to UMC against the Student.\n2 | M-78324\nwww.brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 2433.120900001086,
+          "total_duration_ms": 2532.276099998853,
+          "ocr_error": null
+        }
+      ]
+    }
+  },
+  "doc_c6ac29059251": {
+    "doc_id": "doc_c6ac29059251",
+    "original_filename": "FLAT-_5th_-Dec2025-3.pdf",
+    "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_c6ac29059251.pdf",
+    "file_size_bytes": 246560,
+    "page_count": 2,
+    "status": "completed",
+    "created_at": 1794096912.480863,
+    "sha256": "a79e3681c3ad76640909b2b9e9773bec3516ff44b0d3ed3cbdffc232d3beb5fc",
+    "error_message": null,
+    "summary_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_c6ac29059251_summary.md",
+    "json_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_c6ac29059251_inspection.json",
+    "inspection_result": {
+      "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_c6ac29059251.pdf",
+      "file_name": "doc_c6ac29059251.pdf",
+      "file_size_bytes": 246560,
+      "sha256": "a79e3681c3ad76640909b2b9e9773bec3516ff44b0d3ed3cbdffc232d3beb5fc",
+      "page_count": 2,
+      "is_encrypted": false,
+      "metadata": {
+        "format": "PDF 1.3",
+        "title": "Formal Language and Automata Theory",
+        "author": "BRpaper",
+        "subject": "Formal Language and Automata Theory",
+        "keywords": "",
+        "creator": "BRpaper",
+        "producer": "react-pdf",
+        "creationDate": "D:20261013184232Z",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "page_classifications_summary": {
+        "DIGITAL_TEXT": 0,
+        "SCANNED_IMAGE": 2,
+        "MIXED_CONTENT": 0,
+        "INTENTIONALLY_BLANK": 0,
+        "UNCERTAIN": 0
+      },
+      "ocr_available": true,
+      "ocr_engine_info": {
+        "is_available": true,
+        "tessdata_dir": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "status": "Tessdata found at C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "pymupdf_version": "2.1",
+        "mupdf_version": "1.28.6"
+      },
+      "total_inspection_duration_ms": 5380.486599999131,
+      "pages": [
+        {
+          "page_number": 0,
+          "display_page_number": 1,
+          "width": 858.0,
+          "height": 1169.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "BR paper\nexams preparatory\n4\nRoll No. BELLI LITT\n“total No. of Pages 02\nTotal No. of Questions : 09\nB.Tech. (CSE)\n(Sem:-5)\nFORMAL LANGUAGE AND AUTOMATA THEORY\nSubject Code : BTCS-502-18\nM.Code : 78321\nDate of Examination : 24-11-2025\nTime: 3 Hrs.\n;\n:\nMax. Marks : 60\nINSTRUCTIONS TO CANDIDATES :\n1. SECTION-A Is COMPULSORY consisting of TEN questions carrying TWO marks\neach.\n:\n2. SECTION-B contains FIVE questions, carrying FIVE, marks each. and students\nhave to attempt any FOUR questions.\n3.\nSECTION-C contains THREE questions carrying TEN marks each and students\n.\nhave to attempt any TWO questions.\n;\nSECTION - A\n1.\nWrite briefly:\n.\n2\na.\nCompare PDA with FA.\nb.\nState kleen's theorem\naihasteety\nc. Discuss the importance ofArden's theorem\nd. What is a PDA? Discuss withexample,\ne.\nDifferentiate between type | and2 grammar.\nf£\nWhat is ambiguity in context free grammar?\ng. Give any 2 uses ofAutomatatheory.\n:\nh. What is a formal language?\ni.\nWhat is left recursion?\nj. Give an example ofproduction rule in automata.\no\n8\n’\n_ www.brpaper.com\nme\nwe",
+          "ocr_executed": true,
+          "ocr_duration_ms": 2692.7025000004505,
+          "total_duration_ms": 2771.043299999292,
+          "ocr_error": null
+        },
+        {
+          "page_number": 1,
+          "display_page_number": 2,
+          "width": 752.0,
+          "height": 974.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "BRRaper\nWee ce\nexams preoaratory\nin\nSECTION -B\nst\n2.\nWrite various Principles thatGuide Practice. Explain all principles ofanyone module of\n%\nSoftware Development Life Cycle.\n:\n_\no\n3.\nCompare andcontrast benefits ofvalidationand verification in.aproject.\na\n4.\nExplain briefly object modelingusingUML. Explain with the help of suitable examples.\noS\n5.\nCompare and contrast functionaland non-functional requirements.\n:\nES\n6.\nDifferentiate alpha testing from beta testing and discuss in detail about phases in which\n4s\nalpha and beta testing is doneand how it isrelated to milestone anddeliverable?\nwr\nare\n\\ki\n7.\nWritea short note on :\nghee\na\n2\na. SEICMMI\nween\ni\nb,\nISO\n,\nshale\ni\n5\n4\n8.\na. Give various software reliability metrics.\nGAL.\n'\nb. Differentiate between white box and black box testing.\ni\n9.\nExplain with the help of suitable examples and usesuitable assumption if any :\na. GANTY Chart\ni\neee\nb. PERT Chart\nalas\npe\na\n.\nsas\nAtohtle\nNe\nking ofpassing request on any\nNOTE : Disclosure of Identity by writing Mobile No. or Mal\nt\npageefAnswer Sheet will lead ad UMC against the Studen\n2 | M-75322_\neae\n-\n—\nwww.brpaper:com\nboon oa\nRerann ghey\nPre otaed bas vats",
+          "ocr_executed": true,
+          "ocr_duration_ms": 2502.2839000012027,
+          "total_duration_ms": 2574.8853999975836,
+          "ocr_error": null
+        }
+      ]
+    }
+  },
+  "doc_6f1422777891": {
+    "doc_id": "doc_6f1422777891",
+    "original_filename": "FLAT-_5th_-May2026.pdf",
+    "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_6f1422777891.pdf",
+    "file_size_bytes": 1586160,
+    "page_count": 2,
+    "status": "completed",
+    "created_at": 1794096925.6390784,
+    "sha256": "cec7211438e7faeb2299b82b2f26d114d98e88258c729f200e8c41b829070a7b",
+    "error_message": null,
+    "summary_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_6f1422777891_summary.md",
+    "json_report_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\output\\doc_6f1422777891_inspection.json",
+    "inspection_result": {
+      "file_path": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\uploads\\doc_6f1422777891.pdf",
+      "file_name": "doc_6f1422777891.pdf",
+      "file_size_bytes": 1586160,
+      "sha256": "cec7211438e7faeb2299b82b2f26d114d98e88258c729f200e8c41b829070a7b",
+      "page_count": 2,
+      "is_encrypted": false,
+      "metadata": {
+        "format": "PDF 1.3",
+        "title": "Formal Language and Automata Theory",
+        "author": "BRpaper",
+        "subject": "Formal Language and Automata Theory",
+        "keywords": "",
+        "creator": "BRpaper",
+        "producer": "react-pdf",
+        "creationDate": "D:20260909120557Z",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "page_classifications_summary": {
+        "DIGITAL_TEXT": 0,
+        "SCANNED_IMAGE": 2,
+        "MIXED_CONTENT": 0,
+        "INTENTIONALLY_BLANK": 0,
+        "UNCERTAIN": 0
+      },
+      "ocr_available": true,
+      "ocr_engine_info": {
+        "is_available": true,
+        "tessdata_dir": "C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "status": "Tessdata found at C:\\Users\\Gurnoor\\Desktop\\gemma-chatbot\\data\\pdf_intelligence\\tessdata",
+        "pymupdf_version": "2.1",
+        "mupdf_version": "1.28.6"
+      },
+      "total_inspection_duration_ms": 15177.724500001204,
+      "pages": [
+        {
+          "page_number": 0,
+          "display_page_number": 1,
+          "width": 1990.0,
+          "height": 2841.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "BR paper\ndle\nexams preparatory\nRotNo. ||] TT\nTT TTT TTT)\nTotal No. of Pages: 02\nTotal No. of Questions: 09\nB.Tech (CSE/AIDS/AIML/ALOT/CSE-DS), Semester 5\"\nFORMAL LANGUAGE, AND AUTOMATA THEORY\nSubject\nCode: BT'CS502-18\nM.Code: 7832 1/93172/93938/92360/92343\nDate of Examination:!4-06-2026\nTime: 3 Hrs.\nMax. Marks: 60\nINSTRUCTIONS TO CANDIDATES:\n1. SECTION-A is COMPULSORY consisting ofTEN questions carrying TWO marks each.\n4. SECTION-B contains FIVE questions carrying FIVE marks each and students have to\nattempt any FOUR questions.\n3. SECTION C contains THREE questions carrying TEN marks each and students have to\nattempt any TWO questions.\nQ.\nQuestion\nCourse | Bloom’\n|\nNo.\nLee\n|\nOutcome\n|\ns Level\n,\nSECTION-A\n|\n|\n7\n|.\n| Answer briefly:\n;\n1\nad\n|\na. | What is a formal language land how it is different from natural\nCO-|]\nLI\n_| languages ?\nal\n.\nb. |Explain how a grammar( G)istepresented in formal lanvuage theory,\nc.\n| What is the difference between Regularand context freegrammar?\na\na\n d.\n| Explain Arden’s theorem.\nCO-2\n1.2\ne. | Recall Chomskyfs Normal Form. Give an example,\n—Co3\nL]\nf.\n| Demonstrate that the given grammar is ambiguous.\nCO-3 12\nS—a|SalbSs\n| SSb| SbS\n|\n4.\n| Outline the restrictions on tape movement ina LBA.\nie\nh.\n|Compare and contrast Finite Automata with Turing Machines.\nCO-5\nL2\nEh\nExplain Cook-Liven theorem. —\nCO-6\ney\nJ.\n| When is a problem said to be NP-hard?\nCO-6\na4\n|\nSECTION-B\n|\n-\n|\n2. | Identify the language L=fa\"cb\"\n| n> 1, over alphabet X = {a,b c}}\nCcoO-1\n|\n13\nas per Chomsky hierarchy,\n{\n|\n3. | Examine the pumping lemma for regular grammars and infer how it |\nCQO-2\nL4\n|\n___| can beapplied toprove that a given grammarisnotregular,\n_——_\n4. | Evaluate the following CFG and sinplify it into Chomsky Normal\nCO-3\nLS\nForm (CNP):\non\nies\n-\nS— (S*S)\nIs\nLyty >)\nS—2\n|\n5. | Construct a CSG for the language L={a\"b\"e\" | n=1}. Apply the rules\nCO-4\nLo\n___|\nofCSGs to derive the string “aabbee” for the language.\na\n|\n6.\n| Identify the validity of the Church-Turing Thesis in modern\nCO-6\n|\nL3\n|\ncomputation models.\n1 M-78321/93172/93938/92360/92343\nwww.brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 9071.674999999232,
+          "total_duration_ms": 9482.493499999691,
+          "ocr_error": null
+        },
+        {
+          "page_number": 1,
+          "display_page_number": 2,
+          "width": 1996.0,
+          "height": 2835.0,
+          "rotation": 0,
+          "native_char_count": 15,
+          "native_word_count": 1,
+          "image_count": 3,
+          "image_coverage_ratio": 1.0,
+          "classification": "SCANNED_IMAGE",
+          "classification_reasons": [
+            "Native text chars: 15 (threshold: 50)",
+            "Image count: 3, Union coverage: 100.00% (threshold: 40%)",
+            "Insufficient native text and high raster image coverage (scanned document)"
+          ],
+          "provenance": "ocr",
+          "extracted_text": "exams preparatory\na\nee\nes\n—\nSECTION-C\n.\n7, | Identify the automata machines that accept different languages\nCO-I\n|\nL3\naccording to the Chomsky hierarchy.\ni\n|\nme.\n| Build a LBA for language L having equal number ofa's followed by | CO-4\nL3\n___| equal numberofb's followed by equal number of c's.\n9, | Evaluate the operations ofaTuring Machine in terms of reading and\nCO-5\nFe\nwriting symbols on the tape, state transitions and halting conditions\nwith suitable example.\nd\n|\nNote: Disclosure ofidentity by writing mobile number or making of passing request on any\npaper of Answer Sheet will lead to UMC against the student.\n2 M-78321/93172/93938/92360/92343\nwww.brpaper.com",
+          "ocr_executed": true,
+          "ocr_duration_ms": 5236.223600000812,
+          "total_duration_ms": 5601.594100000511,
+          "ocr_error": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,3400 @@
+{
+  "metrics_summary": {
+    "total_queries_evaluated": 40,
+    "answerable_queries": 35,
+    "unanswerable_queries": 5,
+    "answer_correctness_rate": 0.7714,
+    "claim_groundedness_rate": 0.4729,
+    "unsupported_claim_rate": 0.2132,
+    "citation_accuracy_rate": 1.0,
+    "correct_abstention_rate": 0.4,
+    "retrieval_success_rate": 0.9714,
+    "mean_latency_ms": 8288.33,
+    "mean_ttft_ms": 7243.65,
+    "model_specific_results": {
+      "gemini": {
+        "total_queries": 40,
+        "answerable_queries": 35,
+        "answer_correctness_rate": 0.7714,
+        "mean_groundedness": 0.6915,
+        "citation_accuracy_rate": 1.0,
+        "abstention_rate": 0.4,
+        "mean_latency_ms": 8288.33,
+        "mean_ttft_ms": 7243.65
+      }
+    },
+    "category_specific_results": {
+      "codebase": {
+        "total": 10,
+        "answer_correctness": 0.7,
+        "mean_groundedness": 0.6392,
+        "citation_accuracy": 1.0,
+        "abstention_rate": null
+      },
+      "config": {
+        "total": 5,
+        "answer_correctness": 0.8,
+        "mean_groundedness": 0.785,
+        "citation_accuracy": 1.0,
+        "abstention_rate": null
+      },
+      "document": {
+        "total": 10,
+        "answer_correctness": 1.0,
+        "mean_groundedness": 0.8,
+        "citation_accuracy": 1.0,
+        "abstention_rate": null
+      },
+      "frontend": {
+        "total": 5,
+        "answer_correctness": 0.6,
+        "mean_groundedness": 0.7092,
+        "citation_accuracy": 1.0,
+        "abstention_rate": null
+      },
+      "multi_source": {
+        "total": 5,
+        "answer_correctness": 0.6,
+        "mean_groundedness": 0.4683,
+        "citation_accuracy": 1.0,
+        "abstention_rate": null
+      },
+      "unanswerable": {
+        "total": 5,
+        "answer_correctness": null,
+        "mean_groundedness": null,
+        "citation_accuracy": null,
+        "abstention_rate": 0.4
+      }
+    }
+  },
+  "detailed_evaluations": [
+    {
+      "id": "AQ01",
+      "category": "document",
+      "question": "What is the minimum number of availability zones per region and what availability percentage is maintained according to the cloud deployment guide?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 0,
+      "supported_claims": 0,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 0.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "cloud_deployment_guide.pdf"
+      ],
+      "total_latency_ms": 8900.72,
+      "ttft_ms": 8875.77,
+      "claim_details": []
+    },
+    {
+      "id": "AQ02",
+      "category": "document",
+      "question": "What CIDR blocks are assigned to the primary, secondary, and disaster recovery regions in the cloud deployment guide?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "cloud_deployment_guide.pdf"
+      ],
+      "total_latency_ms": 8775.86,
+      "ttft_ms": 8564.36,
+      "claim_details": [
+        {
+          "claim": "**Primary Region (US-East):** 10.120.0.0/16 [Document: cloud_deployment_guide.pdf, Page 1]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.38,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Secondary Region (US-West):** 10.121.0.0/16 [Document: cloud_deployment_guide.pdf, Page 1]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.12,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Disaster Recovery Region (EU-Central):** 10.122.0.0/16 [Document: cloud_deployment_guide.pdf, Page 1]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.56
+        }
+      ]
+    },
+    {
+      "id": "AQ03",
+      "category": "document",
+      "question": "Which specific cipher suite and TLS version are permitted for internal mesh communications in the cloud deployment guide?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 1,
+      "groundedness_score": 0.0,
+      "unsupported_claim_rate": 1.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "cloud_deployment_guide.pdf"
+      ],
+      "total_latency_ms": 8720.02,
+      "ttft_ms": 8393.48,
+      "claim_details": [
+        {
+          "claim": "*(Note: While the exact TLS version is not explicitly spelled out alongside the cipher suite name in the text, ECDHE-ECDSA-AES256-GCM-SHA384 is a standard cipher suite associated with **TLS 1.2 and TLS 1.3**; however, only the cipher suite itself is explicitly named in the provided reference text [Document: cloud_deployment_guide.pdf, Page 2].)*",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.07,
+          "gt_overlap": 0.19
+        }
+      ]
+    },
+    {
+      "id": "AQ04",
+      "category": "document",
+      "question": "What is the standard certificate rotation window and when is automated renewal triggered in the cloud deployment guide?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "cloud_deployment_guide.pdf"
+      ],
+      "total_latency_ms": 9062.84,
+      "ttft_ms": 8433.31,
+      "claim_details": [
+        {
+          "claim": "**Standard certificate rotation window:** 90 days [Document: cloud_deployment_guide.pdf, Page 2]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.56
+        },
+        {
+          "claim": "**Automated certificate renewal trigger:** 30 days prior to the expiration date [Document: cloud_deployment_guide.pdf, Page 2]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.67
+        }
+      ]
+    },
+    {
+      "id": "AQ05",
+      "category": "document",
+      "question": "What are the RTO and RPO targets defined for tier-1 transactional systems in the cloud deployment guide?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "cloud_deployment_guide.pdf"
+      ],
+      "total_latency_ms": 8469.57,
+      "ttft_ms": 8264.3,
+      "claim_details": [
+        {
+          "claim": "**Recovery Time Objective (RTO):** Strictly under 15 minutes for complete regional failover [Document: cloud_deployment_guide.pdf, Page 3].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.21,
+          "gt_overlap": 0.71
+        },
+        {
+          "claim": "**Recovery Point Objective (RPO):** Strictly under 60 seconds of transaction data loss [Document: cloud_deployment_guide.pdf, Page 3].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.21,
+          "gt_overlap": 0.71
+        }
+      ]
+    },
+    {
+      "id": "AQ06",
+      "category": "document",
+      "question": "What conditions trigger automatic failover between regions according to the cloud deployment guide?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "cloud_deployment_guide.pdf"
+      ],
+      "total_latency_ms": 7934.55,
+      "ttft_ms": 7075.74,
+      "claim_details": [
+        {
+          "claim": "The primary cluster fails **5 consecutive health probes** spanning a 120-second evaluation window [Document: cloud_deployment_guide.pdf, Page 3].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.64,
+          "gt_overlap": 0.71
+        },
+        {
+          "claim": "Regional packet loss exceeds **45%** for longer than **90 continuous seconds** [Document: cloud_deployment_guide.pdf, Page 3].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.67
+        }
+      ]
+    },
+    {
+      "id": "AQ07",
+      "category": "document",
+      "question": "What are the production and staging base URLs defined in the API specification?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "api_specifications.md"
+      ],
+      "total_latency_ms": 6489.66,
+      "ttft_ms": 6293.15,
+      "claim_details": [
+        {
+          "claim": "**Production Base URL:** `https://api.enterprise-gemma.io/v2` [Document: api_specifications.md, Page 1]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.78
+        },
+        {
+          "claim": "**Staging Base URL:** `https://staging-api.enterprise-gemma.io/v2` [Document: api_specifications.md, Page 1]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.22,
+          "gt_overlap": 0.78
+        }
+      ]
+    },
+    {
+      "id": "AQ08",
+      "category": "document",
+      "question": "What are the rate limit quota, burst capacity, and token expiration period in the API specification?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 3,
+      "supported_claims": 3,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "api_specifications.md"
+      ],
+      "total_latency_ms": 6530.3,
+      "ttft_ms": 6263.21,
+      "claim_details": [
+        {
+          "claim": "**Rate Limit Quota:** 1200 requests per minute per authenticated client ID [Document: api_specifications.md, Page 1].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.83
+        },
+        {
+          "claim": "**Burst Capacity:** Up to 250 requests over a rolling 5-second window [Document: api_specifications.md, Page 1].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.18,
+          "gt_overlap": 0.82
+        },
+        {
+          "claim": "**Token Expiration Period:** 3600 seconds (1 hour), while refresh tokens remain valid for 14 days [Document: api_specifications.md, Page 1].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.73,
+          "gt_overlap": 0.47
+        }
+      ]
+    },
+    {
+      "id": "AQ09",
+      "category": "document",
+      "question": "What is the maximum request payload size and what is the mandatory correlation header in the API specification?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "api_specifications.md"
+      ],
+      "total_latency_ms": 6087.31,
+      "ttft_ms": 5985.23,
+      "claim_details": [
+        {
+          "claim": "**Maximum request payload size:** 15 megabytes (15,728,640 bytes) [Document: api_specifications.md, Page 1].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.27,
+          "gt_overlap": 0.82
+        },
+        {
+          "claim": "**Mandatory correlation header:** `X-Request-Correlation-ID: <UUID-v4>` [Document: api_specifications.md, Page 1].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.12,
+          "gt_overlap": 0.75
+        }
+      ]
+    },
+    {
+      "id": "AQ10",
+      "category": "document",
+      "question": "What are the diagnostic command in Step 1 and the initial remediation command in the connection pool runbook?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 6,
+      "supported_claims": 6,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "incident_runbook.txt"
+      ],
+      "total_latency_ms": 5918.25,
+      "ttft_ms": 5800.78,
+      "claim_details": [
+        {
+          "claim": "**Diagnostic Command (Step 1):**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "poolctl stat --pool=gemma_primary --verbose",
+          "status": "SUPPORTED",
+          "context_overlap": 0.6,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "[Document: incident_runbook.txt, Page 1]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Initial Remediation Command (Step 1 of Remediation Steps):**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.6,
+          "gt_overlap": 0.6
+        },
+        {
+          "claim": "poolctl drain --pool=gemma_primary --force --timeout=10",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "[Document: incident_runbook.txt, Page 1]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.5
+        }
+      ]
+    },
+    {
+      "id": "AQ11",
+      "category": "codebase",
+      "question": "What HTTP routes and endpoints are implemented in app.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 6,
+      "supported_claims": 2,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 4,
+      "groundedness_score": 0.3333,
+      "unsupported_claim_rate": 0.6667,
+      "citation_correct": true,
+      "cited_sources": [
+        "app.py"
+      ],
+      "total_latency_ms": 6766.95,
+      "ttft_ms": 6289.29,
+      "claim_details": [
+        {
+          "claim": "`health` (responding at `/api/health`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.67
+        },
+        {
+          "claim": "`update_settings`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "`verify_gemini`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "`list_models` (responding at `/api/models`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "`transcribe_audio_endpoint`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "*(Note: The test also asserts that the total number of route rules is at least 12 [Code: tests_rag_phase5.py, Lines 691-694]).*",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.23,
+          "gt_overlap": 0.08
+        }
+      ]
+    },
+    {
+      "id": "AQ12",
+      "category": "codebase",
+      "question": "How does classify_intent in app.py autonomously determine routing to pipeline, gemini, or chat?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 10,
+      "supported_claims": 8,
+      "partially_supported_claims": 1,
+      "unsupported_claims": 1,
+      "groundedness_score": 0.85,
+      "unsupported_claim_rate": 0.1,
+      "citation_correct": true,
+      "cited_sources": [
+        "app.py"
+      ],
+      "total_latency_ms": 7508.37,
+      "ttft_ms": 6495.17,
+      "claim_details": [
+        {
+          "claim": "**Explicit Mode Check:**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "If an `explicit_mode` is provided and recognized (such as `\"gemini\"`, `\"pipeline\"`, `\"chat\"`, `\"deepseek\"`, `\"qwen\"`, or `\"gemma\"`), it immediately returns that mode (normalizing `\"gemma\"` to `\"chat\"`) [Code: app.py, Lines 215-219].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.22,
+          "gt_overlap": 0.56
+        },
+        {
+          "claim": "**Extracting the Latest Message:**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.67
+        },
+        {
+          "claim": "If the mode is set to `\"auto\"`, it filters the message list for user messages (`role == \"user\"`).",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.44
+        },
+        {
+          "claim": "If no user messages are found, it defaults to `\"chat\"` [Code: app.py, Lines 221-225].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.56
+        },
+        {
+          "claim": "It then evaluates the content of the latest user message [Code: app.py, Lines 227-228]:",
+          "status": "SUPPORTED",
+          "context_overlap": 0.3,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Routing Rules (Evaluated in Order):**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Coding Intent (`\"pipeline\"`):** If the content contains code blocks (`\"```\"`) or matches `CODING_PATTERNS`, it routes to the coding pipeline (DeepSeek Architect + Qwen Coder) [Code: app.py, Lines 230-232].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.29,
+          "gt_overlap": 0.47
+        },
+        {
+          "claim": "**Current Info / Difficult Reasoning (`\"gemini\"`):** If the content matches `CURRENT_INFO_PATTERNS` or `DIFFICULT_REASONING_PATTERNS`, it routes to the Gemini API [Code: app.py, Lines 234-236].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.07,
+          "gt_overlap": 0.6
+        },
+        {
+          "claim": "**Normal / Lightweight (`\"chat\"`):** If none of the above specific patterns match, it defaults to the local lightweight model (Local Gemma 4) [Code: app.py, Lines 238-239].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.12,
+          "gt_overlap": 0.5
+        }
+      ]
+    },
+    {
+      "id": "AQ13",
+      "category": "codebase",
+      "question": "What model names and priorities are defined in CHAT_MODELS, ARCHITECT_MODELS, and CODER_MODELS in app.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 6,
+      "supported_claims": 6,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "app.py"
+      ],
+      "total_latency_ms": 6946.59,
+      "ttft_ms": 6538.13,
+      "claim_details": [
+        {
+          "claim": "**`CHAT_MODELS`** [Code: app.py, Lines 97-99]:",
+          "status": "SUPPORTED",
+          "context_overlap": 0.8,
+          "gt_overlap": 0.8
+        },
+        {
+          "claim": "[\"gemma4:12b\", \"gemma4:latest\", \"gemma4\", \"gemma3:latest\", \"gemma:latest\"]",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "**`ARCHITECT_MODELS`** [Code: app.py, Lines 97-99]:",
+          "status": "SUPPORTED",
+          "context_overlap": 0.8,
+          "gt_overlap": 0.8
+        },
+        {
+          "claim": "[\"deepseek-coder-v2:16b\", \"deepseek-coder-v2:latest\"]",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "**`CODER_MODELS`** [Code: app.py, Lines 97-99]:",
+          "status": "SUPPORTED",
+          "context_overlap": 0.6,
+          "gt_overlap": 0.8
+        },
+        {
+          "claim": "[\"Qwen2.5-Coder:7B\", \"qwen:latest\"]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 1.0
+        }
+      ]
+    },
+    {
+      "id": "AQ14",
+      "category": "codebase",
+      "question": "How does VectorStoreManager initialize persistent ChromaDB storage and collections in rag/vector_store.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 4,
+      "supported_claims": 2,
+      "partially_supported_claims": 2,
+      "unsupported_claims": 0,
+      "groundedness_score": 0.75,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/vector_store.py"
+      ],
+      "total_latency_ms": 7094.18,
+      "ttft_ms": 6580.67,
+      "claim_details": [
+        {
+          "claim": "**Persistent Client:** It uses `chromadb.PersistentClient` for in-process, persistent SQLite vector storage [Code: vector_store.py, Lines 1-19].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.69,
+          "gt_overlap": 0.54
+        },
+        {
+          "claim": "**Isolated Collections:** It manages separate and isolated collections for documents and the codebase (`documents_collection` and `codebase_collection`) using cosine similarity [Code: vector_store.py, Lines 1-19, 53-58].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.62
+        },
+        {
+          "claim": "**Metadata Sanitization:** It sanitizes metadata to ensure strict compatibility with ChromaDB [Code: vector_store.py, Lines 1-19].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.09,
+          "gt_overlap": 0.36
+        },
+        {
+          "claim": "**Initialization:** It initializes cleanly at a configured persistence path (e.g., using `manager.initialize()`, which creates and verifies the persistence directory) [Code: tests_rag_phase2.py, Lines 115-121].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.12,
+          "gt_overlap": 0.44
+        }
+      ]
+    },
+    {
+      "id": "AQ15",
+      "category": "codebase",
+      "question": "What parameters and endpoint does EmbeddingService use when calling Ollama in rag/embeddings.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 6,
+      "supported_claims": 1,
+      "partially_supported_claims": 3,
+      "unsupported_claims": 2,
+      "groundedness_score": 0.4167,
+      "unsupported_claim_rate": 0.3333,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/embeddings.py"
+      ],
+      "total_latency_ms": 6612.99,
+      "ttft_ms": 6014.6,
+      "claim_details": [
+        {
+          "claim": "**Endpoint:** `/api/embed` (built upon `OLLAMA_BASE_URL`, which defaults to `http://localhost:11434`) [Code: embeddings.py, Lines 1-19, Code: config.py, Lines 25-30]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "**Key Configuration Parameters:**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Embedding Dimension:** `768` (`EMBEDDING_DIMENSION`) [Code: config.py, Lines 25-30]",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.38,
+          "gt_overlap": 0.12
+        },
+        {
+          "claim": "**Batch Size:** `32` (`EMBEDDING_BATCH_SIZE`) [Code: config.py, Lines 25-30]",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.14
+        },
+        {
+          "claim": "**Timeout:** `60` seconds (`EMBEDDING_TIMEOUT_SECONDS`) [Code: config.py, Lines 25-30]",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "**Primary Model:** `embeddinggemma` (`PRIMARY_EMBEDDING_MODEL`) [Code: config.py, Lines 25-30]",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.38,
+          "gt_overlap": 0.25
+        }
+      ]
+    },
+    {
+      "id": "AQ16",
+      "category": "codebase",
+      "question": "How does IncrementalIndexer compute file hashes in rag/indexer.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": false,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 3,
+      "supported_claims": 1,
+      "partially_supported_claims": 2,
+      "unsupported_claims": 0,
+      "groundedness_score": 0.6667,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/indexer.py"
+      ],
+      "total_latency_ms": 7167.88,
+      "ttft_ms": 6859.48,
+      "claim_details": [
+        {
+          "claim": "Specifically, within the codebase indexing workflow (`index_codebase`), it computes the file hash by calling the method `self.compute_file_hash(abs_path)` for each discovered code file:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.47,
+          "gt_overlap": 0.18
+        },
+        {
+          "claim": "cur_hash = self.compute_file_hash(abs_path)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "*(As seen in [Code: indexer.py, Lines 432-551])*",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.4,
+          "gt_overlap": 0.2
+        }
+      ]
+    },
+    {
+      "id": "AQ17",
+      "category": "codebase",
+      "question": "How does versioned chunk replacement in _safe_replace_file_entry in rag/indexer.py handle atomic staging and rollback?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 22,
+      "supported_claims": 4,
+      "partially_supported_claims": 14,
+      "unsupported_claims": 4,
+      "groundedness_score": 0.5,
+      "unsupported_claim_rate": 0.1818,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/indexer.py"
+      ],
+      "total_latency_ms": 12398.4,
+      "ttft_ms": 7067.74,
+      "claim_details": [
+        {
+          "claim": "Unique Generation ID & ID Versioning (Isolation)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Unique Generation ID:** A unique 8-character hex identifier (`gen_id`) is assigned to each indexing/replacement operation using `uuid.uuid4().hex[:8]` [Code: indexer.py, Lines 188].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.28,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Chunk ID Versioning:** For every new chunk, any previous generation tag is stripped, and the new generation tag (`:g{gen_id}`) is appended to the chunk ID (`v_id = f\"{clean_base}:g{gen_id}\"`).",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.15,
+          "gt_overlap": 0.38
+        },
+        {
+          "claim": "This ensures that new chunks never collide with or overwrite old chunks during the staging process [Code: indexer.py, Lines 189-197].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.29,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "Staging & Storage Verification",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Embedding and Insertion:** The new texts, metadatas, and versioned IDs are embedded and inserted directly into the vector store (`ChromaDB`) *before* the manifest is updated [Code: indexer.py, Lines 204-222].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.29,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "**Verification:** The method explicitly queries the vector store collection (`col.get(ids=new_ids)`) to verify that all expected chunks were successfully stored and retrieved before proceeding [Code: indexer.py, Lines 225-230].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.29,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "Manifest Commit (The Atomic Switch)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.75
+        },
+        {
+          "claim": "Only after successful storage verification does the system update the manifest entry (`cat_manifest[rel_path]`) with the new `generation_id`, `chunk_ids`, and file metadataBased on the implementation of `_safe_replace_file_entry` in `indexer.py` [Code: indexer.py, Lines 147-266], versioned chunk replacement handles atomic staging and rollback through a carefully sequenced multi-step process:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.34,
+          "gt_overlap": 0.34
+        },
+        {
+          "claim": "**Generation ID Assignment & ID Versioning (Steps 1 & 2):**",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "A unique generation identifier (`gen_id`) is created using a truncated UUID (`uuid.uuid4().hex[:8]`) [Code: indexer.py, Line 187].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.29,
+          "gt_overlap": 0.43
+        },
+        {
+          "claim": "For every chunk in the file, any previous generation tag (e.g., `:g1a2b3c4`) is stripped from the base ID using regex, and a new versioned ID is assigned in the format `{clean_base}:g{gen_id}` [Code: indexer.py, Lines 189-195].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.36,
+          "gt_overlap": 0.32
+        },
+        {
+          "claim": "This ensures that new chunks never collide with or overwrite old chunks during the staging phase.",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.1,
+          "gt_overlap": 0.3
+        },
+        {
+          "claim": "**Isolated Staging & Storage Verification (Steps 3 & 4):**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Embeddings are generated and the *newly versioned* chunks are added directly to the vector store (`ChromaDB`) alongside the existing old-generation chunks [Code: indexer.py, Lines 204-220].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.35,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "A storage verification check is immediately executed by querying the vector store collection for the newly added IDs to guarantee they were successfully persisted [Code: indexer.py, Lines 223-228].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "**Manifest Commit (Step 5):**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.67
+        },
+        {
+          "claim": "Only after successful insertion and verification does the indexer update the in-memory manifest data structure with the new `generation_id`, `chunk_ids`, and metadata, pointing to the new generation [Code: indexer.py, Lines 239-251].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.43
+        },
+        {
+          "claim": "**Rollback on Failure (Exception Handling):**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "If any exception or failure occurs *prior* to the manifest commit (such as an embedding failure, upsert mismatch, or storage verification failure), the code catches the exception in a `try...except staging_exc` block [Code: indexer.py, Lines 230-236].",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.23,
+          "gt_overlap": 0.18
+        },
+        {
+          "claim": "Inside the exception handler, it immediately performs a cleanup by deleting the newly inserted chunks (`new_ids`) from the vector store (`self.vector_store.delete_by_ids`) [Code: indexer.py, Lines 231-235].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "Because the manifest is never updated or committed during a staging failure, the old generation chunks and previous manifest entries remain completely untouched and intact, achieving zero data loss and crash resilience.",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.17,
+          "gt_overlap": 0.26
+        }
+      ]
+    },
+    {
+      "id": "AQ18",
+      "category": "codebase",
+      "question": "How does UnifiedRetriever enforce active generation filtering in rag/retriever.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": false,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 5,
+      "supported_claims": 0,
+      "partially_supported_claims": 5,
+      "unsupported_claims": 0,
+      "groundedness_score": 0.5,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/retriever.py"
+      ],
+      "total_latency_ms": 7916.72,
+      "ttft_ms": 6359.9,
+      "claim_details": [
+        {
+          "claim": "However, looking at the class docstring for `UnifiedRetriever` in `rag/retriever.py` and the automated test suite descriptions in `tests_rag_phase4_2.py`, we can outline its core design and purpose [Code: retriever.py, Lines 109-116, Code: tests_rag_phase4_2.py, Lines 1-37]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.27,
+          "gt_overlap": 0.18
+        },
+        {
+          "claim": "**Active Generation Filtering**: `UnifiedRetriever` enforces active generation filtering to ensure that uncommitted, stale, or orphaned generations are never returned to the user or prompt context [Code: retriever.py, Lines 109-116].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.47,
+          "gt_overlap": 0.32
+        },
+        {
+          "claim": "**Manifest Integration**: It relies on committed manifest states (as tested in Phase 4.2) to verify which file chunks and generation versions are currently active, ensuring old generations are excluded after a manifest commit, and uncommitted or staged generations are ignored [Code: tests_rag_phase4_2.py, Lines 1-15].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.26,
+          "gt_overlap": 0.26
+        },
+        {
+          "claim": "**Core Responsibilities**: As a semantic search engine querying both Document RAG and Codebase RAG collections, it combines top-$k$ limiting, cosine relevance thresholds, deduplication, and generation validation before returning chunks [Code: retriever.py, Lines 109-116].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.44,
+          "gt_overlap": 0.11
+        },
+        {
+          "claim": "*(Note: For the exact line-by-line algorithmic implementation of this filtering mechanism, refer directly to `rag/retriever.py` lines 110–185, which house the specific search and filter logic.)*",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.26,
+          "gt_overlap": 0.11
+        }
+      ]
+    },
+    {
+      "id": "AQ19",
+      "category": "codebase",
+      "question": "How does PromptBuilder format retrieved context and guard against prompt injection in rag/prompt_builder.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 12,
+      "supported_claims": 5,
+      "partially_supported_claims": 5,
+      "unsupported_claims": 2,
+      "groundedness_score": 0.625,
+      "unsupported_claim_rate": 0.1667,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/prompt_builder.py"
+      ],
+      "total_latency_ms": 7465.23,
+      "ttft_ms": 6386.77,
+      "claim_details": [
+        {
+          "claim": "Context Synthesis & Formatting",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "`PromptBuilder` is responsible for formatting retrieved document and codebase chunks into structured reference blocks [Code: prompt_builder.py, Lines 1-16].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.53
+        },
+        {
+          "claim": "It accepts retrieved chunks (either as a `RetrievalResponse` or a list of `RetrievedChunk`/`Dict` objects) [Code: prompt_builder.py, Lines 211-216].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.54,
+          "gt_overlap": 0.31
+        },
+        {
+          "claim": "It generates exact, verifiable citations (such as PDF page numbers, code line numbers, and symbol names) [Code: prompt_builder.py, Lines 1-16].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.4
+        },
+        {
+          "claim": "It assembles the final grounded prompt by combining a system instruction (if provided), the structured context block, and the user query using the `build_grounded_prompt` method [Code: prompt_builder.py, Lines 211-231]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.45,
+          "gt_overlap": 0.35
+        },
+        {
+          "claim": "sections.append(f\"### SYSTEM INSTRUCTION\\n{system_instruction.strip()}\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "sections.append(context_block)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "sections.append(f\"### USER QUERY\\n{user_prompt.strip()}\")",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "It enforces a strict context character/token budget using a configurable empirical approximation (defaulting to `4.0` characters per token) to ensure truncation never produces malformed citations or unclosed code fences [Code: prompt_builder.py, Lines 1-16, 21-33].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.15,
+          "gt_overlap": 0.35
+        },
+        {
+          "claim": "Prompt Injection Defense",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "`PromptBuilder` specifically enforces **prompt injection defense** by treating retrieved context as untrusted content [Code: prompt_builder.py, Lines 1-16, 21-33].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.44,
+          "gt_overlap": 0.62
+        },
+        {
+          "claim": "It uses strict untrusted-content framing around the reference blocks [Code: prompt_builder.py, Lines 21-33] to isolate external retrieved data from the core system instructions and user queries, mitigating the risk of malicious instructions hidden within the retrieved documents or codebase chunks from being executed.",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.27
+        }
+      ]
+    },
+    {
+      "id": "AQ20",
+      "category": "codebase",
+      "question": "How does RAGService implement conservative auto-routing in rag/service.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": false,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 2,
+      "supported_claims": 1,
+      "partially_supported_claims": 1,
+      "unsupported_claims": 0,
+      "groundedness_score": 0.75,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/service.py"
+      ],
+      "total_latency_ms": 6795.53,
+      "ttft_ms": 6275.18,
+      "claim_details": [
+        {
+          "claim": "While the exact internal implementation details of the routing logic are not fully displayed in the snippet, `RAGService` coordinates user query routing using components like `UnifiedRetriever` and `PromptBuilder`, and supports multiple retrieval modes including `'off'`, `'auto'`, `'documents'`, `'codebase'`, and `'both'` [Code: service.py, Lines 1-17].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.41,
+          "gt_overlap": 0.26
+        },
+        {
+          "claim": "Additionally, module-level convenience functions such as `detect_retrieval_mode` are exposed to handle query mode detection (`detect_retrieval_mode(query: str, explicit_mode: Optional[str] = \"auto\")`) [Code: service.py, Lines 291-293].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.58,
+          "gt_overlap": 0.26
+        }
+      ]
+    },
+    {
+      "id": "AQ21",
+      "category": "frontend",
+      "question": "Where is the rag-mode-select element defined and what options does it provide in templates/index.html?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 5,
+      "supported_claims": 4,
+      "partially_supported_claims": 1,
+      "unsupported_claims": 0,
+      "groundedness_score": 0.9,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "templates/index.html"
+      ],
+      "total_latency_ms": 7374.84,
+      "ttft_ms": 6345.72,
+      "claim_details": [
+        {
+          "claim": "`auto` (Default, has the `selected` attribute) [Code: tests_rag_phase6.py, Lines 141-157]",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "`documents` [Code: tests_rag_phase6.py, Lines 141-157]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.6
+        },
+        {
+          "claim": "`codebase` [Code: tests_rag_phase6.py, Lines 141-157]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.6
+        },
+        {
+          "claim": "`both` [Code: tests_rag_phase6.py, Lines 141-157]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.6
+        },
+        {
+          "claim": "`off` [Code: tests_rag_phase6.py, Lines 141-157]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.6
+        }
+      ]
+    },
+    {
+      "id": "AQ22",
+      "category": "frontend",
+      "question": "How is the streaming pause and resume button implemented in templates/index.html?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": false,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 53,
+      "supported_claims": 26,
+      "partially_supported_claims": 10,
+      "unsupported_claims": 17,
+      "groundedness_score": 0.5849,
+      "unsupported_claim_rate": 0.3208,
+      "citation_correct": true,
+      "cited_sources": [
+        "templates/index.html"
+      ],
+      "total_latency_ms": 9914.6,
+      "ttft_ms": 7171.63,
+      "claim_details": [
+        {
+          "claim": "The Pause / Interruption Banner Container",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "The main UI container for handling pause states is `.pause-banner`.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.17,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "It uses flexbox for alignment, is hidden by default (`display: none;`), and becomes active when the `.visible` class is appended [Code: index.html, Lines 895-909]:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.06,
+          "gt_overlap": 0.22
+        },
+        {
+          "claim": ".pause-banner {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "align-items: center;",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "justify-content: space-between;",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "padding: 9px 14px;",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "background: var(--surface-2);",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "border: 1px solid var(--border);",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "border-radius: 12px;",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "margin-bottom: 8px;",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "animation: slideDown 0.25s ease;",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": ".pause-banner.visible { display: flex; }",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Pulse Indicators for States",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Inside the banner, a dynamic pulsing dot (`.pause-pulse-dot`) changes its behavior/color depending on whether the system is actively running or paused.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.12,
+          "gt_overlap": 0.06
+        },
+        {
+          "claim": "For instance, when paused, a `.paused` modifier switches the dot color to a warning state [Code: index.html, Lines 916-935]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.07,
+          "gt_overlap": 0.36
+        },
+        {
+          "claim": ".pause-pulse-dot {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "width: 8px; height: 8px;",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "border-radius: 50%;",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "background: var(--accent);",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "animation: pulseGlow 1.5s infinite;",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": ".pause-banner.paused .pause-pulse-dot { background: var(--warning); }",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.17,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "Action Buttons (Pause & Resume)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "The action buttons use specific style classes (`.banner-action-btn.pause-btn` and `.banner-action-btn.resume-btn`) that assign context-specific colors (such as warning orange for pausing and success green for resuming) with hover transition effects [Code: index.html, Lines 937-960]:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.19,
+          "gt_overlap": 0.15
+        },
+        {
+          "claim": ".banner-action-btn {",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "background: var(--surface);",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "border: 1px solid var(--border);",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "color: var(--text);",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "padding: 5px 10px;",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "border-radius: 6px;",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "font-size: 11px;",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "font-weight: 500;",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "cursor: pointer;",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "align-items: center;",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "transition: all 0.2s;",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": ".banner-action-btn.pause-btn {",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "background: rgba(240, 160, 64, 0.15);",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "border-color: var(--warning);",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "color: var(--warning);",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": ".banner-action-btn.pause-btn:hover { background: var(--warning); color: white; }",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": ".banner-action-btn.resume-btn {",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "background: rgba(74, 222, 128, 0.15);",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "border-color: var(--success);",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "color: var(--success);",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": ".banner-action-btn.resume-btn:hover { background: var(--success); color: white; }",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.38,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Paused Input Options Strip",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "Additionally, a secondary bar (`.paused-options-bar`) provides alternative input actions when execution is paused, allowing options like add-ons or alternate inputs to appear dynamically via the `.visible` toggle class [Code: index.html, Lines 962-975]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": ".paused-options-bar {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "align-items: center;",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "justify-content: space-between;",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "padding: 4px 0 8px 0;",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "font-size: 12px;",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": ".paused-options-bar.visible { display: flex; }",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "AQ23",
+      "category": "frontend",
+      "question": "How does streamBotPipeline handle the citation SSE event in templates/index.html?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": false,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 21,
+      "supported_claims": 3,
+      "partially_supported_claims": 11,
+      "unsupported_claims": 7,
+      "groundedness_score": 0.4048,
+      "unsupported_claim_rate": 0.3333,
+      "citation_correct": true,
+      "cited_sources": [
+        "templates/index.html"
+      ],
+      "total_latency_ms": 11171.2,
+      "ttft_ms": 6899.07,
+      "claim_details": [
+        {
+          "claim": "Route & Metadata Handling (`data.type === \"route\"`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.6,
+          "gt_overlap": 0.4
+        },
+        {
+          "claim": "When a route event is received (`data.type === \"route\"`), the code creates a meta-row element to house route banners and RAG citations [Code: index.html, Lines 3468-3507]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.22,
+          "gt_overlap": 0.44
+        },
+        {
+          "claim": "**Route Banners:** Depending on `data.route` (e.g., `'pipeline'`, `'gemini'`, `'deepseek'`, `'qwen'`, or default local assistant), it generates an appropriate HTML banner and updates the pause banner text [Code: index.html, Lines 3472-3494].",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.18,
+          "gt_overlap": 0.23
+        },
+        {
+          "claim": "**RAG Status Badge:** It calls `createRagStatusBadge(data.rag_mode, data.rag_status, data.rag_sources)` and appends the resulting badge to the meta row if available [Code: index.html, Lines 3496-3500].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.11,
+          "gt_overlap": 0.32
+        },
+        {
+          "claim": "**DOM Insertion:** The meta row is inserted into the bot bubble (`botBubbleEl`) either before the first child or appended [Code: index.html, Lines 3502-3506].",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.05,
+          "gt_overlap": 0.21
+        },
+        {
+          "claim": "RAG Sources Section (`data.rag_sources`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.4,
+          "gt_overlap": 0.6
+        },
+        {
+          "claim": "Directly following the route announcement logic, the code checks if `data.rag_sources` is a valid array containing items (`data.rag_sources.length > 0`) [Code: index.html, Lines 3508-3513]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.17,
+          "gt_overlap": 0.28
+        },
+        {
+          "claim": "It invokes `createSourcesSection(data.rag_sources)` to generate the UI elements for the retrieved sources [Code: index.html, Lines 3509].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.08,
+          "gt_overlap": 0.38
+        },
+        {
+          "claim": "If successfully created, it inserts the sources section right after the meta row (`metaRow.nextSibling`) inside the bot bubble [Code: index.html, LinesBased on the provided codebase, the handling of the event stream (Server-Sent Events, or SSE) parses incoming JSON lines via `JSON.parse(line.slice(6))` [Code: index.html, Line 3467].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.17,
+          "gt_overlap": 0.34
+        },
+        {
+          "claim": "Specifically, regarding citations and RAG (Retrieval-Augmented Generation) data within the route announcement (`data.type === \"route\"`), the code handles it in the following ways [Code: index.html, Lines 3470-3510]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.26,
+          "gt_overlap": 0.37
+        },
+        {
+          "claim": "**RAG Status Badge Creation:**",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "It creates a RAG status badge using `createRagStatusBadge(data.rag_mode, data.rag_status, data.rag_sources)` and appends it to the metadata row (`metaRow`) if available [Code: index.html, Lines 3500-3503].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.1,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "const ragBadge = createRagStatusBadge(data.rag_mode, data.rag_status, data.rag_sources);",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.29,
+          "gt_overlap": 0.14
+        },
+        {
+          "claim": "if (ragBadge) {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "metaRow.appendChild(ragBadge);",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**RAG Sources Section / Citations:**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.75
+        },
+        {
+          "claim": "If `data.rag_sources` is a valid array containing items (`data.rag_sources.length > 0`), it generates a sources section using `createSourcesSection(data.rag_sources)` and inserts it right after the route/metadata elements into the bot bubble (`botBubbleEl`) [Code: index.html, Lines 3505-3510]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.11,
+          "gt_overlap": 0.26
+        },
+        {
+          "claim": "if (Array.isArray(data.rag_sources) && data.rag_sources.length > 0) {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.2,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "const sourcesEl = createSourcesSection(data.rag_sources);",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.4,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "if (sourcesEl) {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "botBubbleEl.insertBefore(sourcesEl, metaRow.nextSibling);",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        }
+      ]
+    },
+    {
+      "id": "AQ24",
+      "category": "frontend",
+      "question": "What CSS variables define the primary background and accent colors in dark and light themes in templates/index.html?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 6,
+      "supported_claims": 6,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "templates/index.html"
+      ],
+      "total_latency_ms": 7455.59,
+      "ttft_ms": 7070.86,
+      "claim_details": [
+        {
+          "claim": "### **Dark Theme (Default)** (`:root`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.75
+        },
+        {
+          "claim": "**Primary Background:** `--bg: #0f0f13;` [Code: index.html, Lines 12-14]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Accent Color:** `--accent: #7c6cf0;` [Code: index.html, Lines 20-21]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "### **Light Theme** (`[data-theme=\"light\"]`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "**Primary Background:** `--bg: #f4f6fb;` [Code: index.html, Lines 46-48]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Accent Color:** `--accent: #5d4de6;` [Code: index.html, Lines 54-55]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.5
+        }
+      ]
+    },
+    {
+      "id": "AQ25",
+      "category": "frontend",
+      "question": "How does loadAvailableModels populate the model selector dropdown in templates/index.html?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 16,
+      "supported_claims": 7,
+      "partially_supported_claims": 7,
+      "unsupported_claims": 2,
+      "groundedness_score": 0.6562,
+      "unsupported_claim_rate": 0.125,
+      "citation_correct": true,
+      "cited_sources": [
+        "templates/index.html"
+      ],
+      "total_latency_ms": 7598.57,
+      "ttft_ms": 6384.58,
+      "claim_details": [
+        {
+          "claim": "**Backend Endpoint (`app.py`)**:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "The backend exposes a route/function named `list_models()` which calls `get_available_ollama_models()` [Code: app.py, Lines 354-357].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.08
+        },
+        {
+          "claim": "def list_models():",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "\"\"\"List available models.\"\"\"",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "available = get_available_ollama_models()",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "return {\"models\": available}",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "The `get_available_ollama_models()` function makes an HTTP GET request to the local Ollama API endpoint (`{OLLAMA_BASE_URL}/api/tags`) and extracts the model names into a Python list of strings [Code: app.py, Lines 135-143]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.26,
+          "gt_overlap": 0.3
+        },
+        {
+          "claim": "def get_available_ollama_models() -> list[str]:",
+          "status": "SUPPORTED",
+          "context_overlap": 0.75,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "\"\"\"Retrieve list of currently installed models in Ollama.\"\"\"",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.67
+        },
+        {
+          "claim": "resp = http_requests.get(f\"{OLLAMA_BASE_URL}/api/tags\", timeout=4)",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.14,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "if resp.status_code == 200:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "return [m.get(\"name\", \"\") for m in resp.json().get(\"models\", [])]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.67
+        },
+        {
+          "claim": "except Exception:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Frontend Selector Element (`index.html`)**:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.2,
+          "gt_overlap": 0.4
+        },
+        {
+          "claim": "The HTML template contains select elements for handling model and mode switching, such as the autonomous routing mode dropdown (`id=\"modeSelect\"`) and the RAG mode selector (`id=\"ragModeSelect\"`), which are dynamically populated or managed via the frontend JavaScript interacting with these endpoints [Code: index.html, Lines 1716-1740].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.07,
+          "gt_overlap": 0.3
+        },
+        {
+          "claim": "*(Note: If a specific `loadAvailableModels` JavaScript function exists outside the provided snippet range, it typically fetches from the backend's `/api/models` or equivalent route, parses the JSON response containing the `\"models\"` array, and programmatically appends `<option>` elements to the target `<select>` dropdown DOM element.)*",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.1,
+          "gt_overlap": 0.26
+        }
+      ]
+    },
+    {
+      "id": "AQ26",
+      "category": "config",
+      "question": "What is the default SIMILARITY_DISTANCE_THRESHOLD and what is the MAX_CONTEXT_TOKENS limit in rag/config.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/config.py"
+      ],
+      "total_latency_ms": 7147.9,
+      "ttft_ms": 6944.55,
+      "claim_details": [
+        {
+          "claim": "**`SIMILARITY_DISTANCE_THRESHOLD`**: `0.70` (cosine distance cutoff) [Code: config.py, Lines 40-43]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.75,
+          "gt_overlap": 0.75
+        },
+        {
+          "claim": "**`MAX_CONTEXT_TOKENS`**: `2000` [Code: config.py, Lines 40-43]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.67
+        }
+      ]
+    },
+    {
+      "id": "AQ27",
+      "category": "config",
+      "question": "What file extensions are supported in SUPPORTED_CODE_EXTENSIONS in rag/config.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/config.py"
+      ],
+      "total_latency_ms": 6692.1,
+      "ttft_ms": 6485.75,
+      "claim_details": [
+        {
+          "claim": "[Code: config.py, Lines 56-72]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.75
+        }
+      ]
+    },
+    {
+      "id": "AQ28",
+      "category": "config",
+      "question": "What filenames and patterns are blacklisted in HARDCODED_SECURITY_BLACKLIST in rag/config.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 4,
+      "supported_claims": 3,
+      "partially_supported_claims": 1,
+      "unsupported_claims": 0,
+      "groundedness_score": 0.875,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/config.py"
+      ],
+      "total_latency_ms": 6722.03,
+      "ttft_ms": 6502.31,
+      "claim_details": [
+        {
+          "claim": "`\".env.production\"`",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "`\".env.development\"`",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "`\"launcher.log\"`",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "*(Note: Additionally, the `is_path_ignored` function also automatically checks if any basename starts with `.env`)* [Code: config.py, Lines 105-113, 149-169].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.25
+        }
+      ]
+    },
+    {
+      "id": "AQ29",
+      "category": "config",
+      "question": "What are the default DOC_CHUNK_SIZE, DOC_CHUNK_OVERLAP, and EMBEDDING_DIMENSION in rag/config.py?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": false,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 2,
+      "supported_claims": 1,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 1,
+      "groundedness_score": 0.5,
+      "unsupported_claim_rate": 0.5,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/config.py"
+      ],
+      "total_latency_ms": 6787.92,
+      "ttft_ms": 6420.77,
+      "claim_details": [
+        {
+          "claim": "**EMBEDDING_DIMENSION**: `768` [Code: config.py, Line 28]",
+          "status": "SUPPORTED",
+          "context_overlap": 0.2,
+          "gt_overlap": 0.6
+        },
+        {
+          "claim": "However, the specific default values for **DOC_CHUNK_SIZE** and **DOC_CHUNK_OVERLAP** are imported from `rag.config` into `document_pipeline.py` [Code: document_pipeline.py, Lines 22-23] and passed as defaults in `DocumentPipeline.__init__` [Code: document_pipeline.py, Lines 131-137], but their raw integer values are not defined within the provided snippets of `config.py`.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.07,
+          "gt_overlap": 0.15
+        }
+      ]
+    },
+    {
+      "id": "AQ30",
+      "category": "config",
+      "question": "How does is_path_ignored in rag/config.py evaluate paths against .ragignore rules and hardcoded rules?",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 20,
+      "supported_claims": 5,
+      "partially_supported_claims": 12,
+      "unsupported_claims": 3,
+      "groundedness_score": 0.55,
+      "unsupported_claim_rate": 0.15,
+      "citation_correct": true,
+      "cited_sources": [
+        "rag/config.py"
+      ],
+      "total_latency_ms": 8770.36,
+      "ttft_ms": 7054.89,
+      "claim_details": [
+        {
+          "claim": "Path Normalization & Preparation",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "It converts both the `target_path` and `base_dir` into absolute paths (`os.path.abspath`) [Code: config.py, Lines 155-156].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.46,
+          "gt_overlap": 0.31
+        },
+        {
+          "claim": "It computes the relative path of the target from the base directory, handling Windows cross-drive exceptions gracefully [Code: config.py, Lines 158-163].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.4
+        },
+        {
+          "claim": "It standardizes path separators to forward slashes (`/`) (`norm_rel`), extracts the `basename`, and isolates the file extension (`ext`) [Code: config.py, Lines 165-167].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.19,
+          "gt_overlap": 0.38
+        },
+        {
+          "claim": "Hardcoded Security Checks (Infallible Safety Net)",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.17,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "Before checking any user-defined ignore rules, the function immediately returns `True` (meaning the path is ignored) if it matches any of the following criteria [Code: config.py, Lines 169-178]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.3
+        },
+        {
+          "claim": "**Blacklisted Names / Environment Files:** If the lowercased basename is in `HARDCODED_SECURITY_BLACKLIST` or starts with `.env`.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.22
+        },
+        {
+          "claim": "**Blacklisted Extensions:** If the file extension (`ext.lower()`) is in `HARDCODED_EXT_BLACKLIST`.",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.14,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "**Internal Directories:** If any part of the relative path (`norm_rel.split(\"/\")`) matches any of the following restricted internal directory names:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.15,
+          "gt_overlap": 0.31
+        },
+        {
+          "claim": "`.test_profile`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Dynamic `.ragignore` Pattern Matching",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "If the path passes the hardcoded safety net, the function loads patterns from the `.ragignore` file using `load_ragignore_patterns()` (ignoring empty lines and comments starting with `#`) [Code: config.py, Lines 134-146, 180].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.29,
+          "gt_overlap": 0.48
+        },
+        {
+          "claim": "It loops through each pattern and cleans it (stripping trailing slashes and normalizing backslashes) [Code: config.py, Lines 181-183]:",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.14,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "**Direct Path or Basename Match:** It checks if `fnmatch` matches either the normalized relative path (`norm_rel`) or the `basename` against the clean pattern [Code: config.py, Lines 186-187].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.22,
+          "gt_overlap": 0.61
+        },
+        {
+          "claim": "**Directory Pattern vs.",
+          "status": "SUPPORTED",
+          "context_overlap": 1.0,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "File Pattern Match:**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 0.67
+        },
+        {
+          "claim": "If the pattern ends with a `/` (`is_dir_pattern`), it checks if any individual directory component (`part`) in the path matches the pattern using `fnmatch` [Code: config.py, Lines 189-192].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.24,
+          "gt_overlap": 0.41
+        },
+        {
+          "claim": "If it is a file/wildcard pattern, it checks if `fnmatch` matches the wildcard-wrapped relative path (`*{clean_pat}*`) or the exact `basename` [Code: config.py, Lines 193-195].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "If any of these conditions match, it returns `True`.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "If all checks pass without a match, it returns `False` [Code: config.py, Lines 186-198].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.09,
+          "gt_overlap": 0.36
+        }
+      ]
+    },
+    {
+      "id": "AQ31",
+      "category": "multi_source",
+      "question": "Compare the X-Request-Correlation-ID header requirement in api_specifications.md with correlation header handling in app.py.",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 9,
+      "supported_claims": 5,
+      "partially_supported_claims": 1,
+      "unsupported_claims": 3,
+      "groundedness_score": 0.6111,
+      "unsupported_claim_rate": 0.3333,
+      "citation_correct": true,
+      "cited_sources": [
+        "api_specifications.md",
+        "app.py"
+      ],
+      "total_latency_ms": 9298.37,
+      "ttft_ms": 6364.12,
+      "claim_details": [
+        {
+          "claim": "Specification Requirement (`api_specifications.md`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.67
+        },
+        {
+          "claim": "**Mandatory Header:** Every API request must supply the header `X-Request-Correlation-ID` formatted as a `<UUID-v4>` [Document: api_specifications.md, Page 1].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.08,
+          "gt_overlap": 0.54
+        },
+        {
+          "claim": "**Gateway Behavior on Omission:** If a client omits this header, the API gateway automatically steps in to auto-generate a UUIDv4 and logs a compliance warning [Document: api_specifications.md,Based on the retrieved reference context, here is a comparison of the `X-Request-Correlation-ID` header requirements and handling:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.04,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "Specification Requirement (`api_specifications.md`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.67
+        },
+        {
+          "claim": "**Mandatory Header:** Every API request must supply the header `X-Request-Correlation-ID: <UUID-v4>` [Document: api_specifications.md, Page 1].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.08,
+          "gt_overlap": 0.58
+        },
+        {
+          "claim": "**Gateway Behavior:** If this correlation header is omitted by the client, the API gateway automatically injects an auto-generated UUIDv4 and logs a compliance warning [Document: api_specifications.md, Page 1].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.12,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "Request Handling Implementation (`app.py`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "*While the specific source code lines for correlation header handling in `app.py` are not fully printed in the truncated context, related integration tests for `app.py` (such as `TestRAGPhase5Integration.test_14_flask_routes_intact`) confirm that Flask routes and endpoint handling are actively managed within the application framework [Code: tests_rag_phase5.py, Lines 691-723].*",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.16,
+          "gt_overlap": 0.23
+        },
+        {
+          "claim": "In a typical architecture aligned with these specifications, `app.py` or the application middleware would expect to read, validate, or propagate the `X-Request-Correlation-ID` header injected or supplied upstream to maintain end-to-end request tracing across services.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.08,
+          "gt_overlap": 0.21
+        }
+      ]
+    },
+    {
+      "id": "AQ32",
+      "category": "multi_source",
+      "question": "Compare the database connection pool limit in incident_runbook.txt with ChromaDB client initialization in rag/vector_store.py.",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": false,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 3,
+      "supported_claims": 1,
+      "partially_supported_claims": 2,
+      "unsupported_claims": 0,
+      "groundedness_score": 0.6667,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "incident_runbook.txt",
+        "rag/vector_store.py"
+      ],
+      "total_latency_ms": 9030.81,
+      "ttft_ms": 8391.71,
+      "claim_details": [
+        {
+          "claim": "`vector_store.py` is noted as using `chromadb.PersistentClient` for in-process, persistent SQLite vector storage managing isolated document and codebase collections with cosine similarity [Code: vector_store.py, Lines 1-19].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.7,
+          "gt_overlap": 0.55
+        },
+        {
+          "claim": "However, the exact connection pool limit from `incident_runbook.txt` and the exact lines of client initialization in `rag/vector_store.py` are absent from the retrieved references.",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.47,
+          "gt_overlap": 0.47
+        },
+        {
+          "claim": "To provide a complete comparison, please provide the contents of `incident_runbook.txt` and the implementation details from `rag/vector_store.py`.",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.45,
+          "gt_overlap": 0.36
+        }
+      ]
+    },
+    {
+      "id": "AQ33",
+      "category": "multi_source",
+      "question": "Compare the maximum API request payload size in api_specifications.md with MAX_FILE_SIZE_BYTES in rag/config.py and MAX_CONTENT_LENGTH in app.py.",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": false,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 5,
+      "supported_claims": 3,
+      "partially_supported_claims": 1,
+      "unsupported_claims": 1,
+      "groundedness_score": 0.7,
+      "unsupported_claim_rate": 0.2,
+      "citation_correct": true,
+      "cited_sources": [
+        "api_specifications.md",
+        "rag/config.py",
+        "app.py"
+      ],
+      "total_latency_ms": 10857.85,
+      "ttft_ms": 10471.63,
+      "claim_details": [
+        {
+          "claim": "**From `api_specifications.md` (Page 1):**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "The maximum request payload size for API requests is **15 megabytes (15,728,640 bytes)**, using standard UTF-8 JSON payloads with `Content-Type: application/json` [Document: api_specifications.md, Page 1].",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.55
+        },
+        {
+          "claim": "**From `rag/config.py` and `app.py`:**",
+          "status": "SUPPORTED",
+          "context_overlap": 0.67,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "The provided reference context does not contain the exact code lines or numerical values for `MAX_FILE_SIZE_BYTES` in `rag/config.py` or `MAX_CONTENT_LENGTH` in `app.py`.",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.38
+        },
+        {
+          "claim": "Therefore, a direct comparison between the API specification size and those configuration variables cannot be made from the retrieved context alone.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.2
+        }
+      ]
+    },
+    {
+      "id": "AQ34",
+      "category": "multi_source",
+      "question": "Compare the multi-region topology in cloud_deployment_guide.pdf with the local server launcher in run_app.py and app.py.",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": true,
+      "total_claims": 11,
+      "supported_claims": 3,
+      "partially_supported_claims": 2,
+      "unsupported_claims": 6,
+      "groundedness_score": 0.3636,
+      "unsupported_claim_rate": 0.5455,
+      "citation_correct": true,
+      "cited_sources": [
+        "cloud_deployment_guide.pdf",
+        "run_app.py",
+        "app.py"
+      ],
+      "total_latency_ms": 11702.21,
+      "ttft_ms": 10580.29,
+      "claim_details": [
+        {
+          "claim": "Multi-Region Topology (`cloud_deployment_guide.pdf`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.5,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "**Architecture:** Organized into a multi-region active-active topology spanning three distinct locations:",
+          "status": "SUPPORTED",
+          "context_overlap": 0.6,
+          "gt_overlap": 0.1
+        },
+        {
+          "claim": "Primary Region (US-East): CIDR block `10.120.0.0/16`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.17,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "Secondary Region (US-West): CIDR block `10.121.0.0/16`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.17,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "Disaster Recovery Region (EU-Central): CIDR block `10.122.0.0/16`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.14,
+          "gt_overlap": 0.14
+        },
+        {
+          "claim": "**Connectivity & Routing:** Each region connects via dedicated VPC peering with non-overlapping CIDR blocks [Document: cloud_deployment_guide.pdf, Page 1].",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.06,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "Redundant edge ingress gateways utilize BGP anycast routing to terminate public TLS connections [Document: cloud_deployment_guide.pdf, Page 1].",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.12
+        },
+        {
+          "claim": "**High Availability:** Compute nodes are distributed across a minimum of 3 availability zones per region to sustain high availability (99.995%), with strict caps on intra-region network latency between availability zones [Document: cloud_deployment_guide.pdf, Page 1].",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.09,
+          "gt_overlap": 0.14
+        },
+        {
+          "claim": "Local Deployment (`run_app.py` and `app.py`)",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 1.0
+        },
+        {
+          "claim": "In contrast to the distributed, multi-region cloud topology spanning multiple global data centers with complex BGP routing and VPC peering, files like `run_app.py` and `app.py` handle **local server launching and application execution** (as indicated by local test references and script setups for development/testing environments).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.12,
+          "gt_overlap": 0.24
+        },
+        {
+          "claim": "While the cloud deployment guide governs enterprise-scale, fault-tolerant infrastructure across international availability zones, the local launcher scripts (`run_app.py`) and application entrypoints (`app.py`) are designed for running and testing the service locally or in single-instance environments.",
+          "status": "PARTIALLY_SUPPORTED",
+          "context_overlap": 0.12,
+          "gt_overlap": 0.35
+        }
+      ]
+    },
+    {
+      "id": "AQ35",
+      "category": "multi_source",
+      "question": "Compare the timeout thresholds in incident_runbook.txt, EMBEDDING_TIMEOUT_SECONDS in rag/config.py, and request timeouts in app.py.",
+      "effective_route": "gemini",
+      "abstention_expected": false,
+      "answer_correct": true,
+      "is_abstention_correct": null,
+      "retrieval_success": false,
+      "total_claims": 1,
+      "supported_claims": 0,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 1,
+      "groundedness_score": 0.0,
+      "unsupported_claim_rate": 1.0,
+      "citation_correct": true,
+      "cited_sources": [
+        "incident_runbook.txt",
+        "rag/config.py",
+        "app.py"
+      ],
+      "total_latency_ms": 10357.7,
+      "ttft_ms": 9931.52,
+      "claim_details": [
+        {
+          "claim": "*(Note: As seen in evaluation entry **Q22**, queries attempting to cross-reference `incident_runbook.txt` with configuration or application files frequently fail due to missing or mismatched retrieval results across modalities [Code: evaluation_results.json, Lines 360-379].)*",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.15,
+          "gt_overlap": 0.07
+        }
+      ]
+    },
+    {
+      "id": "AQ36",
+      "category": "unanswerable",
+      "question": "What is the Kubernetes cluster autoscaler scale-down delay threshold configured for worker nodes in the repository?",
+      "effective_route": "gemini",
+      "abstention_expected": true,
+      "answer_correct": true,
+      "is_abstention_correct": true,
+      "retrieval_success": true,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 0,
+      "groundedness_score": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "citation_correct": true,
+      "cited_sources": [],
+      "total_latency_ms": 10502.39,
+      "ttft_ms": 10272.3,
+      "claim_details": [
+        {
+          "claim": "The reference context does not contain any information about a Kubernetes cluster autoscaler scale-down delay threshold configured for worker nodes.",
+          "status": "SUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.71
+        }
+      ]
+    },
+    {
+      "id": "AQ37",
+      "category": "unanswerable",
+      "question": "What is the Redis cache eviction policy and maxmemory configuration in the repository?",
+      "effective_route": "gemini",
+      "abstention_expected": true,
+      "answer_correct": true,
+      "is_abstention_correct": true,
+      "retrieval_success": true,
+      "total_claims": 6,
+      "supported_claims": 1,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 5,
+      "groundedness_score": 0.1667,
+      "unsupported_claim_rate": 0.8333,
+      "citation_correct": true,
+      "cited_sources": [],
+      "total_latency_ms": 10098.91,
+      "ttft_ms": 9562.74,
+      "claim_details": [
+        {
+          "claim": "The reference context covers:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.33,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Centralized configuration and security rules for the Unified RAG Subsystem (`config.py`) [Code: config.py, Lines 1-9, Symbol: module]",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.77,
+          "gt_overlap": 0.15
+        },
+        {
+          "claim": "Default top-k, max context tokens, cosine distance thresholds, and maximum file size limits (10 MB per file) (`config.py`) [Code: config.py, Lines 40-43, Symbol: global]",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.58,
+          "gt_overlap": 0.05
+        },
+        {
+          "claim": "Integration test cases for codebase retrieval mode (`tests_rag_phase5.py`) [Code: tests_rag_phase5.py, Lines 157-168]",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.4,
+          "gt_overlap": 0.1
+        },
+        {
+          "claim": "Evaluation results regarding HTTP endpoints, intent classification, CODER_MODELS, HTML/SSE processing, file hashing, incremental indexing, and active generation filtering (`evaluation_results.json`) [Code: evaluation_results.json, Lines 211-330]",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.22,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Because the reference context does not contain information about Redis, that specific configuration cannot be answered from the provided codebase data.",
+          "status": "SUPPORTED",
+          "context_overlap": 0.25,
+          "gt_overlap": 0.12
+        }
+      ]
+    },
+    {
+      "id": "AQ38",
+      "category": "unanswerable",
+      "question": "What is the OAuth2 client secret and redirect URI for Google Drive cloud synchronization?",
+      "effective_route": "gemini",
+      "abstention_expected": true,
+      "answer_correct": false,
+      "is_abstention_correct": false,
+      "retrieval_success": true,
+      "total_claims": 22,
+      "supported_claims": 0,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 22,
+      "groundedness_score": 0.0,
+      "unsupported_claim_rate": 1.0,
+      "citation_correct": true,
+      "cited_sources": [],
+      "total_latency_ms": 7765.52,
+      "ttft_ms": 5913.21,
+      "claim_details": [
+        {
+          "claim": "As a general rule for standard applications (like commercial software or custom personal scripts), **there is no universal, public OAuth2 client secret for Google Drive sync.**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.32
+        },
+        {
+          "claim": "For Standard/Commercial Apps",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "If you are developing your own application that integrates with Google Drive, you must generate your own Client ID and Client Secret by registering a project in the **Google Cloud Console**.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.38
+        },
+        {
+          "claim": "**Client ID:** Publicly identifies your app.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "**Client Secret:** Acts like a password for your app and **must be kept confidential**.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "Because it must be kept secret, it is unique to your project and cannot be shared publicly.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "**Redirect URI:** Defined by you in the Google Cloud Console (e.g., `http://localhost`, `https://oauth.pstmn.io/v1/callback`, or a custom domain URI).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.21
+        },
+        {
+          "claim": "For Open-Source or Existing Tools (like rclone, Cyberduck, etc.)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "If you are asking because you are configuring an open-source tool or command-line utility for cloud synchronization (such as `rclone`), these tools often fall into one of two categories:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.1
+        },
+        {
+          "claim": "**Built-in Default Credentials:** Some popular open-source tools come with a pre-configured Google Client ID and Client Secret embedded in their source code.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "These are shared among all users of that specific tool.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**\"Bring Your Own\" Credentials:** Because Google limits how many users can authenticate through a single shared set of credentials, many power-user tools require you to create your own free Google Cloud Console project and input *your own* Client ID and Secret.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.21
+        },
+        {
+          "claim": "### Where to get them:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "If you need a Client ID and Secret for your own use or development:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "Go to the [Google Cloud Console](https://console.cloud.google.com/).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.4
+        },
+        {
+          "claim": "Create a new project.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "Navigate to **APIs & Services** > **Credentials**.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "Click **Create Credentials** > **OAuth client ID**.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.6
+        },
+        {
+          "claim": "Select your application type (e.g., *Desktop app*, *Web application*).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Set your authorized **Redirect URI**.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Google will generate your **Client ID** and **Client Secret**.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "*Note: Never expose your production OAuth client secret in public code repositories like GitHub.*",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.23
+        }
+      ]
+    },
+    {
+      "id": "AQ39",
+      "category": "unanswerable",
+      "question": "How is the Stripe payment webhook HMAC signature verified in the payment gateway module?",
+      "effective_route": "gemini",
+      "abstention_expected": true,
+      "answer_correct": false,
+      "is_abstention_correct": false,
+      "retrieval_success": true,
+      "total_claims": 82,
+      "supported_claims": 0,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 82,
+      "groundedness_score": 0.0,
+      "unsupported_claim_rate": 1.0,
+      "citation_correct": true,
+      "cited_sources": [],
+      "total_latency_ms": 10393.85,
+      "ttft_ms": 5674.59,
+      "claim_details": [
+        {
+          "claim": "Verifying a Stripe webhook HMAC signature in a payment gateway module is a critical security step.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.55
+        },
+        {
+          "claim": "It ensures that the incoming HTTP request actually originated from Stripe and has not been tampered with in transit.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "Stripe uses a cryptographic signature system based on **HMAC (Hash-based Message Authentication Code)** with **SHA-256**.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "### The Verification Process (Step-by-Step)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "**Capture the Raw Body:**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "You must obtain the **exact, raw, unparsed request body** as a string or byte array.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "If your web framework (like Express.js) automatically parses the incoming JSON body into an object, the signature validation will fail because JSON key ordering or whitespace might change.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.09
+        },
+        {
+          "claim": "**Extract the Signature Header:**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "Stripe includes a signature in the `Stripe-Signature` header of every webhook request.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.38
+        },
+        {
+          "claim": "This header contains a timestamp (`t`) and one or more signatures (`v1`, `v0`, etc.).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "*Example header:* `t=1614556800,v1=5257a869e7eceebaed...`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Construct the Signed Payload:**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Create the string that Stripe used to generate the signature by concatenating:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "The timestamp (`t`) value as a string.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "The character `.` (dot).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "The raw request body.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Compute the Expected HMAC:**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Compute an HMAC using SHA-256.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Key:** Your Stripe Webhook Secret (starts with `whsec_...`), converted to bytes.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.22
+        },
+        {
+          "claim": "**Message:** The constructed signed payload from Step 3.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Compare Signatures:**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Compare the signature you computed in Step 4 with the `v1` signature extracted from the header in Step 2.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.14
+        },
+        {
+          "claim": "To prevent timing attacks, you **must use a constant-time string comparison function** rather than a standard equality operator (`==`).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Check the Timestamp (Replay Attack Prevention):**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Check the timestamp (`t`) against the current system time to ensure the request is not too old (Stripe recommends a tolerance of 5 minutes, i.e., `300` seconds).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.12
+        },
+        {
+          "claim": "### Code Examples",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "Node.js (Using the official `stripe` SDK - Recommended)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "The official Stripe SDK handles raw body management and verification for you, which is the safest approach.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.18
+        },
+        {
+          "claim": "const stripe = require('stripe')('sk_test_...');",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "const endpointSecret = 'whsec_YourWebhookSecretHere';",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "app.post('/webhook', express.raw({type: 'application/json'}), (request, response) => {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.1
+        },
+        {
+          "claim": "const sig = request.headers['stripe-signature'];",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "// The SDK verifies the signature and checks the timestamp automatically",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "event = stripe.webhooks.constructEvent(request.body, sig, endpointSecret);",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "} catch (err) {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "console.error(`Webhook signature verification failed: ${err.message}`);",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.38
+        },
+        {
+          "claim": "return response.status(400).send(`Webhook Error: ${err.message}`);",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.11
+        },
+        {
+          "claim": "// Handle the event",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "switch (event.type) {",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "case 'payment_intent.succeeded':",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "const paymentIntent = event.data.object;",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "// TODO: Fulfill the purchase / update database",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "console.log(`Unhandled event type ${event.type}`);",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "response.json({received: true});",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Python / FastAPI or Flask (Manual Verification Logic)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.17
+        },
+        {
+          "claim": "If you are writing a custom module or using a framework without the Stripe SDK helper, here is how the logic works under the hood:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.19
+        },
+        {
+          "claim": "from fastapi import FastAPI, Header, Request, HTTPException",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "app = FastAPI()",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "endpoint_secret = \"whsec_YourWebhookSecretHere\"",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "@app.post(\"/webhook\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "async def stripe_webhook(request: Request, stripe_signature: str = Header(None)):",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.12
+        },
+        {
+          "claim": "if not stripe_signature:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.5
+        },
+        {
+          "claim": "raise HTTPException(status_code=400, detail=\"Missing Stripe-Signature header\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Get raw body as bytes",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "payload = await request.body()",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Parse the signature header (t=timestamp, v1=signature)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "sig_items = dict(item.split(\"=\") for item in stripe_signature.split(\",\"))",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "timestamp = sig_items.get(\"t\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "received_sig = sig_items.get(\"v1\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "if not timestamp or not received_sig:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "raise HTTPException(status_code=400, detail=\"Invalid signature header format\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.11
+        },
+        {
+          "claim": "Check timestamp tolerance (e.g., 5 minutes = 300 seconds)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "if abs(time.time() - int(timestamp)) > 300:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "raise HTTPException(status_code=400, detail=\"Timestamp outside the tolerance zone\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Construct the signed payload",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "signed_payload = f\"{timestamp}.\".encode('utf-8') + payload",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Compute HMAC SHA-256",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "computed_sig = hmac.new(",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "endpoint_secret.encode('utf-8'),",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "signed_payload,",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Constant-time comparison to prevent timing attacks",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "if not hmac.compare_digest(computed_sig, received_sig):",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "raise HTTPException(status_code=400, detail=\"Signature mismatch\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.14
+        },
+        {
+          "claim": "except Exception as e:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "raise HTTPException(status_code=400, detail=f\"Webhook Error: {str(e)}\")",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "# Proceed with processing the event...",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "return {\"status\": \"success\"}",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "### Best Practices for Payment Gateway Modules",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.4
+        },
+        {
+          "claim": "**Always use the official SDK helper** (`stripe.webhooks.constructEvent` or equivalent in PHP/Ruby/Python) if available.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.08
+        },
+        {
+          "claim": "Re-inventing the wheel manually opens the door to bugs in timing-attack prevention or body-parsing discrepancies.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Handle body parsers carefully:** Ensure your web server does not parse the webhook route as JSON *before* you can access the raw string/buffer.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.19
+        },
+        {
+          "claim": "**Return a `2xx` HTTP status quickly:** Acknowledge receipt of the webhook immediately after verification (and before heavy database operations) so Stripe knows the delivery succeeded and doesn't retry unnecessarily.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.14
+        }
+      ]
+    },
+    {
+      "id": "AQ40",
+      "category": "unanswerable",
+      "question": "What GraphQL mutation is used to update user billing addresses and tax identification numbers in the project?",
+      "effective_route": "gemini",
+      "abstention_expected": true,
+      "answer_correct": false,
+      "is_abstention_correct": false,
+      "retrieval_success": true,
+      "total_claims": 26,
+      "supported_claims": 0,
+      "partially_supported_claims": 0,
+      "unsupported_claims": 26,
+      "groundedness_score": 0.0,
+      "unsupported_claim_rate": 1.0,
+      "citation_correct": true,
+      "cited_sources": [],
+      "total_latency_ms": 8328.38,
+      "ttft_ms": 6487.58,
+      "claim_details": [
+        {
+          "claim": "To provide the exact GraphQL mutation for updating user billing addresses and tax identification numbers, I need a little more context about **which specific project, platform, or e-commerce engine** you are working with (for example: Shopify, Magento/Adobe Commerce, Spree, Saleor, or a custom project).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.16
+        },
+        {
+          "claim": "However, since different systems use different schemas, here are the most common patterns used in popular GraphQL APIs for handling this:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.2
+        },
+        {
+          "claim": "Shopify Storefront / Admin API",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Shopify typically handles customer information via customer mutations.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.29
+        },
+        {
+          "claim": "For updating a customer's address:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**Mutation:** `customerUpdate` or `customerAddressUpdate`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "*Note:* Tax identification numbers (like VAT numbers) are often handled through customer metafields or specific localized billing fields depending on whether you are using the Storefront API or Admin API.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.14
+        },
+        {
+          "claim": "Magento / Adobe Commerce (PWA Studio)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Adobe Commerce uses specific mutations for customer billing agreements and addresses.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.22
+        },
+        {
+          "claim": "**Mutation:** `updateCustomer` or `updateCustomerAddress`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "**Example structure:**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "updateCustomerAddress(",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "street: [\"123 Main St\"]",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "postcode: \"78701\"",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "country_code: US",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "telephone: \"555-555-5555\"",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "# Tax ID might be included as a custom attribute or specific input depending on the module",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.11
+        },
+        {
+          "claim": "Saleor Commerce",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "Saleor manages billing addresses primarily through checkout or account mutations.",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.22
+        },
+        {
+          "claim": "**Mutations:** `accountAddressUpdate` or `checkoutBillingAddressUpdate`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.33
+        },
+        {
+          "claim": "### How to find it in your specific project:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "If this is a custom project or a different platform, you can find the exact mutation by looking at your project's GraphQL schema (often accessible via a Playground/GraphiQL interface at `/graphql` or by inspecting your `.graphql` schema files).",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.14
+        },
+        {
+          "claim": "Try searching your codebase for:",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "`mutation` + `Address` (e.g., `updateAddress`, `billingAddress`)",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.25
+        },
+        {
+          "claim": "`taxId`, `vatId`, or `taxIdentification`",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.0
+        },
+        {
+          "claim": "**If you can share the name of the framework, platform, or the schema snippet you are working with, I can write the exact mutation for you!**",
+          "status": "UNSUPPORTED",
+          "context_overlap": 0.0,
+          "gt_overlap": 0.17
+        }
+      ]
+    }
+  ]
+}

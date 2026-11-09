@@ -1,0 +1,79 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.crt
+*.pfx
+*.secret
+*.token
+*id_rsa*
+*id_ed25519*
+
+# Application Runtime Logs
+server.log
+launcher.log
+*.log
+
+# Browser / App User Data Profiles (Edge/Chromium cache & cookies)
+.app_profile/
+.test_profile/
+
+# Local Vector Databases, SQLite Databases & Manifests
+data/chroma_db/
+data/messages.db*
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+*.db
+*.db-wal
+*.db-shm
+
+# PDF Intelligence Local Uploads, Tessdata & Outputs
+data/pdf_intelligence/uploads/*.pdf
+data/pdf_intelligence/tessdata/
+data/pdf_intelligence/output/
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

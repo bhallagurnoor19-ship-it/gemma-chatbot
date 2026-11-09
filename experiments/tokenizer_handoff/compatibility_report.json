@@ -1,0 +1,186 @@
+{
+  "timestamp": "2026-11-07T20:29:51Z",
+  "models_compared": {
+    "target": "embeddinggemma-2:270m",
+    "reference": "gemma4:12b",
+    "legacy": "embeddinggemma:latest"
+  },
+  "structural_comparison": {
+    "exact_vocab_match": true,
+    "exact_scores_match": true,
+    "exact_types_match": true,
+    "exact_merges_match": true,
+    "first_difference_index": null,
+    "vocab_size_emb2": 262144,
+    "vocab_size_gemma4": 262144,
+    "merges_count_emb2": 514906,
+    "merges_count_gemma4": 514906
+  },
+  "special_tokens_comparison": {
+    "tokenizer.ggml.bos_token_id": {
+      "embeddinggemma_2": 2,
+      "gemma4": 2,
+      "match": true
+    },
+    "tokenizer.ggml.eos_token_id": {
+      "embeddinggemma_2": 1,
+      "gemma4": 1,
+      "match": true
+    },
+    "tokenizer.ggml.padding_token_id": {
+      "embeddinggemma_2": 0,
+      "gemma4": 0,
+      "match": true
+    },
+    "tokenizer.ggml.unknown_token_id": {
+      "embeddinggemma_2": 3,
+      "gemma4": 3,
+      "match": true
+    },
+    "tokenizer.ggml.mask_token_id": {
+      "embeddinggemma_2": 4,
+      "gemma4": 4,
+      "match": true
+    },
+    "tokenizer.ggml.add_bos_token": {
+      "embeddinggemma_2": true,
+      "gemma4": true,
+      "match": true
+    },
+    "tokenizer.ggml.add_space_prefix": {
+      "embeddinggemma_2": false,
+      "gemma4": false,
+      "match": true
+    }
+  },
+  "test_cases": [
+    {
+      "test_num": 1,
+      "category": "Basic Greeting",
+      "name": "hey",
+      "input_preview": "hey",
+      "token_count": 2,
+      "identical": true,
+      "first_diff": null,
+      "sample_ids": [
+        2,
+        36935
+      ]
+    },
+    {
+      "test_num": 2,
+      "category": "Standard Conversational",
+      "name": "Hello, how are you?",
+      "input_preview": "Hello, how are you?",
+      "token_count": 10,
+      "identical": true,
+      "first_diff": null,
+      "sample_ids": [
+        2,
+        9259,
+        236764,
+        3,
+        7843,
+        3,
+        733,
+        3
+      ]
+    },
+    {
+      "test_num": 3,
+      "category": "Domain Terminology",
+      "name": "Explain retrieval augmented generation.",
+      "input_preview": "Explain retrieval augmented generation.",
+      "token_count": 11,
+      "identical": true,
+      "first_diff": null,
+      "sample_ids": [
+        2,
+        155122,
+        3,
+        4243,
+        3986,
+        1111,
+        3,
+        202942
+      ]
+    },
+    {
+      "test_num": 4,
+      "category": "Source Code",
+      "name": "Python Function Definition",
+      "input_preview": "def hello_world(): return \"hello\"",
+      "token_count": 13,
+      "identical": true,
+      "first_diff": null,
+      "sample_ids": [
+        2,
+        2063,
+        3,
+        23391,
+        236779,
+        12392,
+        6141,
+        3
+      ]
+    },
+    {
+      "test_num": 5,
+      "category": "Unicode & Multilingual",
+      "name": "Multilingual Polyglot with Emojis",
+      "input_preview": "नमस्ते दुनिया! こんにちは世界 🌍 مرحبا بالعالم. Über die Brücke gehe...",
+      "token_count": 44,
+      "identical": true,
+      "first_diff": null,
+      "sample_ids": [
+        2,
+        226767,
+        3,
+        98262,
+        236888,
+        3,
+        85141,
+        12811
+      ]
+    },
+    {
+      "test_num": 6,
+      "category": "Escaped JSON & SQL",
+      "name": "Escaped Characters in Payload",
+      "input_preview": "{\"query\": \"SELECT * FROM \\\"users\\\" WHERE status = 'active' A...",
+      "token_count": 70,
+      "identical": true,
+      "first_diff": null,
+      "sample_ids": [
+        2,
+        14937,
+        3278,
+        1083,
+        3,
+        236775,
+        12874,
+        3
+      ]
+    },
+    {
+      "test_num": 7,
+      "category": "Complete Chatbot Prompt",
+      "name": "Full Realistic Prompt with System, RAG Context, and History",
+      "input_preview": "<start_of_turn>system\nYou are a helpful, friendly, and knowl...",
+      "token_count": 188,
+      "identical": true,
+      "first_diff": null,
+      "sample_ids": [
+        2,
+        236820,
+        3041,
+        236779,
+        1340,
+        236779,
+        887,
+        236813
+      ]
+    }
+  ],
+  "overall_classification": "EXACTLY COMPATIBLE"
+}

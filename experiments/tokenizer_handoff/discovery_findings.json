@@ -1,0 +1,258 @@
+{
+  "ollama_version": "0.40.15",
+  "installed_models": [
+    {
+      "name": "embeddinggemma-2:270m",
+      "size_mb": 289.88,
+      "modified_at": "2026-11-08T01:48:12.7505289+05:30",
+      "digest": "c21dd30c1e38444d3b4faa091407b6fa97221447b4965d74931d43d7f09bbbfd"
+    },
+    {
+      "name": "embeddinggemma:latest",
+      "size_mb": 593.07,
+      "modified_at": "2026-11-06T00:55:31.2514984+05:30",
+      "digest": "85462619ee721b466c5927d109d4cb765861907d5417b9109caebc4e614679f1"
+    },
+    {
+      "name": "gemma4:12b",
+      "size_mb": 7650.01,
+      "modified_at": "2026-10-01T15:35:33.7254082+05:30",
+      "digest": "6114515d63c17436a7c0417d82820ac65ad643e2806c5a3c89cb62846436ed0b"
+    },
+    {
+      "name": "gemma3:latest",
+      "size_mb": 3184.13,
+      "modified_at": "2026-09-19T16:31:21.5137753+05:30",
+      "digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a"
+    },
+    {
+      "name": "qwen:latest",
+      "size_mb": 2222.15,
+      "modified_at": "2026-09-09T14:21:02.4431779+05:30",
+      "digest": "d53d04290064542e5f12ccfb0055785b7751264dc6bbb06c04c559c57e07496a"
+    },
+    {
+      "name": "Qwen2.5-Coder:7B",
+      "size_mb": 4466.14,
+      "modified_at": "2026-08-05T00:08:00.8047968+05:30",
+      "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364"
+    },
+    {
+      "name": "deepseek-coder-v2:latest",
+      "size_mb": 8492.59,
+      "modified_at": "2026-07-03T14:51:30.4607303+05:30",
+      "digest": "63fb193b3a9b4322a18e8c6b250ca2e70a5ff531e962dbf95ba089b2566f2fa5"
+    },
+    {
+      "name": "deepseek-coder-v2:16b",
+      "size_mb": 8492.59,
+      "modified_at": "2026-07-02T11:28:56.9813769+05:30",
+      "digest": "63fb193b3a9b4322a18e8c6b250ca2e70a5ff531e962dbf95ba089b2566f2fa5"
+    }
+  ],
+  "models_metadata": {
+    "embeddinggemma-2:270m": {
+      "format": "gguf",
+      "family": "gemma-embedding2",
+      "parameter_size": "271.00M",
+      "quantization_level": "Q8_0",
+      "template": "{%- for msg in messages if msg.get('role') == 'system' -%}{%- if msg.get('content') is string -%}{{ msg['content'] }}{%- else -%}{%- for item in msg['content'] if item.get('type') == 'text' -%}{{ item['text'] }}{%- endfor -%}{%- endif -%}{%- endfor -%}{%- for msg in messages if msg.get('role') != 'system' -%}{%- if msg.get('content') is string -%}{{ msg['content'] }}{%- else -%}{%- set existing_text = msg['content'] | selectattr('type', 'equalto', 'text') | map(attribute='text') | join -%}{%- set has_manual_placeholders = ('<|image|>' in existing_text) or ('<|video|>' in existing_text) or ('<|audio|>' in existing_text) -%}{%- for item in msg['content'] -%}{%- if item.get('type') == 'text' -%}{{ item['text'] }}{%- elif not has_manual_placeholders and item.get('type') == 'image' -%}<|image|>{%- elif not has_manual_placeholders and item.get('type') == 'video' -%}<|video|>{%- elif not has_manual_placeholders and item.get('type') == 'audio' -%}<|audio|>{%- endif -%}{%- endfor -%}{%- endif -%}{%- endfor -%}",
+      "parameters": null,
+      "blobs": [
+        "C:\\Users\\Gurnoor\\.ollama\\models\\blobs\\sha256-111e84992a0406bacb70d11dddd8874001c783cc56b82c462ec82a2f5b8d08b1"
+      ],
+      "main_blob_header": {
+        "magic": "GGUF",
+        "gguf_version": 3,
+        "tensor_count": 413,
+        "kv_count": 48,
+        "file_size_bytes": 303957280,
+        "file_size_mb": 289.88
+      },
+      "filtered_model_info": {
+        "gemma-embedding2.attention.causal": false,
+        "gemma-embedding2.attention.head_count": 4,
+        "gemma-embedding2.attention.head_count_kv": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        "gemma-embedding2.attention.key_length": 512,
+        "gemma-embedding2.attention.key_length_swa": 256,
+        "gemma-embedding2.attention.layer_norm_rms_epsilon": 1e-06,
+        "gemma-embedding2.attention.shared_kv_layers": 0,
+        "gemma-embedding2.attention.sliding_window": 1024,
+        "gemma-embedding2.attention.sliding_window_pattern": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "gemma-embedding2.attention.value_length": 512,
+        "gemma-embedding2.attention.value_length_swa": 256,
+        "gemma-embedding2.block_count": 24,
+        "gemma-embedding2.context_length": 262144,
+        "gemma-embedding2.embedding_length": 512,
+        "gemma-embedding2.embedding_length_out": 768,
+        "gemma-embedding2.embedding_length_per_layer_input": 512,
+        "gemma-embedding2.feed_forward_length": 2048,
+        "gemma-embedding2.pooling_type": 1,
+        "gemma-embedding2.rope.dimension_count": 512,
+        "gemma-embedding2.rope.dimension_count_swa": 256,
+        "gemma-embedding2.rope.freq_base": 1000000,
+        "gemma-embedding2.rope.freq_base_swa": 10000,
+        "general.architecture": "gemma-embedding2",
+        "tokenizer.ggml.add_bos_token": true,
+        "tokenizer.ggml.add_eos_token": true,
+        "tokenizer.ggml.add_sep_token": false,
+        "tokenizer.ggml.add_space_prefix": false,
+        "tokenizer.ggml.bos_token_id": 2,
+        "tokenizer.ggml.eos_token_id": 1,
+        "tokenizer.ggml.mask_token_id": 4,
+        "tokenizer.ggml.merges": [],
+        "tokenizer.ggml.model": "gemma4",
+        "tokenizer.ggml.padding_token_id": 0,
+        "tokenizer.ggml.scores": [],
+        "tokenizer.ggml.token_type": [],
+        "tokenizer.ggml.tokens": [],
+        "tokenizer.ggml.unknown_token_id": 3
+      }
+    },
+    "embeddinggemma:latest": {
+      "format": "gguf",
+      "family": "gemma3",
+      "parameter_size": "307.58M",
+      "quantization_level": "BF16",
+      "template": "{{ .Prompt }}",
+      "parameters": "num_batch                      2048\nnum_ctx                        2048",
+      "blobs": [
+        "C:\\Users\\Gurnoor\\.ollama\\models\\blobs\\sha256-0800cbac9c2064dde519420e75e512a83cb360de3ad5df176185dc69652fc515"
+      ],
+      "main_blob_header": {
+        "magic": "GGUF",
+        "gguf_version": 3,
+        "tensor_count": 316,
+        "kv_count": 36,
+        "file_size_bytes": 621867104,
+        "file_size_mb": 593.06
+      },
+      "filtered_model_info": {
+        "gemma3.context_length": 2048,
+        "gemma3.embedding_length": 768,
+        "general.architecture": "gemma3",
+        "tokenizer.ggml.add_bos_token": true,
+        "tokenizer.ggml.add_eos_token": true,
+        "tokenizer.ggml.add_sep_token": false,
+        "tokenizer.ggml.add_space_prefix": false,
+        "tokenizer.ggml.bos_token_id": 2,
+        "tokenizer.ggml.eos_token_id": 1,
+        "tokenizer.ggml.model": "llama",
+        "tokenizer.ggml.padding_token_id": 0,
+        "tokenizer.ggml.pre": "default",
+        "tokenizer.ggml.scores": [],
+        "tokenizer.ggml.token_type": [],
+        "tokenizer.ggml.tokens": [],
+        "tokenizer.ggml.unknown_token_id": 3
+      }
+    },
+    "gemma4:12b": {
+      "format": "gguf",
+      "family": "gemma4",
+      "parameter_size": "11.9B",
+      "quantization_level": "Q4_K_M",
+      "template": "{{ .Prompt }}",
+      "parameters": "draft_num_predict              3\ntemperature                    1\ntop_k                          64\ntop_p                          0.95",
+      "blobs": [
+        "C:\\Users\\Gurnoor\\.ollama\\models\\blobs\\sha256-bb722270d54346adc198f213851dbe0207e87c3ecf2a0aff4d92262726215391",
+        "C:\\Users\\Gurnoor\\.ollama\\models\\blobs\\sha256-7008a656050bed18f6741406a631e83fa75ee1a02308f2e4f40d978cfbb3ce4b",
+        "C:\\Users\\Gurnoor\\.ollama\\models\\blobs\\sha256-0cb0cd0a5c499d92942caa22fe5abb98f6e8874868d590e2b094ece4ac8e6d28"
+      ],
+      "main_blob_header": {
+        "magic": "GGUF",
+        "gguf_version": 3,
+        "tensor_count": 667,
+        "kv_count": 54,
+        "file_size_bytes": 7381383680,
+        "file_size_mb": 7039.44
+      },
+      "filtered_model_info": {
+        "gemma4.context_length": 262144,
+        "gemma4.embedding_length": 3840,
+        "gemma4.embedding_length_per_layer_input": 0,
+        "general.architecture": "gemma4",
+        "tokenizer.ggml.add_bos_token": true,
+        "tokenizer.ggml.add_space_prefix": false,
+        "tokenizer.ggml.bos_token_id": 2,
+        "tokenizer.ggml.eos_token_id": 1,
+        "tokenizer.ggml.mask_token_id": 4,
+        "tokenizer.ggml.merges": [],
+        "tokenizer.ggml.model": "gemma4",
+        "tokenizer.ggml.padding_token_id": 0,
+        "tokenizer.ggml.scores": [],
+        "tokenizer.ggml.suppress_tokens": [
+          258883,
+          258882
+        ],
+        "tokenizer.ggml.token_type": [],
+        "tokenizer.ggml.tokens": [],
+        "tokenizer.ggml.unknown_token_id": 3
+      }
+    }
+  },
+  "tokenize_endpoint_support": {
+    "embeddinggemma-2:270m": {
+      "supported": false,
+      "msg": "[WinError 10054] An existing connection was forcibly closed by the remote host"
+    },
+    "embeddinggemma:latest": {
+      "supported": false,
+      "status": 404,
+      "msg": "HTTP Error 404: Not Found"
+    },
+    "gemma4:12b": {
+      "supported": false,
+      "msg": "[WinError 10054] An existing connection was forcibly closed by the remote host"
+    }
+  }
+}
